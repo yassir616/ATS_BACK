@@ -1,0 +1,332 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version last-->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="test" pageWidth="500" pageHeight="740" columnWidth="500" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" uuid="a21d0a71-52bd-47d1-b52b-7b58d3c57967">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="One Empty Record"/>
+	<property name="com.jaspersoft.studio.unit." value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.pageHeight" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.pageWidth" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.topMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.bottomMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.leftMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.rightMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.columnWidth" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.columnSpacing" value="pixel"/>
+	<parameter name="PATH" class="java.lang.String"/>
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<field name="dateEffet" class="java.lang.String">
+		<fieldDescription><![CDATA[dateEffet]]></fieldDescription>
+	</field>
+	<field name="numeroSouscription" class="java.lang.String">
+		<fieldDescription><![CDATA[numeroSouscription]]></fieldDescription>
+	</field>
+	<field name="risque" class="java.lang.String">
+		<fieldDescription><![CDATA[risque]]></fieldDescription>
+	</field>
+	<field name="agence" class="java.lang.String">
+		<fieldDescription><![CDATA[agence]]></fieldDescription>
+	</field>
+	<field name="dateEcheance" class="java.lang.String">
+		<fieldDescription><![CDATA[dateEcheance]]></fieldDescription>
+	</field>
+	<field name="telephone" class="java.lang.String">
+		<fieldDescription><![CDATA[telephone]]></fieldDescription>
+	</field>
+	<field name="typeFinancement" class="java.lang.String">
+		<fieldDescription><![CDATA[typeFinancement]]></fieldDescription>
+	</field>
+	<field name="compteBancaire" class="java.lang.String">
+		<fieldDescription><![CDATA[compteBancaire]]></fieldDescription>
+	</field>
+	<field name="cinAssure" class="java.lang.String">
+		<fieldDescription><![CDATA[cinAssure]]></fieldDescription>
+	</field>
+	<field name="duree" class="java.lang.String">
+		<fieldDescription><![CDATA[duree]]></fieldDescription>
+	</field>
+	<field name="ageLimitSouscription" class="java.lang.String">
+		<fieldDescription><![CDATA[ageLimitSouscription]]></fieldDescription>
+	</field>
+	<field name="adresseAssure" class="java.lang.String">
+		<fieldDescription><![CDATA[adresseAssure]]></fieldDescription>
+	</field>
+	<field name="garantiePaiment" class="java.lang.String">
+		<fieldDescription><![CDATA[garantiePaiment]]></fieldDescription>
+	</field>
+	<field name="numeroContratFinancement" class="java.lang.String">
+		<fieldDescription><![CDATA[numeroContratFinancement]]></fieldDescription>
+	</field>
+	<field name="registreCommerce" class="java.lang.String">
+		<fieldDescription><![CDATA[registreCommerce]]></fieldDescription>
+	</field>
+	<field name="compteTakaful" class="java.lang.String">
+		<fieldDescription><![CDATA[compteTakaful]]></fieldDescription>
+	</field>
+	<field name="remuneration" class="java.lang.String">
+		<fieldDescription><![CDATA[remuneration]]></fieldDescription>
+	</field>
+	<field name="ageLimiteCouverture" class="java.lang.String">
+		<fieldDescription><![CDATA[ageLimiteCouverture]]></fieldDescription>
+	</field>
+	<field name="adresse" class="java.lang.String">
+		<fieldDescription><![CDATA[adresse]]></fieldDescription>
+	</field>
+	<field name="garantieInvalidite" class="java.lang.String">
+		<fieldDescription><![CDATA[garantieInvalidite]]></fieldDescription>
+	</field>
+	<field name="compteAssure" class="java.lang.String">
+		<fieldDescription><![CDATA[compteAssure]]></fieldDescription>
+	</field>
+	<field name="participant" class="java.lang.String">
+		<fieldDescription><![CDATA[participant]]></fieldDescription>
+	</field>
+	<field name="assure" class="java.lang.String">
+		<fieldDescription><![CDATA[assure]]></fieldDescription>
+	</field>
+	<field name="dateAgrement" class="java.lang.String">
+		<fieldDescription><![CDATA[dateAgrement]]></fieldDescription>
+	</field>
+	<field name="numeroAgrement" class="java.lang.String">
+		<fieldDescription><![CDATA[numeroAgrement]]></fieldDescription>
+	</field>
+	<field name="intermediaire" class="java.lang.String">
+		<fieldDescription><![CDATA[intermediaire]]></fieldDescription>
+	</field>
+	<field name="montantFinancement" class="java.lang.String">
+		<fieldDescription><![CDATA[montantFinancement]]></fieldDescription>
+	</field>
+	<field name="organisme" class="java.lang.String">
+		<fieldDescription><![CDATA[organisme]]></fieldDescription>
+	</field>
+	<field name="renouvellement" class="java.lang.String">
+		<fieldDescription><![CDATA[renouvellement]]></fieldDescription>
+	</field>
+	<field name="telephoneAssure" class="java.lang.String">
+		<fieldDescription><![CDATA[telephoneAssure]]></fieldDescription>
+	</field>
+	<field name="adresseInter" class="java.lang.String">
+		<fieldDescription><![CDATA[adresseInter]]></fieldDescription>
+	</field>
+	<field name="delaiPaiement" class="java.lang.String">
+		<fieldDescription><![CDATA[delaiPaiement]]></fieldDescription>
+	</field>
+	<field name="dureeContrat" class="java.lang.String">
+		<fieldDescription><![CDATA[dureeContrat]]></fieldDescription>
+	</field>
+	<field name="date" class="java.lang.String">
+		<fieldDescription><![CDATA[date]]></fieldDescription>
+	</field>
+	<field name="contributionAnnulle" class="java.lang.String">
+		<fieldDescription><![CDATA[contributionAnnulle]]></fieldDescription>
+	</field>
+	<field name="fraisAcquisition" class="java.lang.String">
+		<fieldDescription><![CDATA[fraisAcquisition]]></fieldDescription>
+	</field>
+	<field name="dureeMois" class="java.lang.String">
+		<fieldDescription><![CDATA[dureeMois]]></fieldDescription>
+	</field>
+	<field name="ville" class="java.lang.String">
+		<fieldDescription><![CDATA[ville]]></fieldDescription>
+	</field>
+	<field name="montantTTC" class="java.lang.String">
+		<fieldDescription><![CDATA[montantTTC]]></fieldDescription>
+	</field>
+	<field name="periodicite" class="java.lang.String">
+		<fieldDescription><![CDATA[periodicite]]></fieldDescription>
+	</field>
+	<field name="remunerationMudaraba" class="java.lang.String">
+		<fieldDescription><![CDATA[remunerationMudaraba]]></fieldDescription>
+	</field>
+	<field name="numeroCompte" class="java.lang.String">
+		<fieldDescription><![CDATA[numeroCompte]]></fieldDescription>
+	</field>
+	<field name="adresseSouscripteur" class="java.lang.String">
+		<fieldDescription><![CDATA[adresseSouscripteur]]></fieldDescription>
+	</field>
+	<field name="seuilVisite" class="java.lang.String">
+		<fieldDescription><![CDATA[seuilVisite]]></fieldDescription>
+	</field>
+	<field name="suspensionActivite" class="java.lang.String">
+		<fieldDescription><![CDATA[suspensionActivite]]></fieldDescription>
+	</field>
+	<field name="maladieInvalidite" class="java.lang.String">
+		<fieldDescription><![CDATA[maladieInvalidite]]></fieldDescription>
+	</field>
+	<field name="maladieOuOperation" class="java.lang.String">
+		<fieldDescription><![CDATA[maladieOuOperation]]></fieldDescription>
+	</field>
+	<field name="pension" class="java.lang.String">
+		<fieldDescription><![CDATA[pension]]></fieldDescription>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<detail>
+		<band height="65" splitType="Stretch">
+			<property name="local_mesure_unitheight" value="pixel"/>
+			<subreport>
+				<reportElement x="0" y="10" width="280" height="55" uuid="d848c369-f592-4195-9ee9-9abe3378095f"/>
+				<subreportParameter name="risque">
+					<subreportParameterExpression><![CDATA[$F{risque}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="numeroSouscription">
+					<subreportParameterExpression><![CDATA[$F{numeroSouscription}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="dateEffet">
+					<subreportParameterExpression><![CDATA[$F{dateEffet}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="agence">
+					<subreportParameterExpression><![CDATA[$F{agence}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="dateEcheance">
+					<subreportParameterExpression><![CDATA[$F{dateEcheance}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="telephone">
+					<subreportParameterExpression><![CDATA[$F{telephone}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="typeFinancement">
+					<subreportParameterExpression><![CDATA[$F{typeFinancement}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="compteBancaire">
+					<subreportParameterExpression><![CDATA[$F{compteBancaire}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="cinAssure">
+					<subreportParameterExpression><![CDATA[$F{cinAssure}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="duree">
+					<subreportParameterExpression><![CDATA[$F{duree}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="ageLimitSouscription">
+					<subreportParameterExpression><![CDATA[$F{ageLimitSouscription}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="adresseAssure">
+					<subreportParameterExpression><![CDATA[$F{adresseAssure}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="garantiePaiment">
+					<subreportParameterExpression><![CDATA[$F{garantiePaiment}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="numeroContratFinancement">
+					<subreportParameterExpression><![CDATA[$F{numeroContratFinancement}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="registreCommerce">
+					<subreportParameterExpression><![CDATA[$F{registreCommerce}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="compteTakaful">
+					<subreportParameterExpression><![CDATA[$F{compteTakaful}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="remuneration">
+					<subreportParameterExpression><![CDATA[$F{remuneration}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="ageLimiteCouverture">
+					<subreportParameterExpression><![CDATA[$F{ageLimiteCouverture}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="adresse">
+					<subreportParameterExpression><![CDATA[$F{adresse}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="garantieInvalidite">
+					<subreportParameterExpression><![CDATA[$F{garantieInvalidite}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="compteAssure">
+					<subreportParameterExpression><![CDATA[$F{compteAssure}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="participant">
+					<subreportParameterExpression><![CDATA[$F{participant}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="assure">
+					<subreportParameterExpression><![CDATA[$F{assure}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="dateAgrement">
+					<subreportParameterExpression><![CDATA[$F{dateAgrement}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="numeroAgrement">
+					<subreportParameterExpression><![CDATA[$F{numeroAgrement}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="intermediaire">
+					<subreportParameterExpression><![CDATA[$F{intermediaire}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="montantFinancement">
+					<subreportParameterExpression><![CDATA[$F{montantFinancement}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="organisme">
+					<subreportParameterExpression><![CDATA[$F{organisme}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="renouvellement">
+					<subreportParameterExpression><![CDATA[$F{renouvellement}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="telephoneAssure">
+					<subreportParameterExpression><![CDATA[$F{telephoneAssure}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="adresseInter">
+					<subreportParameterExpression><![CDATA[$F{adresseInter}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="adresseSouscripteur">
+					<subreportParameterExpression><![CDATA[$F{adresseSouscripteur}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="delaiPaiement">
+					<subreportParameterExpression><![CDATA[$F{delaiPaiement}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="dureeContrat">
+					<subreportParameterExpression><![CDATA[$F{dureeContrat}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="PATH">
+					<subreportParameterExpression><![CDATA[$P{PATH}]]></subreportParameterExpression>
+				</subreportParameter>
+				<dataSourceExpression><![CDATA[new net.sf.jasperreports.engine.JREmptyDataSource()]]></dataSourceExpression>
+				<subreportExpression><![CDATA[$P{PATH}+"/cond11.jasper"]]></subreportExpression>
+			</subreport>
+		</band>
+		<band height="70">
+			<subreport>
+				<reportElement x="0" y="0" width="280" height="55" uuid="4e10dd80-6ee1-438a-923a-aa6476455d4e"/>
+				<subreportParameter name="date">
+					<subreportParameterExpression><![CDATA[$F{date}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="contributionAnnulle">
+					<subreportParameterExpression><![CDATA[$F{contributionAnnulle}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="fraisAcquisition">
+					<subreportParameterExpression><![CDATA[$F{fraisAcquisition}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="dureeMois">
+					<subreportParameterExpression><![CDATA[$F{dureeMois}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="ville">
+					<subreportParameterExpression><![CDATA[$F{ville}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="montantTTC">
+					<subreportParameterExpression><![CDATA[$F{montantTTC}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="periodicite">
+					<subreportParameterExpression><![CDATA[$F{periodicite}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="remunerationMudaraba">
+					<subreportParameterExpression><![CDATA[$F{remunerationMudaraba}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="numeroCompte">
+					<subreportParameterExpression><![CDATA[$F{numeroCompte}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="seuilVisite">
+					<subreportParameterExpression><![CDATA[$F{seuilVisite}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="suspensionActivite">
+					<subreportParameterExpression><![CDATA[$F{suspensionActivite}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="maladieInvalidite">
+					<subreportParameterExpression><![CDATA[$F{maladieInvalidite}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="maladieOuOperation">
+					<subreportParameterExpression><![CDATA[$F{maladieOuOperation}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="pension">
+					<subreportParameterExpression><![CDATA[$F{pension}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="PATH">
+					<subreportParameterExpression><![CDATA[$P{PATH}]]></subreportParameterExpression>
+				</subreportParameter>
+				<dataSourceExpression><![CDATA[new net.sf.jasperreports.engine.JREmptyDataSource()]]></dataSourceExpression>
+				<subreportExpression><![CDATA[$P{PATH}+"/cond22.jasper"]]></subreportExpression>
+			</subreport>
+		</band>
+	</detail>
+</jasperReport>

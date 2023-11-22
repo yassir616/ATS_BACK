@@ -1,0 +1,45 @@
+# Base docker image to run pipeline
+image: docker:19.03.1
+
+services:
+    - docker:19.03.1-dind
+
+cache:
+  paths:
+    - .m2/
+
+stages:
+  - build
+  - test
+  - package
+    
+
+maven-build:
+  image: maven
+  
+  stage: build
+  
+  script: "mvn package -DskipUnitTests -Dmaven.repo.local=.m2"
+  artifacts:
+    paths:
+      - target/*.jar
+
+maven-test:
+  image: maven
+ 
+  stage: test
+  script:
+    - mvn clean verify
+  artifacts:
+    when: always
+    reports:
+      junit:
+        - target/surefire-reports/TEST-*.xml
+        - target/failsafe-reports/TEST-*.xml
+
+package:
+  stage: package
+  script:
+    - docker login registry.gitlab.com --username assafar --password karimovich0668
+    - docker build -t registry.gitlab.com/assafar/takafulback .
+    - docker push registry.gitlab.com/assafar/takafulback

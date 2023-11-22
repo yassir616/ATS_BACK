@@ -1,0 +1,79 @@
+package com.soa.vie.takaful.requestmodels;
+
+import lombok.Getter;
+import lombok.Setter;
+
+@Getter
+@Setter
+public class ConditionParticuliereMrb {
+    String codeQr;
+    String numeroContract;
+    String numeroSouscription;
+    String dateEcheance;
+    String dateEffet;
+    String duree;
+    String agence;
+    String raisonSocial;
+    String siegeSocial;
+    String NumHomologation;
+    String dateHomologation;
+    String typePartenaire;
+    String adresse;
+    String prenomSouscripteur;
+    String nomSouscripteur;
+    String cinSouscripteur;
+    String adresseSouscripteur;
+    String villeSouscripteur;
+    String ribSouscripteur;
+    String prenomAssure;
+    String nomAssure;
+    String cinAssure;
+    String adresseAssure;
+    String villeAssure;
+    String ribAssure;
+    String raisonSocialSous;
+    String formeJuridiqueSous;
+    String capitalSocialSous;
+    String siegeSocialSous;
+    String villeMoralSous;
+    String ribMoralSous;
+    String raisonSocialAssure;
+    String formeJuridiqueAssure;
+    String capitalSocialAssure;
+    String siegeSocialAssure;
+    String villeMoralAssure;
+    String ribMoralAssure;
+    String ville;
+    String date;
+    String numeroCompte;
+    String typeBatiment;
+    String adresseBatiment;
+    String numTitreFoncier;
+    String superficie;
+    String caracteristique;
+    String taciteReconduction;
+    String primeHT;
+    String montantTaxe;
+    String primeEvcat;
+    String montantTTC;
+    String periodicite;
+    String categorie;
+    String typePropriete;
+    String valeurBatiment;
+    String valeurContenue;
+    String proffession;
+    String proffessionSouscripteur;
+    String nomPrenomSouscripteur;
+    String dateNaissanceSouscripteur;
+    String nationaliteSouscripteur;
+    String nomPrenomAssure;
+    String numeroDeTelephoneAssure;
+    String numeroDeTelephoneSouscripteur;
+    String nationalite;
+    String emailAssure;
+    String dateNaissance;
+    String typeSouscripteur;
+    String addressSouscripteur;
+    String primeTTC;
+
+}

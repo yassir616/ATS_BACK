@@ -1,0 +1,29 @@
+# Base docker image to run pipeline
+image: docker:19.03.1
+
+services:
+    - docker:19.03.1-dind
+
+cache:
+  paths:
+    - .m2/
+
+stages:
+  - build
+  - package
+  
+
+maven-build:
+  image: maven
+  
+  stage: build
+  
+  script: "mvn package -Dmaven.repo.local=.m2"
+  artifacts:
+    paths:
+      - target/*.jar
+
+package:
+  stage: package
+  script:
+    - docker build -t takafulback .

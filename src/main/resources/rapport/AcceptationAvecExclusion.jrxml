@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version last-->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Acceptation AvecExclusion" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="82f217ad-7155-44be-b65c-abebd1199482">
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<field name="date" class="java.lang.String">
+		<fieldDescription><![CDATA[date]]></fieldDescription>
+	</field>
+	<field name="intermediaire" class="java.lang.String">
+		<fieldDescription><![CDATA[intermediaire]]></fieldDescription>
+	</field>
+	<field name="agence" class="java.lang.String">
+		<fieldDescription><![CDATA[agence]]></fieldDescription>
+	</field>
+	<field name="nomParticipant" class="java.lang.String">
+		<fieldDescription><![CDATA[nomParticipant]]></fieldDescription>
+	</field>
+	<field name="numeroAcceptation" class="java.lang.String">
+		<fieldDescription><![CDATA[numeroAcceptation]]></fieldDescription>
+	</field>
+	<field name="montantFinancement" class="java.lang.String">
+		<fieldDescription><![CDATA[montantFinancement]]></fieldDescription>
+	</field>
+	<field name="encours" class="java.lang.String">
+		<fieldDescription><![CDATA[encours]]></fieldDescription>
+	</field>
+	<field name="cumul" class="java.lang.String">
+		<fieldDescription><![CDATA[cumul]]></fieldDescription>
+	</field>
+	<field name="duree" class="java.lang.String">
+		<fieldDescription><![CDATA[duree]]></fieldDescription>
+	</field>
+	<field name="differe" class="java.lang.String">
+		<fieldDescription><![CDATA[differe]]></fieldDescription>
+	</field>
+	<field name="tauxSuprime" class="java.lang.String">
+		<fieldDescription><![CDATA[tauxSuprime]]></fieldDescription>
+	</field>
+	<field name="participation" class="java.lang.String">
+		<fieldDescription><![CDATA[participation]]></fieldDescription>
+	</field>
+	<field name="pathologie" class="java.lang.String">
+		<fieldDescription><![CDATA[pathologie]]></fieldDescription>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<detail>
+		<band height="801" splitType="Stretch">
+			<property name="local_mesure_unitheight" value="pixel"/>
+			<property name="com.jaspersoft.studio.unit.height" value="px"/>
+			<image>
+				<reportElement x="1" y="3" width="790" height="797" uuid="02a768d3-c03d-4365-bf43-50faedd9a3f2">
+					<property name="local_mesure_unitx" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					<property name="local_mesure_unity" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+					<property name="local_mesure_unitwidth" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="local_mesure_unitheight" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<imageExpression><![CDATA["C:/Users/umamda/Desktop/Takaful/takafulback/src/main/resources/rapport/lettre d acceptation avec exclusion_page-0001.jpg"]]></imageExpression>
+			</image>
+			<textField>
+				<reportElement x="348" y="115" width="100" height="20" uuid="f0c4b593-27e2-4bf4-8eb7-bab9d2dce773"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{date}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="376" y="139" width="100" height="20" uuid="d94ad6ee-6622-4feb-b1a9-91f52f00f1d7"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{intermediaire}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="376" y="163" width="100" height="20" uuid="8233774f-c64f-4cfe-ad78-d1be5c6b7582"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{agence}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="210" y="243" width="266" height="20" uuid="8d9d54e4-1ece-4bbe-a9de-e11e9704aa5e"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{nomParticipant}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="false">
+				<reportElement mode="Transparent" x="210" y="267" width="266" height="20" forecolor="#000000" backcolor="#FFFFFF" uuid="c0cbd379-147c-4375-9552-ad2373018736"/>
+				<textElement textAlignment="Left" verticalAlignment="Top" rotation="None" markup="none">
+					<font fontName="SansSerif" size="12" isBold="false" isItalic="false" isUnderline="false" isStrikeThrough="false" pdfFontName="Helvetica" pdfEncoding="Cp1252" isPdfEmbedded="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{numeroAcceptation}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="false">
+				<reportElement mode="Transparent" x="210" y="293" width="266" height="20" forecolor="#000000" backcolor="#FFFFFF" uuid="b9e2a7c8-344d-4a9f-8f77-be091e0304c1"/>
+				<textElement textAlignment="Left" verticalAlignment="Top" rotation="None" markup="none">
+					<font fontName="SansSerif" size="12" isBold="false" isItalic="false" isUnderline="false" isStrikeThrough="false" pdfFontName="Helvetica" pdfEncoding="Cp1252" isPdfEmbedded="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{montantFinancement}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="false">
+				<reportElement mode="Transparent" x="210" y="320" width="266" height="20" forecolor="#000000" backcolor="#FFFFFF" uuid="3e4a7393-9f14-4f9d-8f94-635aa7ae1c94"/>
+				<textElement textAlignment="Left" verticalAlignment="Top" rotation="None" markup="none">
+					<font fontName="SansSerif" size="12" isBold="false" isItalic="false" isUnderline="false" isStrikeThrough="false" pdfFontName="Helvetica" pdfEncoding="Cp1252" isPdfEmbedded="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{encours}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="false">
+				<reportElement mode="Transparent" x="210" y="346" width="266" height="20" forecolor="#000000" backcolor="#FFFFFF" uuid="7aaed70a-f4e8-4eb7-a4e0-715659970ee1"/>
+				<textElement textAlignment="Left" verticalAlignment="Top" rotation="None" markup="none">
+					<font fontName="SansSerif" size="12" isBold="false" isItalic="false" isUnderline="false" isStrikeThrough="false" pdfFontName="Helvetica" pdfEncoding="Cp1252" isPdfEmbedded="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{cumul}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="false">
+				<reportElement mode="Transparent" x="210" y="370" width="266" height="20" forecolor="#000000" backcolor="#FFFFFF" uuid="2445375d-b839-48bc-a915-2602e399f9d8"/>
+				<textElement textAlignment="Left" verticalAlignment="Top" rotation="None" markup="none">
+					<font fontName="SansSerif" size="12" isBold="false" isItalic="false" isUnderline="false" isStrikeThrough="false" pdfFontName="Helvetica" pdfEncoding="Cp1252" isPdfEmbedded="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{duree}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="false">
+				<reportElement mode="Transparent" x="210" y="396" width="266" height="20" forecolor="#000000" backcolor="#FFFFFF" uuid="02a653fe-6af7-4d9e-a561-bdc8ba121b7e"/>
+				<textElement textAlignment="Left" verticalAlignment="Top" rotation="None" markup="none">
+					<font fontName="SansSerif" size="12" isBold="false" isItalic="false" isUnderline="false" isStrikeThrough="false" pdfFontName="Helvetica" pdfEncoding="Cp1252" isPdfEmbedded="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{differe}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement mode="Opaque" x="103" y="490" width="95" height="20" uuid="15678a57-f9a7-4f68-8f15-866c6a5156ed">
+					<property name="local_mesure_unitwidth" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Center">
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{montantFinancement}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement mode="Opaque" x="333" y="490" width="37" height="20" uuid="072a8211-5aee-4818-a7f1-0b785ce0dc8d"/>
+				<textElement textAlignment="Center">
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{tauxSuprime}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement mode="Opaque" x="60" y="508" width="89" height="20" uuid="2252a85e-903b-478a-a747-1760a136918f"/>
+				<textElement textAlignment="Center">
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{participation}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement mode="Opaque" x="382" y="507" width="100" height="20" uuid="f5664e50-840f-4d1b-b36e-4e53c4928cc9"/>
+				<textElement textAlignment="Center">
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{pathologie}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+</jasperReport>

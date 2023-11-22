@@ -1,0 +1,294 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version last-->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="report2" pageWidth="595" pageHeight="842" columnWidth="595" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" uuid="ee3f492c-a6e2-4191-9ce8-a6d1d900bd8d">
+	<property name="com.jaspersoft.studio.unit." value="cm"/>
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="One Empty Record"/>
+	<property name="com.jaspersoft.studio.layout" value="com.jaspersoft.studio.editor.layout.HorizontalRowLayout"/>
+	<property name="com.jaspersoft.studio.unit.pageHeight" value="cm"/>
+	<property name="com.jaspersoft.studio.unit.pageWidth" value="cm"/>
+	<property name="com.jaspersoft.studio.unit.topMargin" value="cm"/>
+	<property name="com.jaspersoft.studio.unit.bottomMargin" value="cm"/>
+	<property name="com.jaspersoft.studio.unit.leftMargin" value="cm"/>
+	<property name="com.jaspersoft.studio.unit.rightMargin" value="cm"/>
+	<property name="com.jaspersoft.studio.unit.columnWidth" value="cm"/>
+	<property name="com.jaspersoft.studio.unit.columnSpacing" value="cm"/>
+	<parameter name="createdBy" class="java.lang.String"/>
+	<parameter name="PATH" class="java.lang.String"/>
+	<queryString language="SQL">
+		<![CDATA[]]>
+	</queryString>
+	<field name="NomPrenom" class="java.lang.String">
+		<fieldDescription><![CDATA[nomPrenom]]></fieldDescription>
+	</field>
+	<field name="DateNaissance" class="java.lang.String">
+		<fieldDescription><![CDATA[dateNaissance]]></fieldDescription>
+	</field>
+	<field name="Capital" class="java.lang.String">
+		<fieldDescription><![CDATA[capital]]></fieldDescription>
+	</field>
+	<field name="Duree" class="java.lang.String">
+		<fieldDescription><![CDATA[duree]]></fieldDescription>
+	</field>
+	<field name="PointVente" class="java.lang.String">
+		<fieldDescription><![CDATA[pointVente]]></fieldDescription>
+	</field>
+	<field name="Differe" class="java.lang.String">
+		<fieldDescription><![CDATA[differe]]></fieldDescription>
+	</field>
+	<field name="Periodicite" class="java.lang.String">
+		<fieldDescription><![CDATA[periodicite]]></fieldDescription>
+	</field>
+	<field name="MontantParticipationHT" class="java.lang.String">
+		<fieldDescription><![CDATA[montantParticipationHT]]></fieldDescription>
+	</field>
+	<field name="Taxe" class="java.lang.String">
+		<fieldDescription><![CDATA[taxe]]></fieldDescription>
+	</field>
+	<field name="MontantParticipationTTC" class="java.lang.String">
+		<fieldDescription><![CDATA[montantParticipationTTC]]></fieldDescription>
+	</field>
+	<field name="Risque" class="java.lang.String">
+		<fieldDescription><![CDATA[risque]]></fieldDescription>
+	</field>
+	<field name="produit" class="java.lang.String">
+		<fieldDescription><![CDATA[produit]]></fieldDescription>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="108" splitType="Stretch">
+			<image>
+				<reportElement x="50" y="20" width="110" height="71" uuid="67307427-6956-49aa-a957-79c5bee29b3f">
+					<property name="local_mesure_unitwidth" value="pixel"/>
+					<property name="local_mesure_unitheight" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<imageExpression><![CDATA[$P{PATH}+"/taamine takafuli.png"]]></imageExpression>
+			</image>
+		</band>
+	</title>
+	<columnHeader>
+		<band height="126" splitType="Stretch">
+			<textField>
+				<reportElement x="200" y="70" width="160" height="20" uuid="44da530a-f6d7-4ade-9be5-d9d4b5508ba1">
+					<property name="local_mesure_unitx" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					<property name="local_mesure_unity" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+					<property name="local_mesure_unitwidth" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="local_mesure_unitheight" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Center">
+					<font fontName="Calibri" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{Risque}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="49" y="50" width="461" height="20" uuid="d1125092-f903-4756-8974-49b1a276843b"/>
+				<textElement textAlignment="Center">
+					<font fontName="Times New Roman" size="13" isBold="true"/>
+				</textElement>
+				<text><![CDATA[ASSURANCE TAKAFUL DECES INVALIDITE TOTALE ET DEFINITIVE]]></text>
+			</staticText>
+			<staticText>
+				<reportElement stretchType="RelativeToBandHeight" x="230" y="10" width="90" height="30" uuid="994418a6-d3c0-4af0-9b9c-5f41a855817b"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Calibri" size="17"/>
+				</textElement>
+				<text><![CDATA[DEVIS]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="134" y="100" width="290" height="20" uuid="e34d75de-151e-4597-b102-dc6203aca8de"/>
+				<textElement textAlignment="Center">
+					<font fontName="Calibri" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{produit}]]></textFieldExpression>
+			</textField>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="305" splitType="Stretch">
+			<textField>
+				<reportElement x="220" y="192" width="230" height="20" uuid="5eedd1f0-212d-4b51-a9dc-4de9fa1dd55f"/>
+				<textFieldExpression><![CDATA[$F{MontantParticipationTTC}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="220" y="52" width="250" height="20" uuid="90bd4221-14eb-4cc2-af3d-b7ee53674882"/>
+				<textElement>
+					<font fontName="Calibri"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{DateNaissance}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="49" y="132" width="151" height="20" uuid="8e5d0bdf-47ee-42e2-8920-50ad360cf199"/>
+				<textElement>
+					<font fontName="Calibri"/>
+				</textElement>
+				<text><![CDATA[Périodicité]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="220" y="172" width="230" height="20" uuid="b4565b6d-b2d6-4b12-8b07-af9ad0ca6444"/>
+				<textFieldExpression><![CDATA[$F{Taxe}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="50" y="72" width="150" height="20" uuid="95089ec8-7516-42c2-ae47-65ee984e40f0"/>
+				<textElement>
+					<font fontName="Calibri"/>
+				</textElement>
+				<text><![CDATA[Capital]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="49" y="152" width="151" height="20" uuid="867eb0b3-6fe2-4717-a4e7-f366b7d78bef"/>
+				<textElement>
+					<font fontName="Calibri"/>
+				</textElement>
+				<text><![CDATA[Montant de participation HT*]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="220" y="72" width="230" height="20" uuid="bd0eab19-812e-47f2-aeab-83236e76c91e"/>
+				<textElement>
+					<font fontName="Calibri"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{Capital}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="220" y="92" width="230" height="20" uuid="60fdb0e4-c747-4bb1-bf06-5a7b70cfb6b5"/>
+				<textElement>
+					<font fontName="Calibri"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{Duree}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="218" y="30" width="250" height="20" uuid="b829d522-4b87-4c11-83f7-3a91e50ea09e"/>
+				<textFieldExpression><![CDATA[$F{PointVente}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="50" y="92" width="150" height="20" uuid="b67de965-cb8d-4e11-b4f2-8e05fe752619"/>
+				<textElement>
+					<font fontName="Calibri"/>
+				</textElement>
+				<text><![CDATA[Durée]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="50" y="30" width="150" height="20" uuid="6c0e0720-6751-4f62-a1c5-b169085ee1d4"/>
+				<textElement>
+					<font fontName="Calibri"/>
+				</textElement>
+				<text><![CDATA[Point de vente]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="50" y="172" width="150" height="20" uuid="d4c5c742-6d37-4383-a6ba-278323787df2"/>
+				<textElement>
+					<font fontName="Calibri"/>
+				</textElement>
+				<text><![CDATA[Montant taxe]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="50" y="52" width="150" height="20" uuid="eed3a35c-62ad-415a-93bc-fd1e77e63a7f"/>
+				<textElement rotation="None">
+					<font fontName="Calibri"/>
+				</textElement>
+				<text><![CDATA[Date de naissance]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="218" y="132" width="250" height="20" uuid="a70a859c-ec19-42e9-843f-a2f5daa7acc6"/>
+				<textElement>
+					<font fontName="Calibri"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{Periodicite}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="220" y="112" width="230" height="20" uuid="1f4e8ff7-6392-4c05-b96d-4c9983ff7f01"/>
+				<textFieldExpression><![CDATA[$F{Differe}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="49" y="192" width="151" height="20" uuid="de53de42-1c6e-47bf-99f6-22249359ad47"/>
+				<text><![CDATA[Montant de participation TTC]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="50" y="112" width="150" height="20" uuid="b8b82899-492e-4531-b538-96ee190dbcb8"/>
+				<text><![CDATA[Différé]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="218" y="152" width="230" height="20" uuid="12580134-304d-4c1f-8c1c-aa5d3adeb281"/>
+				<textFieldExpression><![CDATA[$F{MontantParticipationHT}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="200" y="30" width="18" height="20" uuid="d5786a9f-fd70-484a-a3b5-796f9f6fb167"/>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="200" y="52" width="18" height="20" uuid="43efdbb5-45a9-42d5-8823-d5a8f6098cd9"/>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="200" y="72" width="18" height="20" uuid="efd65ba3-0923-44ac-9b3a-7a5142111959"/>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="200" y="92" width="18" height="20" uuid="0fa030c1-9c2c-4986-b68d-f1291b8e1798"/>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="200" y="112" width="18" height="20" uuid="5824337c-adfa-4332-8686-8bc6908f893a"/>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="200" y="132" width="18" height="20" uuid="28e84ecb-bb36-4f46-8327-523cc85b23f9"/>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="200" y="152" width="18" height="20" uuid="a3877a7d-4ae4-4a3a-b8e8-a7075a8d819a"/>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="200" y="172" width="18" height="20" uuid="e7b064a3-78a2-4d42-bc9e-76442b70bc59"/>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="200" y="192" width="18" height="20" uuid="92f20102-cb57-49c8-8742-de0038b05488"/>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="450" y="72" width="38" height="20" uuid="d8f6ade7-26dc-48f7-adca-c79f33f3d1df"/>
+				<text><![CDATA[DH]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="450" y="92" width="38" height="20" uuid="9d2e982e-2e81-4e6a-a649-4847a024bbf2"/>
+				<text><![CDATA[Mois]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="450" y="112" width="38" height="20" uuid="2500b9cc-698d-4cbd-a2f3-b027ffd9cbe5"/>
+				<text><![CDATA[Mois]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="450" y="152" width="38" height="20" uuid="f3cf99f4-2207-4c3a-ae0d-98e0ce338522"/>
+				<text><![CDATA[DH]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="450" y="172" width="38" height="20" uuid="8c6b20e5-f1aa-46e2-bd90-c0ca36d99edd"/>
+				<text><![CDATA[DH]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="450" y="192" width="50" height="20" uuid="868d1877-bc66-44ad-bdaf-67bbac52795a"/>
+				<text><![CDATA[DH]]></text>
+			</staticText>
+		</band>
+	</detail>
+	<pageFooter>
+		<band height="90">
+			<property name="local_mesure_unitheight" value="pixel"/>
+			<property name="com.jaspersoft.studio.unit.height" value="px"/>
+			<staticText>
+				<reportElement x="50" y="20" width="480" height="20" uuid="c1ab3da8-9f71-4370-b9f9-812688d7604f"/>
+				<textElement>
+					<font fontName="Calibri" size="8"/>
+				</textElement>
+				<text><![CDATA[Ce devis est fourni sous réserve d’une éventuelle expertise médicale et /ou surprime]]></text>
+			</staticText>
+		</band>
+	</pageFooter>
+</jasperReport>

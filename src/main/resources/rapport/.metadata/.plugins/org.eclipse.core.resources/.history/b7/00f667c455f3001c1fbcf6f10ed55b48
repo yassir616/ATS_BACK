@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version last-->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="CPBAY" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="6cae202a-a8a5-49b8-8b02-e9bbc80d7ff5">
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<field name="numeroContrat" class="java.lang.String">
+		<fieldDescription><![CDATA[numeroContrat]]></fieldDescription>
+	</field>
+	<field name="dateEffet" class="java.lang.String">
+		<fieldDescription><![CDATA[dateEffet]]></fieldDescription>
+	</field>
+	<field name=" dateEcheance" class="java.lang.String">
+		<fieldDescription><![CDATA[dateEcheance]]></fieldDescription>
+	</field>
+	<field name="dureeContrat" class="java.lang.String">
+		<fieldDescription><![CDATA[dureeContrat]]></fieldDescription>
+	</field>
+	<field name="telephone" class="java.lang.String">
+		<fieldDescription><![CDATA[telephone]]></fieldDescription>
+	</field>
+	<field name="typePersonne" class="java.lang.String">
+		<fieldDescription><![CDATA[typePersonne]]></fieldDescription>
+	</field>
+	<field name="nomPrenomAssure" class="java.lang.String">
+		<fieldDescription><![CDATA[nomPrenomAssure]]></fieldDescription>
+	</field>
+	<field name="dateNaissance" class="java.lang.String">
+		<fieldDescription><![CDATA[dateNaissance]]></fieldDescription>
+	</field>
+	<field name="nationalite" class="java.lang.String">
+		<fieldDescription><![CDATA[nationalite]]></fieldDescription>
+	</field>
+	<field name="cinAssure" class="java.lang.String">
+		<fieldDescription><![CDATA[cinAssure]]></fieldDescription>
+	</field>
+	<field name="profession" class="java.lang.String">
+		<fieldDescription><![CDATA[profession]]></fieldDescription>
+	</field>
+	<field name="adresseAssure" class="java.lang.String">
+		<fieldDescription><![CDATA[adresseAssure]]></fieldDescription>
+	</field>
+	<field name="emailAssure" class="java.lang.String">
+		<fieldDescription><![CDATA[emailAssure]]></fieldDescription>
+	</field>
+	<field name="ribAssure" class="java.lang.String">
+		<fieldDescription><![CDATA[ribAssure]]></fieldDescription>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<detail>
+		<band height="801" splitType="Stretch">
+			<property name="local_mesure_unitheight" value="pixel"/>
+			<property name="com.jaspersoft.studio.unit.height" value="px"/>
+			<image>
+				<reportElement x="1" y="3" width="790" height="797" uuid="92d8fffd-2d7c-4a5d-aa8e-a0fffa43fb89">
+					<property name="local_mesure_unitx" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					<property name="local_mesure_unity" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+					<property name="local_mesure_unitwidth" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="local_mesure_unitheight" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<imageExpression><![CDATA["C:/Users/umamda/Desktop/Projet/takafulback/src/main/resources/rapport/CP_DECES_financement AL YOUSR 22  06 2022_page-0001.jpg"]]></imageExpression>
+			</image>
+			<textField>
+				<reportElement mode="Transparent" x="408" y="219" width="100" height="12" forecolor="#000000" backcolor="#FFFFFF" uuid="874030f5-4bb9-4702-8794-c2bbdebc8984">
+					<property name="local_mesure_unitheight" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Left" verticalAlignment="Top" rotation="None" markup="none">
+					<font fontName="SansSerif" size="9" isBold="false" isItalic="false" isUnderline="false" isStrikeThrough="false" pdfFontName="Helvetica" pdfEncoding="Cp1252" isPdfEmbedded="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{dureeContrat}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement mode="Transparent" x="360" y="252" width="100" height="12" forecolor="#000000" backcolor="#FFFFFF" uuid="623eed4f-4a1d-4520-bc92-ebacbefe3b1b">
+					<property name="local_mesure_unitheight" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Left" verticalAlignment="Top" rotation="None" markup="none">
+					<font fontName="SansSerif" size="9" isBold="false" isItalic="false" isUnderline="false" isStrikeThrough="false" pdfFontName="Helvetica" pdfEncoding="Cp1252" isPdfEmbedded="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{dateEffet}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="266" y="270" width="100" height="12" uuid="5b01fe23-de4f-4cdf-a43a-964a3ffb5e97">
+					<property name="local_mesure_unitheight" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement>
+					<font size="9"/>
+				</textElement>
+				<text><![CDATA[31/12/TR]]></text>
+			</staticText>
+			<textField isBlankWhenNull="false">
+				<reportElement mode="Transparent" x="380" y="288" width="100" height="12" forecolor="#000000" backcolor="#FFFFFF" uuid="cd8750c8-c5c8-4f73-8749-8bad65513098">
+					<property name="local_mesure_unitheight" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Left" verticalAlignment="Top" rotation="None" markup="none">
+					<font fontName="SansSerif" size="9" isBold="false" isItalic="false" isUnderline="false" isStrikeThrough="false" pdfFontName="Helvetica" pdfEncoding="Cp1252" isPdfEmbedded="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{ dateEcheance}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="false">
+				<reportElement mode="Transparent" x="400" y="310" width="100" height="12" forecolor="#000000" backcolor="#FFFFFF" uuid="85c165cb-1cf2-4a30-bba9-7466c85a75fb">
+					<property name="local_mesure_unitheight" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Left" verticalAlignment="Top" rotation="None" markup="none">
+					<font fontName="SansSerif" size="9" isBold="false" isItalic="false" isUnderline="false" isStrikeThrough="false" pdfFontName="Helvetica" pdfEncoding="Cp1252" isPdfEmbedded="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{dureeContrat}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="405" y="358" width="12" height="12" uuid="54430e36-cda1-4e46-9125-9da0834405fd">
+					<property name="local_mesure_unitwidth" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="local_mesure_unitheight" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<printWhenExpression><![CDATA[$F{typePersonne}.equals("physique")?Boolean.TRUE:Boolean.FALSE]]></printWhenExpression>
+				</reportElement>
+				<textElement textAlignment="Center">
+					<font size="9"/>
+				</textElement>
+				<text><![CDATA[X]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="263" y="358" width="12" height="12" uuid="fa35bc76-f48d-4935-8671-986ab27069fb">
+					<property name="local_mesure_unitwidth" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="local_mesure_unitheight" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<printWhenExpression><![CDATA[$F{typePersonne}.equals("moral")?Boolean.TRUE:Boolean.FALSE]]></printWhenExpression>
+				</reportElement>
+				<textElement textAlignment="Center">
+					<font size="9"/>
+				</textElement>
+				<text><![CDATA[X]]></text>
+			</staticText>
+			<textField isBlankWhenNull="false">
+				<reportElement mode="Transparent" x="190" y="378" width="215" height="12" forecolor="#000000" backcolor="#FFFFFF" uuid="7a1f5e67-ced9-4d20-8a78-9eeabc38b23f">
+					<property name="local_mesure_unitheight" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Left" verticalAlignment="Top" rotation="None" markup="none">
+					<font fontName="SansSerif" size="9" isBold="false" isItalic="false" isUnderline="false" isStrikeThrough="false" pdfFontName="Helvetica" pdfEncoding="Cp1252" isPdfEmbedded="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{nomPrenomAssure}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="false">
+				<reportElement mode="Transparent" x="290" y="393" width="118" height="12" forecolor="#000000" backcolor="#FFFFFF" uuid="f3acaf62-51ab-4814-89e7-47468322af98">
+					<property name="local_mesure_unitheight" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Left" verticalAlignment="Top" rotation="None" markup="none">
+					<font fontName="SansSerif" size="9" isBold="false" isItalic="false" isUnderline="false" isStrikeThrough="false" pdfFontName="Helvetica" pdfEncoding="Cp1252" isPdfEmbedded="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{dateNaissance}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="false">
+				<reportElement mode="Transparent" x="290" y="409" width="130" height="12" forecolor="#000000" backcolor="#FFFFFF" uuid="3efe828a-ad73-44fb-97e4-599b69ad5a96">
+					<property name="local_mesure_unitheight" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Left" verticalAlignment="Top" rotation="None" markup="none">
+					<font fontName="SansSerif" size="9" isBold="false" isItalic="false" isUnderline="false" isStrikeThrough="false" pdfFontName="Helvetica" pdfEncoding="Cp1252" isPdfEmbedded="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{nationalite}]]></textFieldExpression>
+			</textField>
+		</band>
+		<band height="801">
+			<property name="local_mesure_unitheight" value="pixel"/>
+			<property name="com.jaspersoft.studio.unit.height" value="px"/>
+			<image>
+				<reportElement x="1" y="3" width="790" height="797" uuid="4f1f59af-4f69-409b-8cad-a65070a436d2">
+					<property name="local_mesure_unitx" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					<property name="local_mesure_unity" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+					<property name="local_mesure_unitwidth" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="local_mesure_unitheight" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<imageExpression><![CDATA["C:/Users/umamda/Desktop/Projet/takafulback/src/main/resources/rapport/CP_DECES_financement AL YOUSR 22  06 2022_page-0002.jpg"]]></imageExpression>
+			</image>
+		</band>
+		<band height="801">
+			<property name="local_mesure_unitheight" value="pixel"/>
+			<property name="com.jaspersoft.studio.unit.height" value="px"/>
+			<image>
+				<reportElement x="1" y="3" width="790" height="797" uuid="a56c88dd-2327-4ee0-a9a0-ae00aec121a2">
+					<property name="local_mesure_unitx" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					<property name="local_mesure_unity" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+					<property name="local_mesure_unitwidth" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="local_mesure_unitheight" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<imageExpression><![CDATA["C:/Users/umamda/Desktop/Projet/takafulback/src/main/resources/rapport/CP_DECES_financement AL YOUSR 22  06 2022_page-0003.jpg"]]></imageExpression>
+			</image>
+		</band>
+		<band height="801">
+			<property name="local_mesure_unitheight" value="pixel"/>
+			<property name="com.jaspersoft.studio.unit.height" value="px"/>
+			<image>
+				<reportElement x="1" y="3" width="790" height="797" uuid="34ca0d06-7d60-4eb0-a658-fc18a6d20165">
+					<property name="local_mesure_unitx" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					<property name="local_mesure_unity" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+					<property name="local_mesure_unitwidth" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="local_mesure_unitheight" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<imageExpression><![CDATA["C:/Users/umamda/Desktop/Projet/takafulback/src/main/resources/rapport/CP_DECES_financement AL YOUSR 22  06 2022_page-0004.jpg"]]></imageExpression>
+			</image>
+		</band>
+	</detail>
+</jasperReport>

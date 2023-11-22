@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version last-->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="lettreRejet" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="6f0dea7f-b7fe-4b93-9a5f-0e58a0669f98">
+	<parameter name="PATH" class="java.lang.String">
+		<parameterDescription><![CDATA[]]></parameterDescription>
+	</parameter>
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<field name="intermediaire" class="java.lang.String">
+		<fieldDescription><![CDATA[intermediaire]]></fieldDescription>
+	</field>
+	<field name="agence" class="java.lang.String">
+		<fieldDescription><![CDATA[agence]]></fieldDescription>
+	</field>
+	<field name="nomParticipant" class="java.lang.String">
+		<fieldDescription><![CDATA[nomParticipant]]></fieldDescription>
+	</field>
+	<field name="numeroAcceptation" class="java.lang.String">
+		<fieldDescription><![CDATA[numeroAcceptation]]></fieldDescription>
+	</field>
+	<field name="montantFinancement" class="java.lang.String">
+		<fieldDescription><![CDATA[montantFinancement]]></fieldDescription>
+	</field>
+	<field name="encours" class="java.lang.String">
+		<fieldDescription><![CDATA[encours]]></fieldDescription>
+	</field>
+	<field name="cumul" class="java.lang.String">
+		<fieldDescription><![CDATA[cumul]]></fieldDescription>
+	</field>
+	<field name="duree" class="java.lang.String">
+		<fieldDescription><![CDATA[duree]]></fieldDescription>
+	</field>
+	<field name="differe" class="java.lang.String">
+		<fieldDescription><![CDATA[differe]]></fieldDescription>
+	</field>
+	<field name="date" class="java.lang.String">
+		<fieldDescription><![CDATA[date]]></fieldDescription>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<detail>
+		<band height="801" splitType="Stretch">
+			<property name="local_mesure_unitheight" value="pixel"/>
+			<property name="com.jaspersoft.studio.unit.height" value="px"/>
+			<image>
+				<reportElement x="1" y="3" width="790" height="797" uuid="7ba0353a-5c68-4afb-88ca-afe44b5a9846">
+					<property name="local_mesure_unitx" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					<property name="local_mesure_unity" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+					<property name="local_mesure_unitwidth" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="local_mesure_unitheight" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<imageExpression><![CDATA[$P{PATH}+"/lettre rejet_page-0001.jpg"]]></imageExpression>
+			</image>
+			<textField>
+				<reportElement x="380" y="111" width="100" height="20" uuid="bdd77c67-0852-43ea-9a1c-4e8049fe993e"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="Calibri" size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{intermediaire}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="380" y="140" width="100" height="20" uuid="8c39c074-141e-4bf7-8133-8da614b28603"/>
+				<textElement>
+					<font fontName="Calibri" size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{agence}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="220" y="217" width="190" height="20" uuid="ab3fd893-4fc5-46da-b718-557c1cbf3b0e"/>
+				<textElement>
+					<font fontName="Calibri" size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{nomParticipant}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="false">
+				<reportElement mode="Transparent" x="220" y="242" width="190" height="20" forecolor="#000000" backcolor="#FFFFFF" uuid="30b7820a-2e32-4fa8-afd7-4ad61e5ef9de"/>
+				<textElement textAlignment="Left" verticalAlignment="Top" rotation="None" markup="none">
+					<font fontName="Calibri" size="12" isBold="true" isItalic="false" isUnderline="false" isStrikeThrough="false" pdfFontName="Helvetica" pdfEncoding="Cp1252" isPdfEmbedded="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{numeroAcceptation}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="false">
+				<reportElement mode="Transparent" x="220" y="268" width="190" height="20" forecolor="#000000" backcolor="#FFFFFF" uuid="059cba2f-41aa-4dd5-b8d8-a6e5cd19e604"/>
+				<textElement textAlignment="Left" verticalAlignment="Top" rotation="None" markup="none">
+					<font fontName="Calibri" size="12" isBold="true" isItalic="false" isUnderline="false" isStrikeThrough="false" pdfFontName="Helvetica" pdfEncoding="Cp1252" isPdfEmbedded="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{montantFinancement}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="false">
+				<reportElement mode="Transparent" x="220" y="293" width="190" height="20" forecolor="#000000" backcolor="#FFFFFF" uuid="209e0c17-af3d-494f-ab1f-ace819ddbad3"/>
+				<textElement textAlignment="Left" verticalAlignment="Top" rotation="None" markup="none">
+					<font fontName="Calibri" size="12" isBold="true" isItalic="false" isUnderline="false" isStrikeThrough="false" pdfFontName="Helvetica" pdfEncoding="Cp1252" isPdfEmbedded="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{encours}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="false">
+				<reportElement mode="Transparent" x="220" y="319" width="190" height="20" forecolor="#000000" backcolor="#FFFFFF" uuid="731bf95a-db03-4c15-8ae7-367b53fbe675"/>
+				<textElement textAlignment="Left" verticalAlignment="Top" rotation="None" markup="none">
+					<font fontName="Calibri" size="12" isBold="true" isItalic="false" isUnderline="false" isStrikeThrough="false" pdfFontName="Helvetica" pdfEncoding="Cp1252" isPdfEmbedded="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{cumul}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="false">
+				<reportElement mode="Transparent" x="220" y="346" width="190" height="20" forecolor="#000000" backcolor="#FFFFFF" uuid="668b5ca8-d9a4-40f6-9c8d-6fbec62b3d77"/>
+				<textElement textAlignment="Left" verticalAlignment="Top" rotation="None" markup="none">
+					<font fontName="Calibri" size="12" isBold="true" isItalic="false" isUnderline="false" isStrikeThrough="false" pdfFontName="Helvetica" pdfEncoding="Cp1252" isPdfEmbedded="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{duree}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="false">
+				<reportElement mode="Transparent" x="220" y="370" width="190" height="20" forecolor="#000000" backcolor="#FFFFFF" uuid="e9f27da7-f9f7-4b41-bc10-c9dec24d87bf"/>
+				<textElement textAlignment="Left" verticalAlignment="Top" rotation="None" markup="none">
+					<font fontName="Calibri" size="12" isBold="true" isItalic="false" isUnderline="false" isStrikeThrough="false" pdfFontName="Helvetica" pdfEncoding="Cp1252" isPdfEmbedded="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{differe}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="410" y="268" width="40" height="20" uuid="3655b79d-fd90-406a-9450-fad51e7659e6"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Calibri" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Dhs]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="410" y="293" width="40" height="20" uuid="95a4d308-43db-435c-8140-031312e7a036"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Calibri" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Dhs]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="410" y="320" width="40" height="20" uuid="49d0122e-7c6d-426d-af57-3bd72af02fd4"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Calibri" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Dhs]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="410" y="346" width="40" height="20" uuid="fd0274b4-903e-49a1-b4c2-cfbc9339c74c"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Calibri" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Mois]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="410" y="370" width="40" height="20" uuid="e54eaff8-83fe-4164-abab-c01450bfc1c2"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Calibri" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Mois]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="346" y="89" width="100" height="20" uuid="b4edf65c-124b-48ed-92e5-9137ba6a4fbf"/>
+				<textElement>
+					<font fontName="Calibri" size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{date}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+</jasperReport>

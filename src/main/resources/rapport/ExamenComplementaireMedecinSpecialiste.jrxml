@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version last-->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="ExamenComplementaireMedecinSpecialiste" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="32c26049-0aae-4135-8aaf-5c373026af80">
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<field name="date" class="java.lang.String">
+		<fieldDescription><![CDATA[date]]></fieldDescription>
+	</field>
+	<field name="intermediaire" class="java.lang.String">
+		<fieldDescription><![CDATA[intermediaire]]></fieldDescription>
+	</field>
+	<field name="agence" class="java.lang.String">
+		<fieldDescription><![CDATA[agence]]></fieldDescription>
+	</field>
+	<field name="specialiste" class="java.lang.String">
+		<fieldDescription><![CDATA[specialiste]]></fieldDescription>
+	</field>
+	<field name="adresse" class="java.lang.String">
+		<fieldDescription><![CDATA[adresse]]></fieldDescription>
+	</field>
+	<field name="telephone" class="java.lang.String">
+		<fieldDescription><![CDATA[telephone]]></fieldDescription>
+	</field>
+	<field name="nomParticipant" class="java.lang.String">
+		<fieldDescription><![CDATA[nomParticipant]]></fieldDescription>
+	</field>
+	<field name="numeroAcceptation" class="java.lang.String">
+		<fieldDescription><![CDATA[numeroAcceptation]]></fieldDescription>
+	</field>
+	<field name="montantFinancement" class="java.lang.String">
+		<fieldDescription><![CDATA[montantFinancement]]></fieldDescription>
+	</field>
+	<field name="encours" class="java.lang.String">
+		<fieldDescription><![CDATA[encours]]></fieldDescription>
+	</field>
+	<field name="cumul" class="java.lang.String">
+		<fieldDescription><![CDATA[cumul]]></fieldDescription>
+	</field>
+	<field name="duree" class="java.lang.String">
+		<fieldDescription><![CDATA[duree]]></fieldDescription>
+	</field>
+	<field name="differe" class="java.lang.String">
+		<fieldDescription><![CDATA[differe]]></fieldDescription>
+	</field>
+	<field name="examens" class="java.lang.String">
+		<fieldDescription><![CDATA[examens]]></fieldDescription>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<detail>
+		<band height="801" splitType="Stretch">
+			<property name="local_mesure_unitheight" value="pixel"/>
+			<property name="com.jaspersoft.studio.unit.height" value="px"/>
+			<image>
+				<reportElement x="-10" y="2" width="790" height="797" uuid="72ef59cf-a495-4a42-8f71-1c6921a22b15">
+					<property name="local_mesure_unitx" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					<property name="local_mesure_unity" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+					<property name="local_mesure_unitwidth" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="local_mesure_unitheight" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<imageExpression><![CDATA["C:/Users/umamda/Desktop/Takaful/takafulback/src/main/resources/rapport/lettre demande examens complémentaires médecin spécialiste_page-0001.jpg"]]></imageExpression>
+			</image>
+			<textField>
+				<reportElement x="345" y="91" width="100" height="20" uuid="5c09f26d-6b2a-4ca5-a6c2-9773df60da67"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{date}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="368" y="116" width="100" height="20" uuid="0bffaed4-298e-416f-a736-531036d240b0"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{intermediaire}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="369" y="140" width="100" height="20" uuid="75c94ba9-2c42-4b6e-8cd2-b01463edbb1f"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{agence}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="180" y="168" width="289" height="20" uuid="3a1cd001-d53f-429b-999e-8f447107ebfc"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{specialiste}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="180" y="195" width="289" height="20" uuid="3b5eb6a6-b892-41a7-94d4-7ef6ecc20fb7"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{adresse}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="180" y="222" width="289" height="20" uuid="04e3fb02-93c4-4bbf-a961-3f760034da39"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{telephone}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="199" y="279" width="269" height="20" uuid="bfff1344-f809-4ecb-a1d1-da1886f2c3df"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{nomParticipant}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="199" y="303" width="269" height="20" uuid="ea64caf6-7931-41d0-a794-23fb01c7f3ab"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{numeroAcceptation}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="199" y="330" width="269" height="20" uuid="0cb64feb-8a0d-47cb-b1c5-e92ea825d66d"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{montantFinancement}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="199" y="355" width="269" height="20" uuid="44153a02-a874-4fd1-92f8-7900f1bfc9a9"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{encours}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="199" y="380" width="269" height="20" uuid="768b092e-180c-4f95-96ee-964485b79526"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{cumul}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="200" y="405" width="269" height="20" uuid="0db19304-63b7-45e7-9a93-8307fdfd4563"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{duree}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="199" y="432" width="270" height="20" uuid="592b0a31-8124-4963-babb-a1daba983fc3"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{differe}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement mode="Transparent" x="107" y="499" width="273" height="20" uuid="9f251b88-48c2-48a7-aa0b-cd3c8479570b"/>
+				<textElement textAlignment="Center">
+					<font isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{nomParticipant}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement mode="Transparent" x="51" y="517" width="200" height="20" uuid="54623b79-4ea7-47e5-91f5-47caaede2734"/>
+				<textElement textAlignment="Center">
+					<font isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{specialiste}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement mode="Opaque" x="75" y="557" width="405" height="20" uuid="6d02503b-28c5-4696-b60f-f98f12e0930c"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{examens}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement mode="Opaque" x="70" y="537" width="190" height="20" uuid="04caf376-46e0-4790-8a2b-6fbcc54d3008"/>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement mode="Opaque" x="70" y="577" width="130" height="20" uuid="62770d9d-e1dd-4cf4-8f6d-4fdc6dcaecbc"/>
+			</textField>
+		</band>
+	</detail>
+</jasperReport>

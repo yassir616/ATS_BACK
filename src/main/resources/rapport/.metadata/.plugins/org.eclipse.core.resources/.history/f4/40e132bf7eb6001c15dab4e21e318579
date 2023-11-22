@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version last-->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="cond2" pageWidth="500" pageHeight="708" columnWidth="500" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" uuid="28ba5f51-62ba-4b1a-a506-378854f71948">
+	<property name="com.jaspersoft.studio.unit." value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.pageHeight" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.pageWidth" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.topMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.bottomMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.leftMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.rightMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.columnWidth" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.columnSpacing" value="pixel"/>
+	<parameter name="PATH" class="java.lang.String"/>
+	<parameter name="remunerationMudaraba" class="java.lang.String"/>
+	<parameter name="contributionAnnulle" class="java.lang.String"/>
+	<parameter name="montantTTC" class="java.lang.String"/>
+	<parameter name="periodicite" class="java.lang.String"/>
+	<parameter name="fraisAcquisition" class="java.lang.String"/>
+	<parameter name="date" class="java.lang.String"/>
+	<parameter name="numeroCompte" class="java.lang.String"/>
+	<parameter name="ville" class="java.lang.String"/>
+	<parameter name="dureeMois" class="java.lang.String"/>
+	<parameter name="maladieInvalidite" class="java.lang.String">
+		<parameterDescription><![CDATA[maladieInvalidite]]></parameterDescription>
+	</parameter>
+	<parameter name="maladieOuOperation" class="java.lang.String">
+		<parameterDescription><![CDATA[maladieOuOperation]]></parameterDescription>
+	</parameter>
+	<parameter name="pension" class="java.lang.String">
+		<parameterDescription><![CDATA[pension]]></parameterDescription>
+	</parameter>
+	<parameter name="suspensionActivite" class="java.lang.String">
+		<parameterDescription><![CDATA[suspensionActivite]]></parameterDescription>
+	</parameter>
+	<parameter name="seuilVisite" class="java.lang.String" nestedType="seuilVisite"/>
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<field name="remunerationMudaraba" class="java.lang.String">
+		<fieldDescription><![CDATA[remunerationMudaraba]]></fieldDescription>
+	</field>
+	<field name="contributionAnnulle" class="java.lang.String">
+		<fieldDescription><![CDATA[contributionAnnulle]]></fieldDescription>
+	</field>
+	<field name="periodicite" class="java.lang.String">
+		<fieldDescription><![CDATA[periodicite]]></fieldDescription>
+	</field>
+	<field name="montantTTC" class="java.lang.String">
+		<fieldDescription><![CDATA[montantTTC]]></fieldDescription>
+	</field>
+	<field name="fraisAcquisition" class="java.lang.String">
+		<fieldDescription><![CDATA[fraisAcquisition]]></fieldDescription>
+	</field>
+	<field name="date" class="java.lang.String">
+		<fieldDescription><![CDATA[date]]></fieldDescription>
+	</field>
+	<field name="numeroCompte" class="java.lang.String">
+		<fieldDescription><![CDATA[numeroCompte]]></fieldDescription>
+	</field>
+	<field name="ville" class="java.lang.String">
+		<fieldDescription><![CDATA[ville]]></fieldDescription>
+	</field>
+	<field name="dureeMois" class="java.lang.String">
+		<fieldDescription><![CDATA[dureeMois]]></fieldDescription>
+	</field>
+	<background>
+		<band height="708">
+			<property name="local_mesure_unitheight" value="pixel"/>
+			<property name="com.jaspersoft.studio.unit.height" value="px"/>
+			<property name="com.jaspersoft.studio.layout" value="com.jaspersoft.studio.editor.layout.VerticalRowLayout"/>
+			<image scaleImage="RetainShape" hAlign="Left" vAlign="Top">
+				<reportElement mode="Transparent" x="0" y="0" width="500" height="708" forecolor="#000000" backcolor="#FFFFFF" uuid="1fa77f8c-6f2b-42fd-821a-1137f6fc266a">
+					<property name="local_mesure_unitx" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					<property name="local_mesure_unity" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+					<property name="local_mesure_unitwidth" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="local_mesure_unitheight" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<graphicElement fill="Solid"/>
+				<imageExpression><![CDATA[$P{PATH}+"/conditionDeces2.png"]]></imageExpression>
+			</image>
+		</band>
+	</background>
+	<detail>
+		<band height="581">
+			<property name="local_mesure_unitheight" value="pixel"/>
+			<property name="com.jaspersoft.studio.unit.height" value="px"/>
+			<textField isBlankWhenNull="true">
+				<reportElement x="220" y="150" width="57" height="20" uuid="65a66a80-4930-4bed-ab48-efa35a1687ba"/>
+				<textElement textAlignment="Center">
+					<font size="9"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{fraisAcquisition}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="300" y="133" width="140" height="20" uuid="5ca4117c-6212-4088-9926-82db2e459fa3"/>
+				<textElement textAlignment="Center">
+					<font size="9"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{contributionAnnulle}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="215" y="63" width="75" height="20" uuid="c57294b3-4dfa-436d-b1f2-03546121a91c"/>
+				<textElement textAlignment="Center" verticalAlignment="Bottom">
+					<font size="9"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{remunerationMudaraba}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="170" y="100" width="160" height="20" uuid="8f47f56e-fae6-482a-9f0b-8910e9b0ac08"/>
+				<textElement textAlignment="Center">
+					<font size="9"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{periodicite}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="351" y="561" width="100" height="20" uuid="986cda3b-17b6-40ef-b82a-53630a60c37d"/>
+				<textElement>
+					<font size="9"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{dureeMois}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="266" y="359" width="160" height="20" uuid="7741da11-d43b-48d8-b493-e024f27c2057"/>
+				<textElement>
+					<font size="9"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{numeroCompte}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="200" y="561" width="77" height="20" uuid="a6e02a6f-de06-4376-9840-7b10a958e320"/>
+				<textElement>
+					<font size="9"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{date}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="188" y="83" width="89" height="20" uuid="edf4a52c-d968-4112-bc2d-732b3ebf4ca0"/>
+				<textElement>
+					<font size="9"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{montantTTC}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement isPrintRepeatedValues="false" x="220" y="452" width="100" height="20" uuid="5b88ba6b-f656-42bb-89af-0e4a9eb8bb8e"/>
+				<textElement textAlignment="Center">
+					<font size="9"/>
+				</textElement>
+				<textFieldExpression><![CDATA[($P{pension}!=null && !$P{pension}.equals("")) ? $P{pension} : "Non"]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="false">
+				<reportElement x="220" y="399" width="100" height="20" uuid="a2a16dd9-80c1-4412-bb95-3d36641e4e8c">
+					<printWhenExpression><![CDATA[1==1]]></printWhenExpression>
+				</reportElement>
+				<textElement>
+					<font fontName="SansSerif" size="9"/>
+				</textElement>
+				<textFieldExpression><![CDATA[($P{maladieInvalidite}!=null && !$P{maladieInvalidite}.equals("")) ? $P{maladieInvalidite} : "Non"]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement isPrintRepeatedValues="false" x="100" y="435" width="320" height="20" uuid="a704b7be-dc60-4013-acba-c0b0e4627a6a"/>
+				<textElement>
+					<font size="9"/>
+				</textElement>
+				<textFieldExpression><![CDATA[($P{maladieOuOperation}!=null && !$P{maladieOuOperation}.equals("")) ? $P{maladieOuOperation} : "Non"]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement isPrintRepeatedValues="false" x="50" y="520" width="400" height="20" uuid="cc651b13-0372-493d-b710-449504e8110a"/>
+				<textElement>
+					<font size="9"/>
+				</textElement>
+				<textFieldExpression><![CDATA[($P{suspensionActivite}!=null && !$P{suspensionActivite}.equals("")) ? $P{suspensionActivite} : "Non"]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="188" y="537" width="121" height="20" uuid="5d387c65-309e-43c8-a49e-d770d21564e1"/>
+				<textElement textAlignment="Center">
+					<font size="9"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{seuilVisite}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement mode="Transparent" x="140" y="561" width="44" height="20" forecolor="#000000" backcolor="#FFFFFF" uuid="2e314b7a-fdf0-4b05-b352-2e8dfcf5c1ef"/>
+				<textElement textAlignment="Center" verticalAlignment="Top" rotation="None" markup="none">
+					<font fontName="SansSerif" size="9" isBold="false" isItalic="false" isUnderline="false" isStrikeThrough="false" pdfFontName="Helvetica" pdfEncoding="Cp1252" isPdfEmbedded="false"/>
+				</textElement>
+				<text><![CDATA[Rabat]]></text>
+			</staticText>
+		</band>
+	</detail>
+</jasperReport>

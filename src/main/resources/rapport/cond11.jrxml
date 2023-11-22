@@ -1,0 +1,476 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version last-->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="cond1" pageWidth="500" pageHeight="708" columnWidth="500" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" uuid="4470e577-87f5-461e-acea-1691c8d93c78">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="One Empty Record"/>
+	<property name="com.jaspersoft.studio.unit." value="pixel"/>
+	<parameter name="PATH" class="java.lang.String"/>
+	<parameter name="risque" class="java.lang.String"/>
+	<parameter name="numeroSouscription" class="java.lang.String"/>
+	<parameter name="dateEffet" class="java.lang.String"/>
+	<parameter name="dateEcheance" class="java.lang.String">
+		<parameterDescription><![CDATA[]]></parameterDescription>
+	</parameter>
+	<parameter name="duree" class="java.lang.String"/>
+	<parameter name="agence" class="java.lang.String"/>
+	<parameter name="organisme" class="java.lang.String"/>
+	<parameter name="adresse" class="java.lang.String"/>
+	<parameter name="numeroAgrement" class="java.lang.String"/>
+	<parameter name="intermediaire" class="java.lang.String"/>
+	<parameter name="dateAgrement" class="java.lang.String"/>
+	<parameter name="participant" class="java.lang.String"/>
+	<parameter name="telephone" class="java.lang.String"/>
+	<parameter name="registreCommerce" class="java.lang.String"/>
+	<parameter name="adresseInter" class="java.lang.String"/>
+	<parameter name="compteBancaire" class="java.lang.String"/>
+	<parameter name="cinAssure" class="java.lang.String"/>
+	<parameter name="assure" class="java.lang.String"/>
+	<parameter name="adresseAssure" class="java.lang.String"/>
+	<parameter name="telephoneAssure" class="java.lang.String"/>
+	<parameter name="compteAssure" class="java.lang.String"/>
+	<parameter name="compteTakaful" class="java.lang.String"/>
+	<parameter name="numeroContratFinancement" class="java.lang.String"/>
+	<parameter name="typeFinancement" class="java.lang.String"/>
+	<parameter name="montantFinancement" class="java.lang.String"/>
+	<parameter name="dureeContrat" class="java.lang.String"/>
+	<parameter name="ageLimiteCouverture" class="java.lang.String"/>
+	<parameter name="ageLimitSouscription" class="java.lang.String"/>
+	<parameter name="garantiePaiment" class="java.lang.String"/>
+	<parameter name="renouvellement" class="java.lang.String"/>
+	<parameter name="garantieInvalidite" class="java.lang.String"/>
+	<parameter name="exclusions" class="java.lang.String"/>
+	<parameter name="delaiPaiement" class="java.lang.String"/>
+	<parameter name="remuneration" class="java.lang.String"/>
+	<parameter name="adresseSouscripteur" class="java.lang.String">
+		<parameterDescription><![CDATA[]]></parameterDescription>
+	</parameter>
+	<queryString language="SQL">
+		<![CDATA[]]>
+	</queryString>
+	<field name="risque" class="java.lang.String">
+		<fieldDescription><![CDATA[risque]]></fieldDescription>
+	</field>
+	<field name="assure" class="java.lang.String">
+		<fieldDescription><![CDATA[assure]]></fieldDescription>
+	</field>
+	<field name="dateAgrement" class="java.lang.String">
+		<fieldDescription><![CDATA[dateAgrement]]></fieldDescription>
+	</field>
+	<field name="adresse" class="java.lang.String">
+		<fieldDescription><![CDATA[adresse]]></fieldDescription>
+	</field>
+	<field name="compteTakaful" class="java.lang.String">
+		<fieldDescription><![CDATA[compteTakaful]]></fieldDescription>
+	</field>
+	<field name="cinAssure" class="java.lang.String">
+		<fieldDescription><![CDATA[cinAssure]]></fieldDescription>
+	</field>
+	<field name="compteAssure" class="java.lang.String">
+		<fieldDescription><![CDATA[compteAssure]]></fieldDescription>
+	</field>
+	<field name="compteBancaire" class="java.lang.String">
+		<fieldDescription><![CDATA[compteBancaire]]></fieldDescription>
+	</field>
+	<field name="ageLimiteCouverture" class="java.lang.String">
+		<fieldDescription><![CDATA[ageLimiteCouverture]]></fieldDescription>
+	</field>
+	<field name="duree" class="java.lang.String">
+		<fieldDescription><![CDATA[duree]]></fieldDescription>
+	</field>
+	<field name="montantFinancement" class="java.lang.String">
+		<fieldDescription><![CDATA[montantFinancement]]></fieldDescription>
+	</field>
+	<field name="garantiePaiment" class="java.lang.String">
+		<fieldDescription><![CDATA[garantiePaiment]]></fieldDescription>
+	</field>
+	<field name="organisme" class="java.lang.String">
+		<fieldDescription><![CDATA[organisme]]></fieldDescription>
+	</field>
+	<field name="telephone" class="java.lang.String">
+		<fieldDescription><![CDATA[telephone]]></fieldDescription>
+	</field>
+	<field name="numeroAgrement" class="java.lang.String">
+		<fieldDescription><![CDATA[numeroAgrement]]></fieldDescription>
+	</field>
+	<field name="garantieInvalidite" class="java.lang.String">
+		<fieldDescription><![CDATA[garantieInvalidite]]></fieldDescription>
+	</field>
+	<field name="delaiPaiement" class="java.lang.String">
+		<fieldDescription><![CDATA[delaiPaiement]]></fieldDescription>
+	</field>
+	<field name="dateEcheance" class="java.lang.String">
+		<fieldDescription><![CDATA[dateEcheance]]></fieldDescription>
+	</field>
+	<field name="numeroSouscription" class="java.lang.String">
+		<fieldDescription><![CDATA[numeroSouscription]]></fieldDescription>
+	</field>
+	<field name="dureeContrat" class="java.lang.String">
+		<fieldDescription><![CDATA[dureeContrat]]></fieldDescription>
+	</field>
+	<field name="dateEffet" class="java.lang.String">
+		<fieldDescription><![CDATA[dateEffet]]></fieldDescription>
+	</field>
+	<field name="remuneration" class="java.lang.String">
+		<fieldDescription><![CDATA[remuneration]]></fieldDescription>
+	</field>
+	<field name="ageLimitSouscription" class="java.lang.String">
+		<fieldDescription><![CDATA[ageLimitSouscription]]></fieldDescription>
+	</field>
+	<field name="agence" class="java.lang.String">
+		<fieldDescription><![CDATA[agence]]></fieldDescription>
+	</field>
+	<field name="adresseAssure" class="java.lang.String">
+		<fieldDescription><![CDATA[adresseAssure]]></fieldDescription>
+	</field>
+	<field name="montantAugmentation" class="java.lang.String">
+		<fieldDescription><![CDATA[montantAugmentation]]></fieldDescription>
+	</field>
+	<field name="renouvellement" class="java.lang.String">
+		<fieldDescription><![CDATA[renouvellement]]></fieldDescription>
+	</field>
+	<field name="intermediaire" class="java.lang.String">
+		<fieldDescription><![CDATA[intermediaire]]></fieldDescription>
+	</field>
+	<field name="registreCommerce" class="java.lang.String">
+		<fieldDescription><![CDATA[registreCommerce]]></fieldDescription>
+	</field>
+	<field name="telephoneAssure" class="java.lang.String">
+		<fieldDescription><![CDATA[telephoneAssure]]></fieldDescription>
+	</field>
+	<field name="participant" class="java.lang.String">
+		<fieldDescription><![CDATA[participant]]></fieldDescription>
+	</field>
+	<field name="numeroContratFinancement" class="java.lang.String">
+		<fieldDescription><![CDATA[numeroContratFinancement]]></fieldDescription>
+	</field>
+	<field name="typeFinancement" class="java.lang.String">
+		<fieldDescription><![CDATA[typeFinancement]]></fieldDescription>
+	</field>
+	<background>
+		<band height="708">
+			<property name="local_mesure_unitheight" value="pixel"/>
+			<property name="com.jaspersoft.studio.unit.height" value="px"/>
+			<property name="com.jaspersoft.studio.layout" value="com.jaspersoft.studio.editor.layout.VerticalRowLayout"/>
+			<image>
+				<reportElement x="0" y="0" width="500" height="708" uuid="b5e1d63d-29a1-463d-a0d9-9cd007edfd0d">
+					<property name="local_mesure_unitx" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					<property name="local_mesure_unitwidth" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="local_mesure_unitheight" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="local_mesure_unity" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+				</reportElement>
+				<imageExpression><![CDATA[$P{PATH}+"/conditionDeces1.png"]]></imageExpression>
+			</image>
+		</band>
+	</background>
+	<detail>
+		<band height="663">
+			<textField isBlankWhenNull="false">
+				<reportElement mode="Transparent" x="268" y="501" width="10" height="10" forecolor="#000000" backcolor="#FFFFFF" uuid="b9e6ac61-0848-4ffa-a5d4-dcf0b22e573b"/>
+				<textElement textAlignment="Left" verticalAlignment="Top" rotation="None" markup="none">
+					<font fontName="SansSerif" size="10" isBold="false" isItalic="false" isUnderline="false" isStrikeThrough="false" pdfFontName="Helvetica" pdfEncoding="Cp1252" isPdfEmbedded="false"/>
+				</textElement>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement mode="Transparent" x="100" y="220" width="110" height="20" forecolor="#000000" backcolor="#FFFFFF" uuid="da71c414-ece9-4bb2-810f-531e05421ed5"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle" rotation="None" markup="none">
+					<font fontName="SansSerif" size="9" isBold="false" isItalic="false" isUnderline="false" isStrikeThrough="false" pdfFontName="Helvetica" pdfEncoding="Cp1252" isPdfEmbedded="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{telephone}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement mode="Transparent" x="370" y="430" width="50" height="20" forecolor="#000000" backcolor="#FFFFFF" uuid="be8fd9b3-e565-4207-985f-ec96f9d7de85"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle" rotation="None" markup="none">
+					<font fontName="SansSerif" size="10" isBold="false" isItalic="false" isUnderline="false" isStrikeThrough="false" pdfFontName="Helvetica" pdfEncoding="Cp1252" isPdfEmbedded="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{dureeContrat}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement mode="Opaque" x="120" y="339" width="260" height="20" forecolor="#000000" backcolor="#FFFFFF" uuid="c9c113aa-6eb8-456d-aa81-0095d04701c0"/>
+				<textElement textAlignment="Center" verticalAlignment="Bottom" rotation="None" markup="none">
+					<font fontName="SansSerif" size="9" isBold="false" isItalic="false" isUnderline="false" isStrikeThrough="false" pdfFontName="Helvetica" pdfEncoding="Cp1252" isPdfEmbedded="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{compteAssure}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="243" y="537" width="10" height="10" uuid="40bab96c-dd7d-4258-b135-b67339d2b816"/>
+			</textField>
+			<textField>
+				<reportElement x="243" y="478" width="10" height="10" uuid="9f6ceb69-f22a-4c6a-85ba-0b844888167d"/>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="360" y="450" width="30" height="20" uuid="7300436e-a51a-4a55-9743-928cf4187255"/>
+				<textElement>
+					<font size="9"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{ageLimitSouscription}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement mode="Transparent" x="110" y="118" width="100" height="14" forecolor="#000000" backcolor="#FFFFFF" uuid="8ccf3968-5dbf-4cf9-a2cf-b32c93ad9b7d"/>
+				<textElement textAlignment="Center" verticalAlignment="Bottom" rotation="None" markup="none">
+					<font fontName="SansSerif" size="9" isBold="false" isItalic="false" isUnderline="false" isStrikeThrough="false" pdfFontName="Helvetica" pdfEncoding="Cp1252" isPdfEmbedded="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{numeroSouscription}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="230" y="643" width="60" height="20" uuid="d66e8bdd-40e2-4e8e-905a-8054f86973ad"/>
+				<textElement verticalAlignment="Top">
+					<font size="9"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{remuneration}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement mode="Transparent" x="40" y="430" width="100" height="20" forecolor="#000000" backcolor="#FFFFFF" uuid="83fcd535-0fd6-4fd4-807b-b1c6c30f58ba"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle" rotation="None" markup="none">
+					<font fontName="SansSerif" size="9" isBold="false" isItalic="false" isUnderline="false" isStrikeThrough="false" pdfFontName="Helvetica" pdfEncoding="Cp1252" isPdfEmbedded="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{numeroContratFinancement}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement mode="Transparent" x="290" y="290" width="140" height="20" forecolor="#000000" backcolor="#FFFFFF" uuid="1b197643-dd74-49ba-aa1a-a58ac71e593b"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle" rotation="None" markup="none">
+					<font fontName="SansSerif" size="9" isBold="false" isItalic="false" isUnderline="false" isStrikeThrough="false" pdfFontName="Helvetica" pdfEncoding="Cp1252" isPdfEmbedded="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{assure}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="268" y="537" width="10" height="10" uuid="b98937d8-8c34-4f82-b09f-9ea2e7843c15"/>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement mode="Transparent" x="170" y="241" width="170" height="20" forecolor="#000000" backcolor="#FFFFFF" uuid="900319bc-3cfe-475c-acd6-edeb5d2636b0"/>
+				<textElement textAlignment="Center" verticalAlignment="Top" rotation="None" markup="none">
+					<font fontName="SansSerif" size="9" isBold="false" isItalic="false" isUnderline="false" isStrikeThrough="false" pdfFontName="Helvetica" pdfEncoding="Cp1252" isPdfEmbedded="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{registreCommerce}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement mode="Transparent" x="260" y="430" width="100" height="20" forecolor="#000000" backcolor="#FFFFFF" uuid="5ff67cbc-88ad-4b02-86b3-b3c10c71b877"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle" rotation="None" markup="none">
+					<font fontName="SansSerif" size="9" isBold="false" isItalic="false" isUnderline="false" isStrikeThrough="false" pdfFontName="Helvetica" pdfEncoding="Cp1252" isPdfEmbedded="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{montantFinancement}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement mode="Transparent" x="128" y="450" width="42" height="20" forecolor="#000000" backcolor="#FFFFFF" uuid="e4bf453b-0897-4872-8f7e-516560d9ebf1"/>
+				<textElement textAlignment="Left" verticalAlignment="Top" rotation="None" markup="none">
+					<font fontName="SansSerif" size="9" isBold="false" isItalic="false" isUnderline="false" isStrikeThrough="false" pdfFontName="Helvetica" pdfEncoding="Cp1252" isPdfEmbedded="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{ageLimiteCouverture}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement mode="Transparent" x="320" y="311" width="110" height="20" forecolor="#000000" backcolor="#FFFFFF" uuid="19a7e58a-db83-4dd2-abaf-08ed59c085d3"/>
+				<textElement textAlignment="Center" verticalAlignment="Top" rotation="None" markup="none">
+					<font fontName="SansSerif" size="9" isBold="false" isItalic="false" isUnderline="false" isStrikeThrough="false" pdfFontName="Helvetica" pdfEncoding="Cp1252" isPdfEmbedded="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{telephoneAssure}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement mode="Transparent" x="300" y="140" width="100" height="12" forecolor="#000000" backcolor="#FFFFFF" uuid="ce8af42f-fc9b-4390-abc3-776f19bb44ec"/>
+				<textElement textAlignment="Center" verticalAlignment="Top" rotation="None" markup="none">
+					<font fontName="SansSerif" size="9" isBold="false" isItalic="false" isUnderline="false" isStrikeThrough="false" pdfFontName="Helvetica" pdfEncoding="Cp1252" isPdfEmbedded="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{duree}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="240" y="622" width="100" height="20" uuid="df1ea9ef-ca26-42bb-a34b-5f253da58e7c"/>
+				<textElement verticalAlignment="Middle">
+					<font size="9"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{delaiPaiement}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement mode="Transparent" x="360" y="154" width="60" height="14" forecolor="#000000" backcolor="#FFFFFF" uuid="122712c1-29cf-4a42-9b21-2d329f934fd4"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle" rotation="None" markup="none">
+					<font fontName="SansSerif" size="9" isBold="false" isItalic="false" isUnderline="false" isStrikeThrough="false" pdfFontName="Helvetica" pdfEncoding="Cp1252" isPdfEmbedded="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{organisme}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement mode="Transparent" x="330" y="201" width="100" height="20" forecolor="#000000" backcolor="#FFFFFF" uuid="ea0a9173-146b-49dd-b4f1-ccbd40cd2a9d"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle" rotation="None" markup="none">
+					<font fontName="SansSerif" size="9" isBold="false" isItalic="false" isUnderline="false" isStrikeThrough="false" pdfFontName="Helvetica" pdfEncoding="Cp1252" isPdfEmbedded="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{dateAgrement}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement mode="Transparent" x="320" y="188" width="100" height="12" forecolor="#000000" backcolor="#FFFFFF" uuid="ed84de84-f283-4446-b2fd-af2c8811f8f2"/>
+				<textElement textAlignment="Center" verticalAlignment="Top" rotation="None" markup="none">
+					<font fontName="SansSerif" size="9" isBold="false" isItalic="false" isUnderline="false" isStrikeThrough="false" pdfFontName="Helvetica" pdfEncoding="Cp1252" isPdfEmbedded="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{intermediaire}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement mode="Transparent" x="75" y="155" width="140" height="12" forecolor="#000000" backcolor="#FFFFFF" uuid="4b8ded44-26bf-4bd8-92c1-400fb1f0528d"/>
+				<textElement textAlignment="Center" verticalAlignment="Bottom" rotation="None" markup="none">
+					<font fontName="SansSerif" size="9" isBold="false" isItalic="false" isUnderline="false" isStrikeThrough="false" pdfFontName="Helvetica" pdfEncoding="Cp1252" isPdfEmbedded="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{agence}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="false">
+				<reportElement mode="Transparent" x="243" y="501" width="10" height="10" forecolor="#000000" backcolor="#FFFFFF" uuid="148cd2e6-e73a-4a04-8ed4-3a360d942260"/>
+				<textElement textAlignment="Left" verticalAlignment="Top" rotation="None" markup="none">
+					<font fontName="SansSerif" size="10" isBold="false" isItalic="false" isUnderline="false" isStrikeThrough="false" pdfFontName="Helvetica" pdfEncoding="Cp1252" isPdfEmbedded="false"/>
+				</textElement>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement mode="Transparent" x="100" y="190" width="110" height="18" forecolor="#000000" backcolor="#FFFFFF" uuid="26540da4-558e-4993-a8ce-73d76e1997f2"/>
+				<textElement textAlignment="Center" verticalAlignment="Top" rotation="None" markup="none">
+					<font fontName="SansSerif" size="9" isBold="false" isItalic="false" isUnderline="false" isStrikeThrough="false" pdfFontName="Helvetica" pdfEncoding="Cp1252" isPdfEmbedded="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{numeroAgrement}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement mode="Transparent" x="320" y="220" width="120" height="20" forecolor="#000000" backcolor="#FFFFFF" uuid="e9872712-5fa1-42f0-96bf-df8906efd4cb"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle" rotation="None" markup="none">
+					<font fontName="SansSerif" size="9" isBold="false" isItalic="false" isUnderline="false" isStrikeThrough="false" pdfFontName="Helvetica" pdfEncoding="Cp1252" isPdfEmbedded="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{participant}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement mode="Opaque" x="120" y="270" width="260" height="22" forecolor="#000000" backcolor="#FFFFFF" uuid="9a57ce1e-6299-479e-a93e-fa5aaf1b8dae">
+					<property name="local_mesure_unitx" value="pixel"/>
+					<property name="local_mesure_unity" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+					<property name="local_mesure_unitheight" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Bottom" rotation="None" markup="none">
+					<font fontName="SansSerif" size="9" isBold="false" isItalic="false" isUnderline="false" isStrikeThrough="false" pdfFontName="Helvetica" pdfEncoding="Cp1252" isPdfEmbedded="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{compteBancaire}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement mode="Transparent" x="300" y="121" width="100" height="12" forecolor="#000000" backcolor="#FFFFFF" uuid="c9269828-9780-437c-ba36-5b67fe6853d8"/>
+				<textElement textAlignment="Center" verticalAlignment="Bottom" rotation="None" markup="none">
+					<font fontName="SansSerif" size="9" isBold="false" isItalic="false" isUnderline="false" isStrikeThrough="false" pdfFontName="Helvetica" pdfEncoding="Cp1252" isPdfEmbedded="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{dateEffet}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement mode="Transparent" x="80" y="290" width="100" height="20" forecolor="#000000" backcolor="#FFFFFF" uuid="f706d32a-700a-4364-a4d0-9d5c3b8104ed"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle" rotation="None" markup="none">
+					<font fontName="SansSerif" size="9" isBold="false" isItalic="false" isUnderline="false" isStrikeThrough="false" pdfFontName="Helvetica" pdfEncoding="Cp1252" isPdfEmbedded="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{cinAssure}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement key="" mode="Opaque" x="120" y="366" width="260" height="24" forecolor="#000000" backcolor="#FFFFFF" uuid="e07f55d4-74ac-4f81-837f-a56d65277366"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle" rotation="None" markup="none">
+					<font fontName="SansSerif" size="9" isBold="false" isItalic="false" isUnderline="false" isStrikeThrough="false" pdfFontName="Helvetica" pdfEncoding="Cp1252" isPdfEmbedded="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{compteTakaful}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement mode="Transparent" x="70" y="311" width="150" height="20" forecolor="#000000" backcolor="#FFFFFF" uuid="c4e50583-55b4-47b6-a64a-324c1ed60ab0"/>
+				<textElement textAlignment="Center" verticalAlignment="Top" rotation="None" markup="none">
+					<font fontName="SansSerif" size="9" isBold="false" isItalic="false" isUnderline="false" isStrikeThrough="false" pdfFontName="Helvetica" pdfEncoding="Cp1252" isPdfEmbedded="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{adresseAssure}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement mode="Transparent" x="100" y="140" width="100" height="12" forecolor="#000000" backcolor="#FFFFFF" uuid="ebf556f1-1dc8-438b-bca3-e433fc657a5b"/>
+				<textElement textAlignment="Center" verticalAlignment="Top" rotation="None" markup="none">
+					<font fontName="SansSerif" size="9" isBold="false" isItalic="false" isUnderline="false" isStrikeThrough="false" pdfFontName="Helvetica" pdfEncoding="Cp1252" isPdfEmbedded="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{dateEcheance}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="200" y="100" width="150" height="20" uuid="4d34ce62-45aa-4df0-828a-a99d7e519dfb"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="9"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{risque}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="269" y="478" width="10" height="10" uuid="ce04868f-4c7b-4155-9a8f-c4b530d32e88"/>
+			</textField>
+			<staticText>
+				<reportElement x="259" y="477" width="10" height="13" uuid="ace85b92-3e70-4398-92b5-10fc7c4b00ac">
+					<printWhenExpression><![CDATA[$P{renouvellement}.equals("true")?Boolean.TRUE:Boolean.FALSE]]></printWhenExpression>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[X]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="233" y="477" width="10" height="13" uuid="395fed04-27c6-4810-8cdc-87c9fc3aa4d1">
+					<printWhenExpression><![CDATA[$P{renouvellement}.equals("false")?Boolean.TRUE:Boolean.FALSE]]></printWhenExpression>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[X]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="258" y="499" width="10" height="13" uuid="eeb5dcae-e201-4f8a-96e2-4342bf7af296">
+					<printWhenExpression><![CDATA[$P{garantieInvalidite}.equals("true")?Boolean.TRUE:Boolean.FALSE]]></printWhenExpression>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[X]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="233" y="498" width="10" height="13" uuid="ccb5f777-747b-4343-8598-b087ab997fd4">
+					<printWhenExpression><![CDATA[$P{garantieInvalidite}.equals("false")?Boolean.TRUE:Boolean.FALSE]]></printWhenExpression>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[X]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="233" y="534" width="10" height="13" uuid="880a69f1-ee16-435a-acca-10541abfe8eb">
+					<printWhenExpression><![CDATA[$P{garantiePaiment}.equals("false")?Boolean.TRUE:Boolean.FALSE]]></printWhenExpression>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[X]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="259" y="534" width="10" height="13" uuid="e3657bfe-df4a-4951-a001-1337402ba736">
+					<printWhenExpression><![CDATA[$P{garantiePaiment}.equals("true")?Boolean.TRUE:Boolean.FALSE]]></printWhenExpression>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[X]]></text>
+			</staticText>
+			<textField isBlankWhenNull="true">
+				<reportElement x="75" y="168" width="365" height="20" uuid="6e8fd95d-fc44-48b4-9290-4adf3d259c7e"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="9"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{adresseInter}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="100" y="201" width="115" height="20" uuid="01b6d085-1498-4379-80ca-56cc8d487a3e"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font size="9"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{adresseInter}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="120" y="260" width="260" height="20" uuid="5563a8f6-b011-423d-8ba7-5eb78b9188dc"/>
+				<textElement textAlignment="Center">
+					<font size="9"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{adresseSouscripteur}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="420" y="520" width="40" height="20" uuid="fe6135ec-229a-4f80-8138-8ef393cde9b3"/>
+				<textElement>
+					<font size="9"/>
+				</textElement>
+				<text><![CDATA[66]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Transparent" x="150" y="430" width="100" height="20" forecolor="#000000" backcolor="#FFFFFF" uuid="90861898-2937-493c-9754-6525da150392">
+					<property name="local_mesure_unity" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle" rotation="None" markup="none">
+					<font fontName="SansSerif" size="9" isBold="false" isItalic="false" isUnderline="false" isStrikeThrough="false" pdfFontName="Helvetica" pdfEncoding="Cp1252" isPdfEmbedded="false"/>
+				</textElement>
+				<text><![CDATA[MOURABAHA]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="420" y="430" width="40" height="20" uuid="404e7417-04a4-41e2-8c35-4f5aec55399e"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[Mois]]></text>
+			</staticText>
+		</band>
+	</detail>
+</jasperReport>

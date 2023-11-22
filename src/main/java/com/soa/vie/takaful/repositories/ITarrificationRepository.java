@@ -1,0 +1,19 @@
+package com.soa.vie.takaful.repositories;
+
+import org.javers.spring.annotation.JaversSpringDataAuditable;
+import org.springframework.data.repository.PagingAndSortingRepository;
+import org.springframework.stereotype.Repository;
+
+import java.util.Optional;
+
+import com.soa.vie.takaful.entitymodels.DecesProduit;
+import com.soa.vie.takaful.entitymodels.Tarrification;
+@Repository
+@JaversSpringDataAuditable
+public interface ITarrificationRepository extends PagingAndSortingRepository<Tarrification, String> {
+
+
+    Optional<Tarrification> findByDureeMaxGreaterThanEqualAndDureeMinLessThanEqualAndAgeMaxGreaterThanEqualAndAndAgeMinLessThanEqualAndCapitalMaxGreaterThanEqualAndCapitalMinLessThanEqualAndDiffereMaxGreaterThanEqualAndDiffereMinLessThanEqualAndTauxIsNotNullAndDecesProduit(int duree,int dureem,int age,int agem, float capital,float capitalm,float differe,float differem,DecesProduit decesProduit);
+    Optional<Tarrification> findByDureeMaxGreaterThanEqualAndDureeMinLessThanEqualAndAgeMaxGreaterThanEqualAndAndAgeMinLessThanEqualAndCapitalMaxGreaterThanEqualAndCapitalMinLessThanEqualAndDiffereMaxGreaterThanEqualAndDiffereMinLessThanEqualAndForfaitIsNotNull(int duree,int dureem,int age,int agem, float capital,float capitalm,float differe,float differem);
+
+}

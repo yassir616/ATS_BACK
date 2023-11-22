@@ -1,0 +1,547 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.20.1.final using JasperReports Library version 6.20.1-7584acb244139816654f64e2fd57a00d3e31921e  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="MRBCondPart" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="cbedb55a-28b8-4cff-b00b-a39a3cb2e271">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="One Empty Record"/>
+	<parameter name="PATH" class="java.lang.String"/>
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<field name="superficie" class="java.lang.String"/>
+	<field name="numeroContract" class="java.lang.String"/>
+	<field name="duree" class="java.lang.String"/>
+	<field name="typeBatiment" class="java.lang.String"/>
+	<field name="categorie" class="java.lang.String"/>
+	<field name="typePropriete" class="java.lang.String"/>
+	<field name="valeurBatiment" class="java.lang.String"/>
+	<field name="valeurContenue" class="java.lang.String"/>
+	<field name="adresseBatiment" class="java.lang.String"/>
+	<field name="numTitreFoncier" class="java.lang.String"/>
+	<field name="dateEffet" class="java.lang.String"/>
+	<field name="dateEcheance" class="java.lang.String"/>
+	<field name="nomPrenomAssure" class="java.lang.String"/>
+	<field name="nationalite" class="java.lang.String"/>
+	<field name="cinAssure" class="java.lang.String"/>
+	<field name="proffession" class="java.lang.String"/>
+	<field name="adresseAssure" class="java.lang.String"/>
+	<field name="numeroDeTelephoneAssure" class="java.lang.String"/>
+	<field name="emailAssure" class="java.lang.String"/>
+	<field name="ribAssure" class="java.lang.String"/>
+	<field name="dateNaissance" class="java.lang.String"/>
+	<field name="typeSouscripteur" class="java.lang.String"/>
+	<field name="nomPrenomSouscripteur" class="java.lang.String"/>
+	<field name="dateNaissanceSouscripteur" class="java.lang.String"/>
+	<field name="nationaliteSouscripteur" class="java.lang.String"/>
+	<field name="cinSouscripteur" class="java.lang.String"/>
+	<field name="proffessionSouscripteur" class="java.lang.String"/>
+	<field name="addressSouscripteur" class="java.lang.String"/>
+	<field name="numeroDeTelephoneSouscripteur" class="java.lang.String"/>
+	<field name="ribSouscripteur" class="java.lang.String"/>
+	<field name="periodicite" class="java.lang.String"/>
+	<field name="primeHT" class="java.lang.String"/>
+	<field name="primeEvcat" class="java.lang.String"/>
+	<field name="primeTTC" class="java.lang.String"/>
+	<field name="montantTaxe" class="java.lang.String"/>
+	<field name="codeQr" class="java.lang.String"/>
+	<detail>
+		<band height="801" splitType="Stretch">
+			<property name="com.jaspersoft.studio.unit.height" value="px"/>
+			<image scaleImage="FillFrame">
+				<reportElement x="0" y="0" width="560" height="801" uuid="7f40f4b3-c680-4329-829f-2568b7b18917"/>
+				<imageExpression><![CDATA[$P{PATH}+"/MRBConsultationPage1_page-0001.jpg"]]></imageExpression>
+			</image>
+			<textField>
+				<reportElement x="440" y="230" width="91" height="13" uuid="360bc063-74c7-4513-ad46-92bff042bb46">
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{numeroContract}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="460" y="317" width="50" height="20" uuid="3d6b5139-e4c6-459e-9190-01cf19abdacb">
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{duree}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="430" y="317" width="28" height="16" uuid="ab64f40b-efe8-4c62-b789-c79df056347f"/>
+				<text><![CDATA[Mois]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="253" y="286" width="100" height="12" uuid="c69bd90c-c87e-463b-a182-6710ce3ef9f4">
+					<property name="local_mesure_unitheight" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Center">
+					<font size="9" isBold="true"/>
+				</textElement>
+				<text><![CDATA[31/12/TR]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="334" y="247" width="10" height="13" uuid="f1c417e5-1e75-4a73-9177-31961363cde8">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+				</reportElement>
+				<text><![CDATA[X]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="388" y="267" width="64" height="16" uuid="83eea030-de4a-4731-9619-18638bd452fa">
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{dateEffet}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="388" y="302" width="88" height="16" uuid="5b4e93a1-2bf1-4af1-a4f2-1cb2ff853418">
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{dateEcheance}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="310" y="392" width="106" height="15" uuid="ff5a546a-318b-4f10-83c9-ad4c81c5b72b">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{nomPrenomAssure}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="420" y="426" width="68" height="14" uuid="954f59f0-da8c-428c-9fb7-dafc6d516e6c">
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{nationalite}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="410" y="444" width="70" height="14" uuid="b2c25e78-69e2-4bfe-9584-268164f3b298">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{cinAssure}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="380" y="460" width="80" height="13" uuid="2628e15c-3458-4ccb-a1a4-c9a6f3fc83b3">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{proffession}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="307" y="478" width="179" height="13" uuid="d6ccdb7b-8d0c-40bb-8f8a-0f395b046e2f">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{adresseAssure}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="135" y="478" width="150" height="13" uuid="b37113ae-8f05-4029-9550-13a65fbef316">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{numeroDeTelephoneAssure}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="320" y="515" width="204" height="13" uuid="287c8e3e-d60f-495e-bb58-bb2b19eabfe4">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{ribAssure}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="339" y="409" width="100" height="13" uuid="e1c03bd5-296a-4488-95c4-fbc8955186d3">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{dateNaissance}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="338" y="372" width="10" height="13" uuid="60d6e394-2b2a-47fa-a93e-0aede12881b7">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+					<printWhenExpression><![CDATA[$F{typeSouscripteur}.equals("physique")]]></printWhenExpression>
+				</reportElement>
+				<text><![CDATA[X]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="188" y="372" width="10" height="13" uuid="df8ee321-a186-44a0-9acc-8e374c0c3234">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+					<printWhenExpression><![CDATA[$F{typeSouscripteur}.equals("morale")]]></printWhenExpression>
+				</reportElement>
+				<text><![CDATA[X]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="389" y="551" width="10" height="13" uuid="8fee3302-bd87-48b6-ad8d-4a7edf7218c5">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+				</reportElement>
+				<text><![CDATA[X]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="301" y="570" width="139" height="13" uuid="fc85a1b8-7570-498c-8856-dd354a446614">
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{nomPrenomSouscripteur}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="339" y="589" width="148" height="21" uuid="a0e773e7-3059-4864-bebc-ec05130d57b1">
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{dateNaissanceSouscripteur}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="420" y="602" width="124" height="14" uuid="a35b5318-7324-4c79-95a6-d6eef12223d6">
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{nationaliteSouscripteur}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="410" y="623" width="120" height="14" uuid="d9799572-5e38-4f9a-97b1-ddd62cdf027d">
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{cinSouscripteur}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="380" y="640" width="146" height="16" uuid="11e2cf20-15d3-4908-9283-3795fb366509">
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{proffessionSouscripteur}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="307" y="655" width="180" height="17" uuid="b934ea03-bcfc-47de-9042-52950b207624">
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{addressSouscripteur}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="135" y="657" width="195" height="15" uuid="aaf9b63e-a1c8-4cf9-b518-4d3c45358637">
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{numeroDeTelephoneSouscripteur}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="320" y="694" width="204" height="16" uuid="bf4250d7-3f12-4f09-91df-6d4ebb5729a9">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{ribSouscripteur}]]></textFieldExpression>
+			</textField>
+			<image>
+				<reportElement mode="Transparent" x="460" y="50" width="65" height="65" uuid="75a55385-6ca1-421f-879c-3cc3d92bb102"/>
+				<imageExpression><![CDATA[com.google.zxing.client.j2se.MatrixToImageWriter.toBufferedImage(
+  new com.google.zxing.qrcode.QRCodeWriter().encode(
+$F{codeQr},
+  com.google.zxing.BarcodeFormat.QR_CODE,400,400))]]></imageExpression>
+			</image>
+		</band>
+		<band height="802">
+			<property name="com.jaspersoft.studio.unit.height" value="px"/>
+			<image scaleImage="FillFrame">
+				<reportElement x="0" y="0" width="560" height="801" uuid="b7a2fec6-19b8-475b-b784-0fa79eaf3056">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<imageExpression><![CDATA[$P{PATH}+"/MRBConsultationPage2_page-0001.jpg"]]></imageExpression>
+			</image>
+			<textField>
+				<reportElement x="450" y="230" width="63" height="16" uuid="67e95f43-14bd-4cec-9db9-3b31bdb6650d">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{superficie}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="420" y="117" width="8" height="13" uuid="b07692e0-3715-4894-aa68-f03d85a28b45">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+					<printWhenExpression><![CDATA[$F{categorie}.equals("habitat")]]></printWhenExpression>
+				</reportElement>
+				<text><![CDATA[X]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="350" y="117" width="8" height="13" uuid="2062c49d-fa69-4828-b96c-3aff6e52c2ea">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<printWhenExpression><![CDATA[$F{categorie}.equals("professionnel")]]></printWhenExpression>
+				</reportElement>
+				<text><![CDATA[X]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="288" y="116" width="8" height="13" uuid="6551f898-1229-47d5-8920-bea39e12e742">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<printWhenExpression><![CDATA[$F{categorie}.equals("industriel")]]></printWhenExpression>
+				</reportElement>
+				<text><![CDATA[X]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="226" y="117" width="9" height="13" uuid="15e22fb9-9db4-4fd0-a49e-d394ce2b3e14">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+					<printWhenExpression><![CDATA[$F{categorie}.equals("commercial")]]></printWhenExpression>
+				</reportElement>
+				<text><![CDATA[X]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="164" y="116" width="8" height="13" uuid="b08d7ad3-e5ef-49ef-bdb1-28c09afa8384">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+					<printWhenExpression><![CDATA[$F{categorie}.equals("autres")]]></printWhenExpression>
+				</reportElement>
+				<text><![CDATA[X]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="455" y="188" width="9" height="13" uuid="d93497ac-ce4e-4775-9779-a2ca39d29250">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+					<printWhenExpression><![CDATA[$F{typePropriete}.equals("location")]]></printWhenExpression>
+				</reportElement>
+				<text><![CDATA[X]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="372" y="188" width="9" height="13" uuid="1c439f4c-b244-437b-a150-072d1a948b52">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					<printWhenExpression><![CDATA[$F{typePropriete}.equals("copropriete")]]></printWhenExpression>
+				</reportElement>
+				<text><![CDATA[X]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="284" y="189" width="9" height="13" uuid="4fb6ec3e-8422-4646-ab35-40ffc6c2e748">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+					<printWhenExpression><![CDATA[$F{typePropriete}.equals("propriete")]]></printWhenExpression>
+				</reportElement>
+				<text><![CDATA[X]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="447" y="208" width="9" height="13" uuid="15e2e055-aeef-4a9d-b316-5ec524efe2a8">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+					<printWhenExpression><![CDATA[$F{typeBatiment}.equals("Villa")]]></printWhenExpression>
+				</reportElement>
+				<text><![CDATA[X]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="397" y="209" width="9" height="13" uuid="829cc4ff-f24c-40dc-9659-b7cb93647ebe">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+					<printWhenExpression><![CDATA[$F{typeBatiment}.equals("Appartement")]]></printWhenExpression>
+				</reportElement>
+				<text><![CDATA[X]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="299" y="209" width="9" height="13" uuid="132121d5-6567-4cd1-99be-19394303a07c">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					<printWhenExpression><![CDATA[$F{typeBatiment}.equals("Maison")]]></printWhenExpression>
+				</reportElement>
+				<text><![CDATA[X]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="208" y="208" width="9" height="13" uuid="0c92d701-9a9a-4e11-ad13-b9c8af270ec8">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+					<printWhenExpression><![CDATA[$F{typeBatiment}.equals("autres")]]></printWhenExpression>
+				</reportElement>
+				<text><![CDATA[X]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="392" y="135" width="88" height="20" uuid="1e02bd8e-2fc1-42e8-b52e-ff45e80f5e6a">
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{valeurBatiment}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="406" y="155" width="94" height="13" uuid="9cb946ef-50a7-44e7-a720-67974a920991">
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{valeurContenue}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="271" y="171" width="286" height="14" uuid="8fcc30ab-037b-4dd5-92a2-a524fcad2169">
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{adresseBatiment}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="181" y="170" width="98" height="16" uuid="5ab8079f-b633-41e7-95d5-e4c5452cabc8">
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{numTitreFoncier}]]></textFieldExpression>
+			</textField>
+		</band>
+		<band height="801">
+			<property name="com.jaspersoft.studio.unit.height" value="px"/>
+			<image scaleImage="FillFrame">
+				<reportElement x="0" y="0" width="560" height="801" uuid="7370d19f-15d4-419f-afc0-b4b2135ac213">
+					<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+				</reportElement>
+				<imageExpression><![CDATA[$P{PATH}+"/MRBConsultationPage3_page-0001.jpg"]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement x="413" y="526" width="10" height="13" uuid="2ac1ab70-11f7-4f30-8886-d345405bed98">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+					<printWhenExpression><![CDATA[$F{periodicite}.equals("Mensuelle")]]></printWhenExpression>
+				</reportElement>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[X]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="334" y="526" width="10" height="13" uuid="c4337b77-470b-4c9c-9674-3c384cd4cb64">
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					<printWhenExpression><![CDATA[$F{periodicite}.equals("Trimestrielle")]]></printWhenExpression>
+				</reportElement>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[X]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="262" y="526" width="10" height="13" uuid="5a48ef71-6686-4b3a-8485-a12726b4a71c">
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					<printWhenExpression><![CDATA[$F{periodicite}.equals("Semestrielle")]]></printWhenExpression>
+				</reportElement>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[X]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="164" y="526" width="10" height="13" uuid="b450ea0c-d223-48d5-810f-4cf28eeedddf">
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					<printWhenExpression><![CDATA[$F{periodicite}.equals("Annuelle")]]></printWhenExpression>
+				</reportElement>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[X]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="114" y="526" width="10" height="13" uuid="2f266eed-192a-44d5-8fdf-7f7a434a7151">
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					<printWhenExpression><![CDATA[$F{periodicite}.equals("Unique")]]></printWhenExpression>
+				</reportElement>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[X]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="335" y="450" width="70" height="15" uuid="575a1030-809e-4c0c-99ae-781521303da9">
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{primeHT}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="277" y="467" width="85" height="16" uuid="2fc4f1d8-4186-4409-99b7-0a06a09d619d">
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{primeEvcat}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="312" y="565" width="10" height="13" uuid="3baac44c-b4bc-44df-b1d9-e2e3c3e0b631">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+				</reportElement>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[X]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="338" y="503" width="68" height="17" uuid="8faf5f22-bf98-423c-84ae-3fc08c7d4c87">
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{primeTTC}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="376" y="485" width="79" height="18" uuid="cbffc576-6d03-453b-aadb-c5164a1e24e0">
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{montantTaxe}]]></textFieldExpression>
+			</textField>
+		</band>
+		<band height="801">
+			<property name="com.jaspersoft.studio.unit.height" value="px"/>
+			<image scaleImage="FillFrame">
+				<reportElement x="0" y="0" width="560" height="801" uuid="455913fe-d40d-44b0-8c1e-dc7083763aaa">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<imageExpression><![CDATA[$P{PATH}+"/MRBConsultationPage4_page-0001.jpg"]]></imageExpression>
+			</image>
+		</band>
+		<band height="795">
+			<property name="com.jaspersoft.studio.unit.height" value="px"/>
+			<image scaleImage="FillFrame">
+				<reportElement x="-3" y="1" width="560" height="794" uuid="eb2eee26-82fb-4f3d-bb3d-20cfbd526583">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<imageExpression><![CDATA[$P{PATH}+"/MRBConsultationPage5_page-0001.jpg"]]></imageExpression>
+			</image>
+		</band>
+	</detail>
+</jasperReport>

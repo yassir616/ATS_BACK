@@ -1,0 +1,363 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.20.0.final using JasperReports Library version 6.20.0-2bc7ab61c56f459e8176eb05c7705e145cd400ad  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="report2" pageWidth="595" pageHeight="842" columnWidth="595" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" uuid="ee3f492c-a6e2-4191-9ce8-a6d1d900bd8d">
+	<property name="com.jaspersoft.studio.unit." value="cm"/>
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="One Empty Record"/>
+	<property name="com.jaspersoft.studio.layout" value="com.jaspersoft.studio.editor.layout.HorizontalRowLayout"/>
+	<property name="com.jaspersoft.studio.unit.pageHeight" value="cm"/>
+	<property name="com.jaspersoft.studio.unit.pageWidth" value="cm"/>
+	<property name="com.jaspersoft.studio.unit.topMargin" value="cm"/>
+	<property name="com.jaspersoft.studio.unit.bottomMargin" value="cm"/>
+	<property name="com.jaspersoft.studio.unit.leftMargin" value="cm"/>
+	<property name="com.jaspersoft.studio.unit.rightMargin" value="cm"/>
+	<property name="com.jaspersoft.studio.unit.columnWidth" value="cm"/>
+	<property name="com.jaspersoft.studio.unit.columnSpacing" value="cm"/>
+	<parameter name="createdBy" class="java.lang.String"/>
+	<parameter name="PATH" class="java.lang.String"/>
+	<queryString language="SQL">
+		<![CDATA[]]>
+	</queryString>
+	<field name="NomPrenom" class="java.lang.String">
+		<fieldDescription><![CDATA[nomPrenom]]></fieldDescription>
+	</field>
+	<field name="DateNaissance" class="java.lang.String">
+		<fieldDescription><![CDATA[dateNaissance]]></fieldDescription>
+	</field>
+	<field name="valeurBatiment" class="java.lang.String">
+		<fieldDescription><![CDATA[valeurBatiment]]></fieldDescription>
+	</field>
+	<field name="typeBatiment" class="java.lang.String">
+		<fieldDescription><![CDATA[typeBatiment]]></fieldDescription>
+	</field>
+	<field name="PointVente" class="java.lang.String">
+		<fieldDescription><![CDATA[pointVente]]></fieldDescription>
+	</field>
+	<field name="primeNette" class="java.lang.String">
+		<fieldDescription><![CDATA[primeNette]]></fieldDescription>
+	</field>
+	<field name="Periodicite" class="java.lang.String">
+		<fieldDescription><![CDATA[periodicite]]></fieldDescription>
+	</field>
+	<field name="primeHT" class="java.lang.String">
+		<fieldDescription><![CDATA[primeHT]]></fieldDescription>
+	</field>
+	<field name="primeEvcat" class="java.lang.String">
+		<fieldDescription><![CDATA[primeEvcat]]></fieldDescription>
+	</field>
+	<field name="primeTTC" class="java.lang.String">
+		<fieldDescription><![CDATA[primeTTC]]></fieldDescription>
+	</field>
+	<field name="produit" class="java.lang.String">
+		<fieldDescription><![CDATA[produit]]></fieldDescription>
+	</field>
+	<field name="taxe" class="java.lang.String">
+		<fieldDescription><![CDATA[taxe]]></fieldDescription>
+	</field>
+	<field name="prorata" class="java.lang.String">
+		<fieldDescription><![CDATA[prorata]]></fieldDescription>
+	</field>
+	<field name="prorataTTC" class="java.lang.String">
+		<fieldDescription><![CDATA[prorataTTC]]></fieldDescription>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="136" splitType="Stretch">
+			<image>
+				<reportElement x="50" y="20" width="110" height="71" uuid="67307427-6956-49aa-a957-79c5bee29b3f">
+					<property name="local_mesure_unitwidth" value="pixel"/>
+					<property name="local_mesure_unitheight" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<imageExpression><![CDATA[$P{PATH}+"/taamine takafuli.png"]]></imageExpression>
+			</image>
+		</band>
+	</title>
+	<columnHeader>
+		<band height="170" splitType="Stretch">
+			<staticText>
+				<reportElement x="49" y="50" width="461" height="20" uuid="d1125092-f903-4756-8974-49b1a276843b"/>
+				<textElement textAlignment="Center">
+					<font fontName="Times New Roman" size="13" isBold="true"/>
+				</textElement>
+				<text><![CDATA[ASSURANCE TAKAFUL MULTIRISQUES BATIMENT]]></text>
+			</staticText>
+			<staticText>
+				<reportElement stretchType="RelativeToBandHeight" x="230" y="10" width="90" height="30" uuid="994418a6-d3c0-4af0-9b9c-5f41a855817b"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Calibri" size="17"/>
+				</textElement>
+				<text><![CDATA[DEVIS]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="134" y="100" width="290" height="20" uuid="e34d75de-151e-4597-b102-dc6203aca8de"/>
+				<textElement textAlignment="Center">
+					<font fontName="Calibri" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{produit}]]></textFieldExpression>
+			</textField>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="297" splitType="Stretch">
+			<textField>
+				<reportElement x="219" y="229" width="230" height="20" uuid="5eedd1f0-212d-4b51-a9dc-4de9fa1dd55f"/>
+				<textFieldExpression><![CDATA[$F{primeTTC}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="220" y="70" width="250" height="20" uuid="90bd4221-14eb-4cc2-af3d-b7ee53674882"/>
+				<textElement>
+					<font fontName="Calibri"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{DateNaissance}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="49" y="150" width="151" height="20" uuid="8e5d0bdf-47ee-42e2-8920-50ad360cf199"/>
+				<textElement>
+					<font fontName="Calibri"/>
+				</textElement>
+				<text><![CDATA[Périodicité]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="220" y="50" width="250" height="20" uuid="1c47176a-984e-4ca3-80bf-330f0a389c1b">
+					<property name="local_mesure_unitwidth" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<textElement>
+					<font fontName="Calibri"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{NomPrenom}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="219" y="208" width="230" height="20" uuid="b4565b6d-b2d6-4b12-8b07-af9ad0ca6444"/>
+				<textFieldExpression><![CDATA[$F{primeEvcat}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="50" y="90" width="150" height="20" uuid="95089ec8-7516-42c2-ae47-65ee984e40f0"/>
+				<textElement>
+					<font fontName="Calibri"/>
+				</textElement>
+				<text><![CDATA[Valeur de batiment]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="49" y="170" width="151" height="20" uuid="867eb0b3-6fe2-4717-a4e7-f366b7d78bef"/>
+				<textElement>
+					<font fontName="Calibri"/>
+				</textElement>
+				<text><![CDATA[Contribution HT]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="220" y="90" width="230" height="20" uuid="bd0eab19-812e-47f2-aeab-83236e76c91e"/>
+				<textElement>
+					<font fontName="Calibri"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{valeurBatiment}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="50" y="50" width="150" height="20" uuid="19f87e29-5514-4c25-b6b7-fdac66812e6b">
+					<property name="local_mesure_unitx" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					<property name="local_mesure_unity" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+					<property name="local_mesure_unitwidth" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<textElement>
+					<font fontName="Calibri"/>
+				</textElement>
+				<text><![CDATA[Nom et Prénom]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="220" y="110" width="230" height="20" uuid="60fdb0e4-c747-4bb1-bf06-5a7b70cfb6b5"/>
+				<textElement>
+					<font fontName="Calibri"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{typeBatiment}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="218" y="30" width="250" height="20" uuid="b829d522-4b87-4c11-83f7-3a91e50ea09e"/>
+				<textFieldExpression><![CDATA[$F{PointVente}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="50" y="110" width="150" height="20" uuid="b67de965-cb8d-4e11-b4f2-8e05fe752619"/>
+				<textElement>
+					<font fontName="Calibri"/>
+				</textElement>
+				<text><![CDATA[Valeur du contenu]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="50" y="30" width="150" height="20" uuid="6c0e0720-6751-4f62-a1c5-b169085ee1d4"/>
+				<textElement>
+					<font fontName="Calibri"/>
+				</textElement>
+				<text><![CDATA[Point de vente]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="50" y="190" width="150" height="20" uuid="d4c5c742-6d37-4383-a6ba-278323787df2"/>
+				<textElement>
+					<font fontName="Calibri"/>
+				</textElement>
+				<text><![CDATA[Taxe 14 %]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="50" y="70" width="150" height="20" uuid="eed3a35c-62ad-415a-93bc-fd1e77e63a7f"/>
+				<textElement rotation="None">
+					<font fontName="Calibri"/>
+				</textElement>
+				<text><![CDATA[Date de naissance]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="218" y="150" width="250" height="20" uuid="a70a859c-ec19-42e9-843f-a2f5daa7acc6"/>
+				<textElement>
+					<font fontName="Calibri"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{Periodicite}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="220" y="130" width="230" height="20" uuid="1f4e8ff7-6392-4c05-b96d-4c9983ff7f01"/>
+				<textFieldExpression><![CDATA[$F{primeNette}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="50" y="229" width="151" height="20" uuid="de53de42-1c6e-47bf-99f6-22249359ad47"/>
+				<text><![CDATA[Contribution TTC]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="50" y="130" width="150" height="20" uuid="b8b82899-492e-4531-b538-96ee190dbcb8"/>
+				<text><![CDATA[Prime Nette]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="218" y="170" width="230" height="20" uuid="12580134-304d-4c1f-8c1c-aa5d3adeb281"/>
+				<textFieldExpression><![CDATA[$F{primeHT}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="200" y="30" width="18" height="20" uuid="d5786a9f-fd70-484a-a3b5-796f9f6fb167"/>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="200" y="50" width="18" height="20" uuid="c5a32750-f6a4-4f16-b226-9eec024eb2aa"/>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="200" y="70" width="18" height="20" uuid="43efdbb5-45a9-42d5-8823-d5a8f6098cd9"/>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="200" y="90" width="18" height="20" uuid="efd65ba3-0923-44ac-9b3a-7a5142111959"/>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="200" y="110" width="18" height="20" uuid="0fa030c1-9c2c-4986-b68d-f1291b8e1798"/>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="200" y="130" width="18" height="20" uuid="5824337c-adfa-4332-8686-8bc6908f893a"/>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="200" y="150" width="18" height="20" uuid="28e84ecb-bb36-4f46-8327-523cc85b23f9"/>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="200" y="170" width="18" height="20" uuid="a3877a7d-4ae4-4a3a-b8e8-a7075a8d819a"/>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="200" y="190" width="18" height="20" uuid="e7b064a3-78a2-4d42-bc9e-76442b70bc59"/>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="200" y="210" width="18" height="20" uuid="92f20102-cb57-49c8-8742-de0038b05488"/>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="450" y="90" width="38" height="20" uuid="d8f6ade7-26dc-48f7-adca-c79f33f3d1df"/>
+				<text><![CDATA[DH]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="450" y="130" width="38" height="20" uuid="2500b9cc-698d-4cbd-a2f3-b027ffd9cbe5"/>
+				<text><![CDATA[DH]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="450" y="170" width="38" height="20" uuid="f3cf99f4-2207-4c3a-ae0d-98e0ce338522"/>
+				<text><![CDATA[DH]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="450" y="208" width="38" height="20" uuid="8c6b20e5-f1aa-46e2-bd90-c0ca36d99edd"/>
+				<text><![CDATA[DH]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="450" y="229" width="38" height="20" uuid="868d1877-bc66-44ad-bdaf-67bbac52795a"/>
+				<text><![CDATA[DH]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="200" y="230" width="18" height="20" uuid="5c3e3981-3d57-47bb-9e9a-fe61f0ae28fe"/>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="51" y="209" width="150" height="20" uuid="6482d1e2-2936-4851-85b7-7f4bb317857b"/>
+				<textElement>
+					<font fontName="Calibri"/>
+				</textElement>
+				<text><![CDATA[Contribution Evcat]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="219" y="190" width="228" height="20" uuid="86c38c2c-cf27-4767-81e3-03d2b96ef310"/>
+				<textFieldExpression><![CDATA[$F{taxe}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="450" y="188" width="38" height="20" uuid="943e144c-a637-41a9-bfea-6078e66601e5"/>
+				<text><![CDATA[DH]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="49" y="250" width="151" height="20" uuid="177e1af4-b387-4d38-95dc-503edf1cc0f5">
+					<printWhenExpression><![CDATA[!$F{prorata}.equals($F{primeHT})]]></printWhenExpression>
+				</reportElement>
+				<text><![CDATA[Prorata]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="50" y="270" width="151" height="20" uuid="655971a5-4859-4239-81ae-d9d94190cb39">
+					<printWhenExpression><![CDATA[!$F{prorata}.equals($F{primeHT})]]></printWhenExpression>
+				</reportElement>
+				<text><![CDATA[Prorata TTC]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="218" y="250" width="230" height="20" uuid="94d0ac64-1581-42b4-bbf0-c699e06df3db">
+					<printWhenExpression><![CDATA[!$F{prorata}.equals($F{primeHT})]]></printWhenExpression>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{prorata}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="219" y="270" width="230" height="20" uuid="e05e5ff8-8704-4f51-8e3b-52bd03850f69">
+					<printWhenExpression><![CDATA[!$F{prorata}.equals($F{primeHT})]]></printWhenExpression>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{prorataTTC}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="450" y="250" width="38" height="20" uuid="d47258cb-bbd0-43c5-9401-a5e4c8ed1cdd">
+					<printWhenExpression><![CDATA[!$F{prorata}.equals($F{primeHT})]]></printWhenExpression>
+				</reportElement>
+				<text><![CDATA[DH]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="450" y="270" width="38" height="20" uuid="bf152baa-f462-4ad8-a802-9f49a5302f5b">
+					<printWhenExpression><![CDATA[!$F{prorata}.equals($F{primeHT})]]></printWhenExpression>
+				</reportElement>
+				<text><![CDATA[DH]]></text>
+			</staticText>
+		</band>
+	</detail>
+	<pageFooter>
+		<band height="90">
+			<property name="local_mesure_unitheight" value="pixel"/>
+			<property name="com.jaspersoft.studio.unit.height" value="px"/>
+			<staticText>
+				<reportElement x="50" y="20" width="480" height="20" uuid="c1ab3da8-9f71-4370-b9f9-812688d7604f"/>
+				<textElement>
+					<font fontName="Calibri" size="8"/>
+				</textElement>
+				<text><![CDATA[Ce devis est fourni sous réserve d’une éventuelle expertise médicale et /ou surprime]]></text>
+			</staticText>
+		</band>
+	</pageFooter>
+</jasperReport>

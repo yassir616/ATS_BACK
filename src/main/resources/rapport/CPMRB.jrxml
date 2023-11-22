@@ -1,0 +1,541 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version last-->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Blank_A4" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="e80649e8-6ddc-4574-b969-bce3bcaf6973">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="One Empty Record"/>
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<field name="numeroSouscription" class="java.lang.String">
+		<fieldDescription><![CDATA[numeroSouscription]]></fieldDescription>
+	</field>
+	<field name="dateEffet" class="java.lang.String">
+		<fieldDescription><![CDATA[dateEffet]]></fieldDescription>
+	</field>
+	<field name="duree" class="java.lang.String">
+		<fieldDescription><![CDATA[duree]]></fieldDescription>
+	</field>
+	<field name="dateEcheance" class="java.lang.String">
+		<fieldDescription><![CDATA[dateEcheance]]></fieldDescription>
+	</field>
+	<field name="raisonSocial" class="java.lang.String">
+		<fieldDescription><![CDATA[raisonSocial]]></fieldDescription>
+	</field>
+	<field name="siegeSocial" class="java.lang.String">
+		<fieldDescription><![CDATA[siegeSocial]]></fieldDescription>
+	</field>
+	<field name="agence" class="java.lang.String">
+		<fieldDescription><![CDATA[agence]]></fieldDescription>
+	</field>
+	<field name="numHomologation" class="java.lang.String">
+		<fieldDescription><![CDATA[numHomologation]]></fieldDescription>
+	</field>
+	<field name="dateHomologation" class="java.lang.String">
+		<fieldDescription><![CDATA[dateHomologation]]></fieldDescription>
+	</field>
+	<field name="adresse" class="java.lang.String">
+		<fieldDescription><![CDATA[adresse]]></fieldDescription>
+	</field>
+	<field name="typePartenaire" class="java.lang.String">
+		<fieldDescription><![CDATA[typePartenaire]]></fieldDescription>
+	</field>
+	<field name="prenomSouscripteur" class="java.lang.String">
+		<fieldDescription><![CDATA[prenomSouscripteur]]></fieldDescription>
+	</field>
+	<field name="nomSouscripteur" class="java.lang.String">
+		<fieldDescription><![CDATA[nomSouscripteur]]></fieldDescription>
+	</field>
+	<field name="cinSouscripteur" class="java.lang.String">
+		<fieldDescription><![CDATA[cinSouscripteur]]></fieldDescription>
+	</field>
+	<field name="adresseSouscripteur" class="java.lang.String">
+		<fieldDescription><![CDATA[adresseSouscripteur]]></fieldDescription>
+	</field>
+	<field name="prenomAssure" class="java.lang.String">
+		<fieldDescription><![CDATA[prenomAssure]]></fieldDescription>
+	</field>
+	<field name="nomAssure" class="java.lang.String">
+		<fieldDescription><![CDATA[nomAssure]]></fieldDescription>
+	</field>
+	<field name="cinAssure" class="java.lang.String">
+		<fieldDescription><![CDATA[cinAssure]]></fieldDescription>
+	</field>
+	<field name="adresseAssure" class="java.lang.String">
+		<fieldDescription><![CDATA[adresseAssure]]></fieldDescription>
+	</field>
+	<field name="villeAssure" class="java.lang.String">
+		<fieldDescription><![CDATA[villeAssure]]></fieldDescription>
+	</field>
+	<field name="ribAssure" class="java.lang.String">
+		<fieldDescription><![CDATA[ribAssure]]></fieldDescription>
+	</field>
+	<field name="villeSouscripteur" class="java.lang.String">
+		<fieldDescription><![CDATA[villeSouscripteur]]></fieldDescription>
+	</field>
+	<field name="ribSouscripteur" class="java.lang.String">
+		<fieldDescription><![CDATA[ribSouscripteur]]></fieldDescription>
+	</field>
+	<field name="raisonSocialSous" class="java.lang.String">
+		<fieldDescription><![CDATA[raisonSocialSous]]></fieldDescription>
+	</field>
+	<field name="formeJuridiqueSous" class="java.lang.String">
+		<fieldDescription><![CDATA[formeJuridiqueSous]]></fieldDescription>
+	</field>
+	<field name="capitalSocialSous" class="java.lang.String">
+		<fieldDescription><![CDATA[capitalSocialSous]]></fieldDescription>
+	</field>
+	<field name="siegeSocialSous" class="java.lang.String">
+		<fieldDescription><![CDATA[siegeSocialSous]]></fieldDescription>
+	</field>
+	<field name="villeMoralSous" class="java.lang.String">
+		<fieldDescription><![CDATA[villeMoralSous]]></fieldDescription>
+	</field>
+	<field name="ribMoralSous" class="java.lang.String">
+		<fieldDescription><![CDATA[ribMoralSous]]></fieldDescription>
+	</field>
+	<field name="raisonSocialAssure" class="java.lang.String">
+		<fieldDescription><![CDATA[raisonSocialAssure]]></fieldDescription>
+	</field>
+	<field name="formeJuridiqueAssure" class="java.lang.String"/>
+	<field name="capitalSocialAssure" class="java.lang.String">
+		<fieldDescription><![CDATA[capitalSocialAssure]]></fieldDescription>
+	</field>
+	<field name="siegeSocialAssure" class="java.lang.String">
+		<fieldDescription><![CDATA[siegeSocialAssure]]></fieldDescription>
+	</field>
+	<field name="villeMoralAssure" class="java.lang.String">
+		<fieldDescription><![CDATA[villeMoralAssure]]></fieldDescription>
+	</field>
+	<field name="ribMoralAssure" class="java.lang.String">
+		<fieldDescription><![CDATA[ribMoralAssure]]></fieldDescription>
+	</field>
+	<field name="typeBatiment" class="java.lang.String">
+		<fieldDescription><![CDATA[typeBatiment]]></fieldDescription>
+	</field>
+	<field name="adresseBatiment" class="java.lang.String">
+		<fieldDescription><![CDATA[adresseBatiment]]></fieldDescription>
+	</field>
+	<field name="numTitreFoncier" class="java.lang.String">
+		<fieldDescription><![CDATA[numTitreFoncier]]></fieldDescription>
+	</field>
+	<field name="superficie" class="java.lang.String">
+		<fieldDescription><![CDATA[superficie]]></fieldDescription>
+	</field>
+	<field name="caracteristique" class="java.lang.String">
+		<fieldDescription><![CDATA[caracteristique]]></fieldDescription>
+	</field>
+	<field name="taciteReconduction" class="java.lang.String">
+		<fieldDescription><![CDATA[taciteReconduction]]></fieldDescription>
+	</field>
+	<field name="montantTTC" class="java.lang.String">
+		<fieldDescription><![CDATA[montantTTC]]></fieldDescription>
+	</field>
+	<field name="periodicite" class="java.lang.String">
+		<fieldDescription><![CDATA[periodicite]]></fieldDescription>
+	</field>
+	<field name="numeroCompte" class="java.lang.String">
+		<fieldDescription><![CDATA[numeroCompte]]></fieldDescription>
+	</field>
+	<field name="date" class="java.lang.String">
+		<fieldDescription><![CDATA[date]]></fieldDescription>
+	</field>
+	<detail>
+		<band height="801" splitType="Stretch">
+			<image>
+				<reportElement x="1" y="3" width="790" height="797" uuid="8da6d794-ae12-4bfc-9cab-8a496c9e45ad">
+					<property name="local_mesure_unitx" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					<property name="local_mesure_unity" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+					<property name="local_mesure_unitwidth" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="local_mesure_unitheight" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<imageExpression><![CDATA["C:/Users/umamda/Desktop/Takaful/takafulback/src/main/resources/rapport/CPMRB1.jpg"]]></imageExpression>
+			</image>
+			<textField isBlankWhenNull="true">
+				<reportElement x="120" y="136" width="120" height="20" uuid="c8090a9a-af07-4110-9cf0-9268b7346cfa"/>
+				<textElement>
+					<font size="9"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{numeroSouscription}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="330" y="136" width="100" height="20" uuid="5bde99a3-3ed8-4d6c-9123-e0d5fc15971b"/>
+				<textElement>
+					<font size="9"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{dateEffet}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="330" y="154" width="116" height="20" uuid="21540d7b-2569-4bb1-8b63-32d9e4b340ca"/>
+				<textElement>
+					<font size="9"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{duree}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="110" y="154" width="100" height="20" uuid="cddf51b1-0dc4-441f-8391-34762c700a0f"/>
+				<textElement>
+					<font size="9"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{dateEcheance}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="100" y="221" width="360" height="20" uuid="65077c14-8c96-423d-a5fb-eb0a19121874"/>
+				<textElement textAlignment="Center">
+					<font size="9"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{raisonSocial}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="90" y="241" width="140" height="20" uuid="1ae5dece-13d8-4f85-9ca7-f2ffc9dca751"/>
+				<textElement>
+					<font size="9"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{siegeSocial}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="330" y="241" width="155" height="20" uuid="14e1ea12-ec80-42b2-97b1-17c8ffe60563"/>
+				<textElement>
+					<font size="9"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{agence}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="101" y="259" width="109" height="20" uuid="2de243b7-731c-4ef2-9e68-e117bd12ed57"/>
+				<textElement textAlignment="Center">
+					<font size="9"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{numHomologation}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="338" y="259" width="121" height="20" uuid="10256394-4a27-4d43-93a4-09ac3b269f07"/>
+				<textElement textAlignment="Center">
+					<font size="9"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{dateHomologation}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="79" y="277" width="150" height="20" uuid="b48bb6df-1c0f-476a-9a1d-df66d8945e20"/>
+				<textElement>
+					<font size="9"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{adresse}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="350" y="278" width="134" height="20" uuid="6dfb3a38-e3bc-4639-8ebe-8d8979402367"/>
+				<textElement>
+					<font size="9"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{typePartenaire}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="287" y="596" width="160" height="20" uuid="be2af4dd-eb28-4073-81c2-34684faf60a8"/>
+				<textElement>
+					<font size="9"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{ribSouscripteur}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="306" y="578" width="154" height="20" uuid="2a2a881d-b1c1-4574-81fc-7a5fc9f3eac6"/>
+				<textElement textAlignment="Center">
+					<font size="9"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{villeSouscripteur}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="306" y="512" width="146" height="20" uuid="ed33022a-fe67-4aca-95bc-0ee92abfdd45"/>
+				<textElement>
+					<font size="9"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{prenomSouscripteur}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="306" y="528" width="145" height="20" uuid="91e6a3b0-a236-4e4e-8bd5-4c01187ebb2e"/>
+				<textElement>
+					<font size="9"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{nomSouscripteur}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="316" y="545" width="100" height="20" uuid="1d8bb754-ecae-4c3d-b8d2-a530c1103abb"/>
+				<textElement textAlignment="Center">
+					<font size="9"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{cinSouscripteur}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="303" y="562" width="186" height="20" uuid="94ed294f-9571-49f7-a040-37aec3578555"/>
+				<textElement>
+					<font size="9"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{adresseSouscripteur}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="298" y="730" width="148" height="20" uuid="130eda97-b56f-4f9f-bbcf-608f36986aec"/>
+				<textElement>
+					<font size="9"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{ribAssure}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="303" y="714" width="181" height="20" uuid="0801efd7-e8d9-45c1-a5f9-874b3a79e413"/>
+				<textElement textAlignment="Center">
+					<font size="9"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{villeAssure}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="303" y="698" width="176" height="20" uuid="35984e44-dd7f-4505-8176-8eb314e7da42"/>
+				<textElement>
+					<font size="9"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{adresseAssure}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="306" y="681" width="100" height="20" uuid="ab145aac-5db4-4d93-985a-48cca1bf4812"/>
+				<textElement>
+					<font size="9"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{cinAssure}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="298" y="664" width="136" height="20" uuid="177b0b7c-20ac-41af-bed0-5026f5a8353a"/>
+				<textElement>
+					<font size="9"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{nomAssure}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="306" y="649" width="140" height="20" uuid="18031e44-c231-4459-a23e-af3a2bf98da2"/>
+				<textElement>
+					<font size="9"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{prenomAssure}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="91" y="513" width="130" height="20" uuid="efc461c5-d70b-4328-8188-0d7c02523363"/>
+				<textElement>
+					<font size="9"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{raisonSocialSous}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="100" y="529" width="110" height="20" uuid="56cc7bc4-5b51-4070-a1f7-f479592014b9"/>
+				<textElement>
+					<font size="9"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{formeJuridiqueSous}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="92" y="545" width="109" height="20" uuid="7b36db6a-0b13-4ed6-b9cb-54900b0e27ad"/>
+				<textElement>
+					<font size="9"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{capitalSocialSous}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="90" y="562" width="119" height="20" uuid="9672ef8c-be81-4380-9d37-20ed3a0f25f4"/>
+				<textElement>
+					<font size="9"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{siegeSocialSous}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="79" y="579" width="118" height="20" uuid="11b3b0ec-efbb-4067-bc03-ee84791bcf2e"/>
+				<textElement>
+					<font size="9"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{villeMoralSous}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="56" y="595" width="140" height="20" uuid="c932af3d-d366-4ade-90ad-8b0e0e57ec17"/>
+				<textElement>
+					<font size="9"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{ribMoralSous}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="56" y="730" width="140" height="20" uuid="d6947ddb-36e2-430a-8e2c-aab5fe66c71a"/>
+				<textElement>
+					<font size="9"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{ribMoralAssure}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="56" y="714" width="173" height="20" uuid="48c28418-f414-497e-a81c-9fa669f288cf"/>
+				<textElement>
+					<font size="9"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{villeMoralAssure}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="92" y="698" width="141" height="20" uuid="f183fc58-88be-4fda-b023-d9263bbcb9a5"/>
+				<textElement>
+					<font size="9"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{siegeSocialAssure}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="92" y="681" width="116" height="20" uuid="a70c5b7f-a023-48aa-a3fd-5ad980342741"/>
+				<textElement>
+					<font size="9"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{capitalSocialAssure}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="100" y="665" width="108" height="20" uuid="f64798fe-b870-452b-b1b5-9b7b222ad895"/>
+				<textElement>
+					<font size="9"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{formeJuridiqueAssure}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="96" y="649" width="111" height="20" uuid="a69221ba-988f-4c65-8495-a3d76d4713fe"/>
+				<textElement>
+					<font size="9"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{raisonSocialAssure}]]></textFieldExpression>
+			</textField>
+		</band>
+		<band height="801">
+			<property name="local_mesure_unitheight" value="pixel"/>
+			<property name="com.jaspersoft.studio.unit.height" value="px"/>
+			<image>
+				<reportElement x="1" y="3" width="790" height="797" uuid="71934aa0-1a35-4119-b668-ba73853391ed">
+					<property name="local_mesure_unitx" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					<property name="local_mesure_unity" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+					<property name="local_mesure_unitwidth" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="local_mesure_unitheight" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<imageExpression><![CDATA["C:/Users/umamda/Desktop/Takaful/takafulback/src/main/resources/rapport/CPMRB2.jpg"]]></imageExpression>
+			</image>
+			<textField isBlankWhenNull="true">
+				<reportElement x="221" y="151" width="184" height="39" uuid="05a77e3a-9c43-4fcf-825d-c40c5f4c11cc"/>
+				<textElement textAlignment="Center">
+					<font size="9"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{typeBatiment}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="220" y="280" width="185" height="40" uuid="ef9466e2-5f2f-406c-b600-e0e1955c8101"/>
+				<textElement>
+					<font size="9"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{caracteristique}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="220" y="255" width="100" height="20" uuid="8af44633-37c0-4daf-a73f-9de166daed90"/>
+				<textElement textAlignment="Center">
+					<font size="9"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{superficie}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="216" y="230" width="189" height="20" uuid="3d271372-76bc-481e-9bd1-f6e18b6cea6e"/>
+				<textElement textAlignment="Center">
+					<font size="9"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{numTitreFoncier}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="216" y="195" width="189" height="25" uuid="709c2edb-5118-4cd2-9539-5a2ad2f5deab"/>
+				<textElement>
+					<font size="9"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{adresseBatiment}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="327" y="384" width="9" height="13" uuid="643c43f3-59d9-4631-8365-8c28ec95fe92">
+					<printWhenExpression><![CDATA[$F{taciteReconduction}.equals("true")?Boolean.TRUE:Boolean.FALSE]]></printWhenExpression>
+				</reportElement>
+				<text><![CDATA[X]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="327" y="406" width="10" height="13" uuid="c8e20cfe-956d-4bb4-879e-e221beb840b7">
+					<printWhenExpression><![CDATA[$F{taciteReconduction}.equals("false")?Boolean.TRUE:Boolean.FALSE]]></printWhenExpression>
+				</reportElement>
+				<text><![CDATA[X]]></text>
+			</staticText>
+		</band>
+		<band height="801">
+			<property name="local_mesure_unitheight" value="pixel"/>
+			<property name="com.jaspersoft.studio.unit.height" value="px"/>
+			<image>
+				<reportElement x="1" y="3" width="790" height="797" uuid="e9065a3f-aa69-4dd7-b282-f4e38d764c58">
+					<property name="local_mesure_unitx" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					<property name="local_mesure_unity" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+					<property name="local_mesure_unitwidth" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="local_mesure_unitheight" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<imageExpression><![CDATA["C:/Users/umamda/Desktop/Takaful/takafulback/src/main/resources/rapport/CPMRB3.jpg"]]></imageExpression>
+			</image>
+			<textField isBlankWhenNull="true">
+				<reportElement x="248" y="230" width="58" height="20" uuid="e0357380-6bd0-4cab-88c4-78f372aac56e"/>
+				<textElement>
+					<font size="9"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{montantTTC}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="246" y="247" width="74" height="20" uuid="076b7b06-edb2-4b4d-9fa9-ed9028ad22a5"/>
+				<textFieldExpression><![CDATA[$F{periodicite}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="247" y="268" width="58" height="20" uuid="2e269fa1-a1b4-4f1c-91a1-29e72d51a3dd"/>
+				<textFieldExpression><![CDATA[$F{montantTTC}]]></textFieldExpression>
+			</textField>
+		</band>
+		<band height="801">
+			<property name="local_mesure_unitheight" value="pixel"/>
+			<property name="com.jaspersoft.studio.unit.height" value="px"/>
+			<image>
+				<reportElement x="1" y="3" width="790" height="797" uuid="29e4bf15-bbf8-4292-baf7-28a9de977132">
+					<property name="local_mesure_unitx" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					<property name="local_mesure_unity" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+					<property name="local_mesure_unitwidth" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="local_mesure_unitheight" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<imageExpression><![CDATA["C:/Users/umamda/Desktop/Takaful/takafulback/src/main/resources/rapport/CPMRB4.jpg"]]></imageExpression>
+			</image>
+			<textField>
+				<reportElement x="150" y="551" width="284" height="20" uuid="723885ae-4043-4676-8a31-395ccb0915d1"/>
+				<textFieldExpression><![CDATA[$F{numeroCompte}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="390" y="609" width="100" height="20" uuid="6db034fd-7c0c-4aba-b433-95ed169f1f0c"/>
+				<textElement>
+					<font size="9"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{duree}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="225" y="609" width="55" height="20" uuid="76b9ffca-9e53-41e1-aa08-7b77b8d67ba1"/>
+				<textElement>
+					<font size="9"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{date}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="160" y="609" width="50" height="20" uuid="7ffe60c9-5d0c-4dea-948c-b01385940b61"/>
+				<textElement textAlignment="Center">
+					<font size="9"/>
+				</textElement>
+				<text><![CDATA[Rabat]]></text>
+			</staticText>
+		</band>
+	</detail>
+</jasperReport>

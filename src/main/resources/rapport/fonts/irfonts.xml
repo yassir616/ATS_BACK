@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<fontFamily name="Times New Roman">
+   <normal>net/sf/jasperreports/fonts/timesnewroman/Times_MS.ttf</normal>
+   <bold>net/sf/jasperreports/fonts/timesnewroman/Times_MS_Bold.ttf</bold>
+   <italic>net/sf/jasperreports/fonts/timesnewroman/Times_MS_Italic.ttf</italic>
+   <boldItalic>net/sf/jasperreports/fonts/timesnewroman/Times_MS_Bold_Italic.ttf</boldItalic>
+   <pdfEncoding>Identity-H</pdfEncoding>
+   <pdfEmbedded>true</pdfEmbedded>
+   <exportFonts>
+       <export key="net.sf.jasperreports.html">'Times New Roman', Arial, Helvetica, sans-serif</export>
+       <export key="net.sf.jasperreports.xhtml">'Times New Roman', Arial, Helvetica, sans-serif</export>
+   </exportFonts>
+</fontFamily>

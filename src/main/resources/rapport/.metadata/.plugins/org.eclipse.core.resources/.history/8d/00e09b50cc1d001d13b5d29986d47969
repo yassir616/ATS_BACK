@@ -1,0 +1,339 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version last-->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Acceptation" pageWidth="612" pageHeight="792" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="430adf11-5171-47a9-a551-ee24803582e9">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="One Empty Record"/>
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<field name="date" class="java.util.Date">
+		<fieldDescription><![CDATA[date]]></fieldDescription>
+	</field>
+	<field name="intermediaire" class="java.lang.String">
+		<fieldDescription><![CDATA[intermediaire]]></fieldDescription>
+	</field>
+	<field name="Nom du participant" class="java.lang.String">
+		<fieldDescription><![CDATA[nom]]></fieldDescription>
+	</field>
+	<field name="Agence" class="java.lang.String">
+		<fieldDescription><![CDATA[agence]]></fieldDescription>
+	</field>
+	<field name="N° acceptation" class="java.lang.String">
+		<fieldDescription><![CDATA[numeroAcceptation]]></fieldDescription>
+	</field>
+	<field name="Montant Mourabaha" class="java.lang.String">
+		<fieldDescription><![CDATA[montantMourabaha]]></fieldDescription>
+	</field>
+	<field name="Encours" class="java.lang.String">
+		<fieldDescription><![CDATA[encours]]></fieldDescription>
+	</field>
+	<field name="Cumul" class="java.lang.String">
+		<fieldDescription><![CDATA[cumul]]></fieldDescription>
+	</field>
+	<field name="Durée" class="java.lang.String">
+		<fieldDescription><![CDATA[duree]]></fieldDescription>
+	</field>
+	<field name="Différé" class="java.lang.String">
+		<fieldDescription><![CDATA[differe]]></fieldDescription>
+	</field>
+	<field name="montantCotisation" class="java.lang.String">
+		<fieldDescription><![CDATA[montantCotisation]]></fieldDescription>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="100" splitType="Stretch">
+			<staticText>
+				<reportElement positionType="FixRelativeToBottom" x="370" y="60" width="60" height="20" uuid="9b549704-8857-4cf9-aedc-a43930c7fb59"/>
+				<textElement>
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<text><![CDATA[Rabat, Le]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="430" y="60" width="100" height="20" uuid="9d8db704-2c3a-4d24-a564-43b0b7ca31e5"/>
+				<textElement>
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{date}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="370" y="80" width="160" height="20" uuid="4b842dfd-2e16-49e4-9ebc-06ac2e3f140d"/>
+				<textElement>
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{intermediaire}]]></textFieldExpression>
+			</textField>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="50" splitType="Stretch">
+			<staticText>
+				<reportElement x="40" y="20" width="52" height="20" uuid="6b0a721d-a71b-4c6d-a9f9-7ff6785f7e81"/>
+				<textElement>
+					<font fontName="Times New Roman" size="12" isBold="true" isUnderline="true"/>
+				</textElement>
+				<text><![CDATA[Objet:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="80" y="20" width="340" height="20" uuid="5bcc4cdd-3b6a-42e1-aecc-c31317782f4e"/>
+				<textElement>
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<text><![CDATA[Assurance Takaful Décès ITD MOURABAHA]]></text>
+			</staticText>
+		</band>
+	</pageHeader>
+	<detail>
+		<band height="459" splitType="Stretch">
+			<textField>
+				<reportElement x="220" y="10" width="110" height="20" uuid="03fb8789-c71f-426b-9607-42712bf378ff"/>
+				<textElement>
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{Nom du participant}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="80" y="10" width="127" height="20" uuid="21fa12ab-4ba4-444a-b3b2-63fa7b0dc627"/>
+				<textElement>
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<text><![CDATA[Nom du participant]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="220" y="30" width="110" height="20" uuid="71fb3298-84c5-435b-b10f-353460385163"/>
+				<textElement>
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{Agence}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="80" y="30" width="127" height="20" uuid="5ca684d9-d671-4063-8bab-ff697ca38334"/>
+				<textElement>
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<text><![CDATA[Agence]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="220" y="50" width="110" height="20" uuid="e0cad7c5-6df3-4308-a0ac-1a74e9470811"/>
+				<textElement>
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{N° acceptation}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="80" y="50" width="127" height="20" uuid="e85f2751-f165-4805-a921-c3a430950a60"/>
+				<textElement>
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<text><![CDATA[N° acceptation]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="220" y="90" width="110" height="20" uuid="da0128d1-5c8f-4a9d-afa9-d281a69bc30b"/>
+				<textElement>
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{Encours}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="80" y="90" width="127" height="20" uuid="91a2ccc5-e49b-4046-99ce-2aaa57107b6b"/>
+				<textElement>
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<text><![CDATA[Encours]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="220" y="110" width="110" height="20" uuid="c95ae1ad-d65b-4e4b-803a-626612fe466e"/>
+				<textElement>
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{Cumul}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="80" y="110" width="127" height="20" uuid="47bd5966-606a-4c32-b6d2-9cdc4462fd07"/>
+				<textElement>
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<text><![CDATA[Cumul]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="220" y="70" width="110" height="20" uuid="44bce76b-f0a0-443c-88de-e8792c7b5c6e"/>
+				<textElement>
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{Montant Mourabaha}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="80" y="70" width="127" height="20" uuid="d47df4a5-10f7-458b-8de8-bc8e99002ed3"/>
+				<textElement>
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<text><![CDATA[Montant Financement]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="207" y="10" width="13" height="20" uuid="44fb3c84-ebf4-4dd8-9360-2a6a729cdced"/>
+				<textElement>
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="207" y="30" width="13" height="20" uuid="b90cec07-7d46-4d21-a9ce-46f4cfbe0f52"/>
+				<textElement>
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="207" y="50" width="13" height="20" uuid="14f19275-7eb6-4e85-b545-abef5b10096e"/>
+				<textElement>
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="207" y="70" width="13" height="20" uuid="07109019-d91e-4bb2-9f08-fea9d9be608e"/>
+				<textElement>
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="207" y="90" width="13" height="20" uuid="89093224-1aaa-4488-88f5-2a89d111c6a5"/>
+				<textElement>
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="207" y="110" width="13" height="20" uuid="11a54c04-9314-49e9-9bd3-24418341a351"/>
+				<textElement>
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="330" y="70" width="30" height="20" uuid="008a1246-119d-429c-961f-49fb532f3810"/>
+				<textElement>
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<text><![CDATA[DHS]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="220" y="130" width="110" height="20" uuid="f9a9fd83-684b-40fb-bc08-6a9a17af139f"/>
+				<textElement>
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{Durée}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="80" y="130" width="127" height="20" uuid="42c921b5-698d-4427-9dff-d15b1d5be46e"/>
+				<textElement>
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<text><![CDATA[Durée]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="207" y="130" width="13" height="20" uuid="40065e57-8373-4f7c-8ca5-93b7c96dac54"/>
+				<textElement>
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="220" y="150" width="110" height="20" uuid="a70cbf63-10f7-4722-9d80-394116650eb0"/>
+				<textElement>
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{Différé}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="80" y="150" width="127" height="20" uuid="38602e6f-55db-4c13-8dcc-e1c397fcc90f"/>
+				<textElement>
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<text><![CDATA[Différé]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="207" y="150" width="13" height="20" uuid="efc772fe-e350-47a9-ad13-d9ba4b83bb01"/>
+				<textElement>
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="330" y="90" width="30" height="20" uuid="bf4595c4-54ca-487b-83a0-31009693e052"/>
+				<textElement>
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<text><![CDATA[DHS]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="330" y="110" width="30" height="20" uuid="c9e5a033-0d61-4559-8614-c754bf0f09bf"/>
+				<textElement>
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<text><![CDATA[DHS]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="330" y="130" width="30" height="20" uuid="1edfadce-a278-44e9-9d9c-205ed0816de7"/>
+				<textElement>
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<text><![CDATA[Mois]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="330" y="150" width="30" height="20" uuid="ecd0d864-a568-45bd-a777-8d1096b5e55f"/>
+				<textElement>
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<text><![CDATA[Mois]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="80" y="210" width="100" height="20" uuid="d9df2a2a-736d-43b1-a96f-0e1cc16fae12"/>
+				<textElement>
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<text><![CDATA[Messieurs,]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="80" y="240" width="474" height="20" uuid="298152bc-db4b-458d-a3e9-ae70addb7663"/>
+				<textElement>
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<text><![CDATA[Nous vous marquons notre accord pour la couverture du capital Financement décès ITD]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="40" y="260" width="514" height="20" uuid="87b5f7ba-93a5-4396-b620-b63d2075baa8"/>
+				<textElement>
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA["qui s'éléve à "+$F{Montant Mourabaha}+" DHS au tarif normal soit une participation TTC"]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="40" y="320" width="515" height="20" uuid="7b4a567e-e664-4251-b6c4-417631308728"/>
+				<textElement>
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<text><![CDATA[Nous vous en souhaitons bonne réception Meilleures salutations.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="280" y="410" width="100" height="20" uuid="4c793768-4066-49f9-bd4a-2098caac6d89"/>
+				<textElement>
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<text><![CDATA[Signature]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="40" y="280" width="340" height="20" uuid="bed8ca25-4e6c-4b66-87b4-0497d21fcef9"/>
+				<textElement>
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA["de "+$F{montantCotisation}+" DHS."]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+</jasperReport>

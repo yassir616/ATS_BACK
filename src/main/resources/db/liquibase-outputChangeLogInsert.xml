@@ -1,0 +1,2845 @@
+<?xml version="1.1" encoding="UTF-8" standalone="no"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog" xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.6.xsd">
+
+    <changeSet id="disable-keys" author="x" runAlways="true">
+        <sql>EXEC sp_msforeachtable "ALTER TABLE ? NOCHECK CONSTRAINT all"</sql>
+    </changeSet>
+
+    <changeSet author="umamda (generated)" id="1638879995979-18">
+        <insert tableName="autog_seq">
+            <column name="next_val" valueNumeric="52" />
+        </insert>
+    </changeSet>
+    <changeSet author="umamda (generated)" id="1638879995979-19">
+        <insert tableName="autogeneration_seq">
+            <column name="next_val" valueNumeric="64" />
+        </insert>
+    </changeSet>
+    <changeSet author="umamda (generated)" id="1638879995979-20">
+        <insert tableName="autogeneration_sequence">
+            <column name="next_val" valueNumeric="1" />
+        </insert>
+    </changeSet>
+    <changeSet author="umamda (generated)" id="1638879995979-21">
+        <insert tableName="autogeneration_sequence_sinistre_mrb">
+            <column name="next_val" valueNumeric="1" />
+        </insert>
+        <insert tableName="autogeneration_sequence_sinistre_mrb">
+            <column name="next_val" valueNumeric="1" />
+        </insert>
+    </changeSet>
+
+
+    <changeSet author="Dehaoui (generated)" id="1640692897760-57">
+        <insert tableName="region">
+            <column name="id" valueNumeric="1" />
+            <column name="name" value="Tanger-Tétouan-Al Hoceïma" />
+        </insert>
+        <insert tableName="region">
+            <column name="id" valueNumeric="2" />
+            <column name="name" value="l'Oriental" />
+        </insert>
+        <insert tableName="region">
+            <column name="id" valueNumeric="3" />
+            <column name="name" value="Fès-Meknès" />
+        </insert>
+        <insert tableName="region">
+            <column name="id" valueNumeric="4" />
+            <column name="name" value="Rabat-Salé-Kénitra" />
+        </insert>
+        <insert tableName="region">
+            <column name="id" valueNumeric="5" />
+            <column name="name" value="Béni Mellal-Khénifra" />
+        </insert>
+        <insert tableName="region">
+            <column name="id" valueNumeric="6" />
+            <column name="name" value="Casablanca-Settat" />
+        </insert>
+        <insert tableName="region">
+            <column name="id" valueNumeric="7" />
+            <column name="name" value="Marrakech-Safi" />
+        </insert>
+        <insert tableName="region">
+            <column name="id" valueNumeric="8" />
+            <column name="name" value="Drâa-Tafilalet" />
+        </insert>
+        <insert tableName="region">
+            <column name="id" valueNumeric="9" />
+            <column name="name" value="Souss-Massa" />
+        </insert>
+        <insert tableName="region">
+            <column name="id" valueNumeric="10" />
+            <column name="name" value="Guelmim-Oued Noun" />
+        </insert>
+        <insert tableName="region">
+            <column name="id" valueNumeric="11" />
+            <column name="name" value="Laâyoune-Sakia El Hamra" />
+        </insert>
+        <insert tableName="region">
+            <column name="id" valueNumeric="12" />
+            <column name="name" value="Dakhla-Oued Ed Dahab" />
+        </insert>
+    </changeSet>
+
+    <changeSet author="Dehaoui (generated)" id="1640692897760-77">
+        <insert tableName="ville">
+            <column name="id" valueNumeric="1" />
+            <column name="name" value="Aïn Harrouda" />
+            <column name="region_id" valueNumeric="6" />
+        </insert>
+        <insert tableName="ville">
+            <column name="id" valueNumeric="2" />
+            <column name="name" value="Ben Yakhlef" />
+            <column name="region_id" valueNumeric="6" />
+        </insert>
+        <insert tableName="ville">
+            <column name="id" valueNumeric="3" />
+            <column name="name" value="Bouskoura" />
+            <column name="region_id" valueNumeric="6" />
+        </insert>
+        <insert tableName="ville">
+            <column name="id" valueNumeric="4" />
+            <column name="name" value="Casablanca" />
+            <column name="region_id" valueNumeric="6" />
+        </insert>
+        <insert tableName="ville">
+            <column name="id" valueNumeric="5" />
+            <column name="name" value="Médiouna" />
+            <column name="region_id" valueNumeric="6" />
+        </insert>
+        <insert tableName="ville">
+            <column name="id" valueNumeric="6" />
+            <column name="name" value="Mohammadia" />
+            <column name="region_id" valueNumeric="6" />
+        </insert>
+        <insert tableName="ville">
+            <column name="id" valueNumeric="7" />
+            <column name="name" value="Tit Mellil" />
+            <column name="region_id" valueNumeric="6" />
+        </insert>
+        <insert tableName="ville">
+            <column name="id" valueNumeric="8" />
+            <column name="name" value="Ben Yakhlef" />
+            <column name="region_id" valueNumeric="6" />
+        </insert>
+        <insert tableName="ville">
+            <column name="id" valueNumeric="9" />
+            <column name="name" value="Bejaâd" />
+            <column name="region_id" valueNumeric="5" />
+        </insert>
+        <insert tableName="ville">
+            <column name="id" valueNumeric="10" />
+            <column name="name" value="Ben Ahmed" />
+            <column name="region_id" valueNumeric="6" />
+        </insert>
+        <insert tableName="ville">
+            <column name="id" valueNumeric="11" />
+            <column name="name" value="Benslimane" />
+            <column name="region_id" valueNumeric="6" />
+        </insert>
+        <insert tableName="ville">
+            <column name="id" valueNumeric="12" />
+            <column name="name" value="Berrechid" />
+            <column name="region_id" valueNumeric="6" />
+        </insert>
+        <insert tableName="ville">
+            <column name="id" valueNumeric="13" />
+            <column name="name" value="Boujniba" />
+            <column name="region_id" valueNumeric="5" />
+        </insert>
+        <insert tableName="ville">
+            <column name="id" valueNumeric="14" />
+            <column name="name" value="Boulanouare" />
+            <column name="region_id" valueNumeric="5" />
+        </insert>
+        <insert tableName="ville">
+            <column name="id" valueNumeric="15" />
+            <column name="name" value="Bouznika" />
+            <column name="region_id" valueNumeric="6" />
+        </insert>
+        <insert tableName="ville">
+            <column name="id" valueNumeric="16" />
+            <column name="name" value="Deroua" />
+            <column name="region_id" valueNumeric="6" />
+        </insert>
+        <insert tableName="ville">
+            <column name="id" valueNumeric="17" />
+            <column name="name" value="El Borouj" />
+            <column name="region_id" valueNumeric="6" />
+        </insert>
+        <insert tableName="ville">
+            <column name="id" valueNumeric="18" />
+            <column name="name" value="El Gara" />
+            <column name="region_id" valueNumeric="6" />
+        </insert>
+        <insert tableName="ville">
+            <column name="id" valueNumeric="19" />
+            <column name="name" value="Guisser" />
+            <column name="region_id" valueNumeric="6" />
+        </insert>
+        <insert tableName="ville">
+            <column name="id" valueNumeric="20" />
+            <column name="name" value="Hattane" />
+            <column name="region_id" valueNumeric="5" />
+        </insert>
+        <insert tableName="ville">
+            <column name="id" valueNumeric="21" />
+            <column name="name" value="Khouribga" />
+            <column name="region_id" valueNumeric="5" />
+        </insert>
+        <insert tableName="ville">
+            <column name="id" valueNumeric="22" />
+            <column name="name" value="Loulad" />
+            <column name="region_id" valueNumeric="6" />
+        </insert>
+        <insert tableName="ville">
+            <column name="id" valueNumeric="23" />
+            <column name="name" value="Oued Zem" />
+            <column name="region_id" valueNumeric="5" />
+        </insert>
+        <insert tableName="ville">
+            <column name="id" valueNumeric="24" />
+            <column name="name" value="Oulad Abbou" />
+            <column name="region_id" valueNumeric="6" />
+        </insert>
+        <insert tableName="ville">
+            <column name="id" valueNumeric="25" />
+            <column name="name" value="Oulad H'Riz Sahel" />
+            <column name="region_id" valueNumeric="6" />
+        </insert>
+        <insert tableName="ville">
+            <column name="id" valueNumeric="26" />
+            <column name="name" value="Oulad M'rah" />
+            <column name="region_id" valueNumeric="6" />
+        </insert>
+        <insert tableName="ville">
+            <column name="id" valueNumeric="27" />
+            <column name="name" value="Oulad Saïd" />
+            <column name="region_id" valueNumeric="6" />
+        </insert>
+        <insert tableName="ville">
+            <column name="id" valueNumeric="28" />
+            <column name="name" value="Oulad Sidi Ben Daoud" />
+            <column name="region_id" valueNumeric="6" />
+        </insert>
+        <insert tableName="ville">
+            <column name="id" valueNumeric="29" />
+            <column name="name" value="Ras El Aïn" />
+            <column name="region_id" valueNumeric="6" />
+        </insert>
+        <insert tableName="ville">
+            <column name="id" valueNumeric="30" />
+            <column name="name" value="Settat" />
+            <column name="region_id" valueNumeric="6" />
+        </insert>
+        <insert tableName="ville">
+            <column name="id" valueNumeric="31" />
+            <column name="name" value="Sidi Rahhal Chataï" />
+            <column name="region_id" valueNumeric="6" />
+        </insert>
+        <insert tableName="ville">
+            <column name="id" valueNumeric="32" />
+            <column name="name" value="Soualem" />
+            <column name="region_id" valueNumeric="6" />
+        </insert>
+        <insert tableName="ville">
+            <column name="id" valueNumeric="33" />
+            <column name="name" value="Azemmour" />
+            <column name="region_id" valueNumeric="6" />
+        </insert>
+        <insert tableName="ville">
+            <column name="id" valueNumeric="34" />
+            <column name="name" value="Bir Jdid" />
+            <column name="region_id" valueNumeric="6" />
+        </insert>
+        <insert tableName="ville">
+            <column name="id" valueNumeric="35" />
+            <column name="name" value="Bouguedra" />
+            <column name="region_id" valueNumeric="7" />
+        </insert>
+        <insert tableName="ville">
+            <column name="id" valueNumeric="36" />
+            <column name="name" value="Echemmaia" />
+            <column name="region_id" valueNumeric="7" />
+        </insert>
+        <insert tableName="ville">
+            <column name="id" valueNumeric="37" />
+            <column name="name" value="El Jadida" />
+            <column name="region_id" valueNumeric="6" />
+        </insert>
+        <insert tableName="ville">
+            <column name="id" valueNumeric="38" />
+            <column name="name" value="Hrara" />
+            <column name="region_id" valueNumeric="7" />
+        </insert>
+        <insert tableName="ville">
+            <column name="id" valueNumeric="39" />
+            <column name="name" value="Ighoud" />
+            <column name="region_id" valueNumeric="7" />
+        </insert>
+        <insert tableName="ville">
+            <column name="id" valueNumeric="40" />
+            <column name="name" value="Jamâat Shaim" />
+            <column name="region_id" valueNumeric="7" />
+        </insert>
+        <insert tableName="ville">
+            <column name="id" valueNumeric="41" />
+            <column name="name" value="Jorf Lasfar" />
+            <column name="region_id" valueNumeric="6" />
+        </insert>
+        <insert tableName="ville">
+            <column name="id" valueNumeric="42" />
+            <column name="name" value="Khemis Zemamra" />
+            <column name="region_id" valueNumeric="6" />
+        </insert>
+        <insert tableName="ville">
+            <column name="id" valueNumeric="43" />
+            <column name="name" value="Laaounate" />
+            <column name="region_id" valueNumeric="6" />
+        </insert>
+        <insert tableName="ville">
+            <column name="id" valueNumeric="44" />
+            <column name="name" value="Moulay Abdallah" />
+            <column name="region_id" valueNumeric="6" />
+        </insert>
+        <insert tableName="ville">
+            <column name="id" valueNumeric="45" />
+            <column name="name" value="Oualidia" />
+            <column name="region_id" valueNumeric="6" />
+        </insert>
+        <insert tableName="ville">
+            <column name="id" valueNumeric="46" />
+            <column name="name" value="Oulad Amrane" />
+            <column name="region_id" valueNumeric="6" />
+        </insert>
+        <insert tableName="ville">
+            <column name="id" valueNumeric="47" />
+            <column name="name" value="Oulad Frej" />
+            <column name="region_id" valueNumeric="6" />
+        </insert>
+        <insert tableName="ville">
+            <column name="id" valueNumeric="48" />
+            <column name="name" value="Oulad Ghadbane" />
+            <column name="region_id" valueNumeric="6" />
+        </insert>
+        <insert tableName="ville">
+            <column name="id" valueNumeric="49" />
+            <column name="name" value="Safi" />
+            <column name="region_id" valueNumeric="7" />
+        </insert>
+        <insert tableName="ville">
+            <column name="id" valueNumeric="50" />
+            <column name="name" value="Sebt El Maârif" />
+            <column name="region_id" valueNumeric="6" />
+        </insert>
+        <insert tableName="ville">
+            <column name="id" valueNumeric="51" />
+            <column name="name" value="Sebt Gzoula" />
+            <column name="region_id" valueNumeric="7" />
+        </insert>
+        <insert tableName="ville">
+            <column name="id" valueNumeric="52" />
+            <column name="name" value="Sidi Ahmed" />
+            <column name="region_id" valueNumeric="7" />
+        </insert>
+        <insert tableName="ville">
+            <column name="id" valueNumeric="53" />
+            <column name="name" value="Sidi Ali Ban Hamdouche" />
+            <column name="region_id" valueNumeric="6" />
+        </insert>
+        <insert tableName="ville">
+            <column name="id" valueNumeric="54" />
+            <column name="name" value="Sidi Bennour" />
+            <column name="region_id" valueNumeric="6" />
+        </insert>
+        <insert tableName="ville">
+            <column name="id" valueNumeric="55" />
+            <column name="name" value="Sidi Bouzid" />
+            <column name="region_id" valueNumeric="6" />
+        </insert>
+        <insert tableName="ville">
+            <column name="id" valueNumeric="56" />
+            <column name="name" value="Sidi Smaïl" />
+            <column name="region_id" valueNumeric="6" />
+        </insert>
+        <insert tableName="ville">
+            <column name="id" valueNumeric="57" />
+            <column name="name" value="Youssoufia" />
+            <column name="region_id" valueNumeric="7" />
+        </insert>
+        <insert tableName="ville">
+            <column name="id" valueNumeric="58" />
+            <column name="name" value="Fès" />
+            <column name="region_id" valueNumeric="3" />
+        </insert>
+        <insert tableName="ville">
+            <column name="id" valueNumeric="59" />
+            <column name="name" value="Aïn Cheggag" />
+            <column name="region_id" valueNumeric="3" />
+        </insert>
+        <insert tableName="ville">
+            <column name="id" valueNumeric="60" />
+            <column name="name" value="Bhalil" />
+            <column name="region_id" valueNumeric="3" />
+        </insert>
+        <insert tableName="ville">
+            <column name="id" valueNumeric="61" />
+            <column name="name" value="Boulemane" />
+            <column name="region_id" valueNumeric="3" />
+        </insert>
+        <insert tableName="ville">
+            <column name="id" valueNumeric="62" />
+            <column name="name" value="El Menzel" />
+            <column name="region_id" valueNumeric="3" />
+        </insert>
+        <insert tableName="ville">
+            <column name="id" valueNumeric="63" />
+            <column name="name" value="Guigou" />
+            <column name="region_id" valueNumeric="3" />
+        </insert>
+        <insert tableName="ville">
+            <column name="id" valueNumeric="64" />
+            <column name="name" value="Imouzzer Kandar" />
+            <column name="region_id" valueNumeric="3" />
+        </insert>
+        <insert tableName="ville">
+            <column name="id" valueNumeric="65" />
+            <column name="name" value="Imouzzer Marmoucha" />
+            <column name="region_id" valueNumeric="3" />
+        </insert>
+        <insert tableName="ville">
+            <column name="id" valueNumeric="66" />
+            <column name="name" value="Missour" />
+            <column name="region_id" valueNumeric="3" />
+        </insert>
+        <insert tableName="ville">
+            <column name="id" valueNumeric="67" />
+            <column name="name" value="Moulay Yaâcoub" />
+            <column name="region_id" valueNumeric="3" />
+        </insert>
+        <insert tableName="ville">
+            <column name="id" valueNumeric="68" />
+            <column name="name" value="Ouled Tayeb" />
+            <column name="region_id" valueNumeric="3" />
+        </insert>
+        <insert tableName="ville">
+            <column name="id" valueNumeric="69" />
+            <column name="name" value="Outat El Haj" />
+            <column name="region_id" valueNumeric="3" />
+        </insert>
+        <insert tableName="ville">
+            <column name="id" valueNumeric="70" />
+            <column name="name" value="Ribate El Kheir" />
+            <column name="region_id" valueNumeric="3" />
+        </insert>
+        <insert tableName="ville">
+            <column name="id" valueNumeric="71" />
+            <column name="name" value="Séfrou" />
+            <column name="region_id" valueNumeric="3" />
+        </insert>
+        <insert tableName="ville">
+            <column name="id" valueNumeric="72" />
+            <column name="name" value="Skhinate" />
+            <column name="region_id" valueNumeric="3" />
+        </insert>
+        <insert tableName="ville">
+            <column name="id" valueNumeric="73" />
+            <column name="name" value="Tafajight" />
+            <column name="region_id" valueNumeric="3" />
+        </insert>
+        <insert tableName="ville">
+            <column name="id" valueNumeric="74" />
+            <column name="name" value="Arbaoua" />
+            <column name="region_id" valueNumeric="4" />
+        </insert>
+        <insert tableName="ville">
+            <column name="id" valueNumeric="75" />
+            <column name="name" value="Aïn Dorij" />
+            <column name="region_id" valueNumeric="1" />
+        </insert>
+        <insert tableName="ville">
+            <column name="id" valueNumeric="76" />
+            <column name="name" value="Dar Gueddari" />
+            <column name="region_id" valueNumeric="4" />
+        </insert>
+        <insert tableName="ville">
+            <column name="id" valueNumeric="77" />
+            <column name="name" value="Had Kourt" />
+            <column name="region_id" valueNumeric="4" />
+        </insert>
+        <insert tableName="ville">
+            <column name="id" valueNumeric="78" />
+            <column name="name" value="Jorf El Melha" />
+            <column name="region_id" valueNumeric="4" />
+        </insert>
+        <insert tableName="ville">
+            <column name="id" valueNumeric="79" />
+            <column name="name" value="Kénitra" />
+            <column name="region_id" valueNumeric="4" />
+        </insert>
+        <insert tableName="ville">
+            <column name="id" valueNumeric="80" />
+            <column name="name" value="Khenichet" />
+            <column name="region_id" valueNumeric="4" />
+        </insert>
+        <insert tableName="ville">
+            <column name="id" valueNumeric="81" />
+            <column name="name" value="Lalla Mimouna" />
+            <column name="region_id" valueNumeric="4" />
+        </insert>
+        <insert tableName="ville">
+            <column name="id" valueNumeric="82" />
+            <column name="name" value="Mechra Bel Ksiri" />
+            <column name="region_id" valueNumeric="4" />
+        </insert>
+        <insert tableName="ville">
+            <column name="id" valueNumeric="83" />
+            <column name="name" value="Mehdia" />
+            <column name="region_id" valueNumeric="4" />
+        </insert>
+        <insert tableName="ville">
+            <column name="id" valueNumeric="84" />
+            <column name="name" value="Moulay Bousselham" />
+            <column name="region_id" valueNumeric="4" />
+        </insert>
+        <insert tableName="ville">
+            <column name="id" valueNumeric="85" />
+            <column name="name" value="Sidi Allal Tazi" />
+            <column name="region_id" valueNumeric="4" />
+        </insert>
+        <insert tableName="ville">
+            <column name="id" valueNumeric="86" />
+            <column name="name" value="Sidi Kacem" />
+            <column name="region_id" valueNumeric="4" />
+        </insert>
+        <insert tableName="ville">
+            <column name="id" valueNumeric="87" />
+            <column name="name" value="Sidi Slimane" />
+            <column name="region_id" valueNumeric="4" />
+        </insert>
+        <insert tableName="ville">
+            <column name="id" valueNumeric="88" />
+            <column name="name" value="Sidi Taibi" />
+            <column name="region_id" valueNumeric="4" />
+        </insert>
+        <insert tableName="ville">
+            <column name="id" valueNumeric="89" />
+            <column name="name" value="Sidi Yahya El Gharb" />
+            <column name="region_id" valueNumeric="4" />
+        </insert>
+        <insert tableName="ville">
+            <column name="id" valueNumeric="90" />
+            <column name="name" value="Souk El Arbaa" />
+            <column name="region_id" valueNumeric="4" />
+        </insert>
+        <insert tableName="ville">
+            <column name="id" valueNumeric="91" />
+            <column name="name" value="Akka" />
+            <column name="region_id" valueNumeric="9" />
+        </insert>
+        <insert tableName="ville">
+            <column name="id" valueNumeric="92" />
+            <column name="name" value="Assa" />
+            <column name="region_id" valueNumeric="10" />
+        </insert>
+        <insert tableName="ville">
+            <column name="id" valueNumeric="93" />
+            <column name="name" value="Bouizakarne" />
+            <column name="region_id" valueNumeric="10" />
+        </insert>
+        <insert tableName="ville">
+            <column name="id" valueNumeric="94" />
+            <column name="name" value="El Ouatia" />
+            <column name="region_id" valueNumeric="10" />
+        </insert>
+        <insert tableName="ville">
+            <column name="id" valueNumeric="95" />
+            <column name="name" value="Es-Semara" />
+            <column name="region_id" valueNumeric="11" />
+        </insert>
+        <insert tableName="ville">
+            <column name="id" valueNumeric="96" />
+            <column name="name" value="Fam El Hisn" />
+            <column name="region_id" valueNumeric="9" />
+        </insert>
+        <insert tableName="ville">
+            <column name="id" valueNumeric="97" />
+            <column name="name" value="Foum Zguid" />
+            <column name="region_id" valueNumeric="9" />
+        </insert>
+        <insert tableName="ville">
+            <column name="id" valueNumeric="98" />
+            <column name="name" value="Guelmim" />
+            <column name="region_id" valueNumeric="10" />
+        </insert>
+        <insert tableName="ville">
+            <column name="id" valueNumeric="99" />
+            <column name="name" value="Taghjijt" />
+            <column name="region_id" valueNumeric="10" />
+        </insert>
+        <insert tableName="ville">
+            <column name="id" valueNumeric="100" />
+            <column name="name" value="Tan-Tan" />
+            <column name="region_id" valueNumeric="10" />
+        </insert>
+        <insert tableName="ville">
+            <column name="id" valueNumeric="101" />
+            <column name="name" value="Tata" />
+            <column name="region_id" valueNumeric="9" />
+        </insert>
+        <insert tableName="ville">
+            <column name="id" valueNumeric="102" />
+            <column name="name" value="Zag" />
+            <column name="region_id" valueNumeric="10" />
+        </insert>
+        <insert tableName="ville">
+            <column name="id" valueNumeric="103" />
+            <column name="name" value="Marrakech" />
+            <column name="region_id" valueNumeric="7" />
+        </insert>
+        <insert tableName="ville">
+            <column name="id" valueNumeric="104" />
+            <column name="name" value="Ait Daoud" />
+            <column name="region_id" valueNumeric="7" />
+        </insert>
+        <insert tableName="ville">
+            <column name="id" valueNumeric="115" />
+            <column name="name" value="Amizmiz" />
+            <column name="region_id" valueNumeric="7" />
+        </insert>
+        <insert tableName="ville">
+            <column name="id" valueNumeric="116" />
+            <column name="name" value="Assahrij" />
+            <column name="region_id" valueNumeric="7" />
+        </insert>
+        <insert tableName="ville">
+            <column name="id" valueNumeric="117" />
+            <column name="name" value="Aït Ourir" />
+            <column name="region_id" valueNumeric="7" />
+        </insert>
+        <insert tableName="ville">
+            <column name="id" valueNumeric="118" />
+            <column name="name" value="Ben Guerir" />
+            <column name="region_id" valueNumeric="7" />
+        </insert>
+        <insert tableName="ville">
+            <column name="id" valueNumeric="119" />
+            <column name="name" value="Chichaoua" />
+            <column name="region_id" valueNumeric="7" />
+        </insert>
+        <insert tableName="ville">
+            <column name="id" valueNumeric="120" />
+            <column name="name" value="El Hanchane" />
+            <column name="region_id" valueNumeric="7" />
+        </insert>
+        <insert tableName="ville">
+            <column name="id" valueNumeric="121" />
+            <column name="name" value="El Kelaâ des Sraghna" />
+            <column name="region_id" valueNumeric="7" />
+        </insert>
+        <insert tableName="ville">
+            <column name="id" valueNumeric="122" />
+            <column name="name" value="Essaouira" />
+            <column name="region_id" valueNumeric="7" />
+        </insert>
+        <insert tableName="ville">
+            <column name="id" valueNumeric="123" />
+            <column name="name" value="Fraïta" />
+            <column name="region_id" valueNumeric="7" />
+        </insert>
+        <insert tableName="ville">
+            <column name="id" valueNumeric="124" />
+            <column name="name" value="Ghmate" />
+            <column name="region_id" valueNumeric="7" />
+        </insert>
+        <insert tableName="ville">
+            <column name="id" valueNumeric="125" />
+            <column name="name" value="Ighounane" />
+            <column name="region_id" valueNumeric="8" />
+        </insert>
+        <insert tableName="ville">
+            <column name="id" valueNumeric="126" />
+            <column name="name" value="Imintanoute" />
+            <column name="region_id" valueNumeric="7" />
+        </insert>
+        <insert tableName="ville">
+            <column name="id" valueNumeric="127" />
+            <column name="name" value="Kattara" />
+            <column name="region_id" valueNumeric="7" />
+        </insert>
+        <insert tableName="ville">
+            <column name="id" valueNumeric="128" />
+            <column name="name" value="Lalla Takerkoust" />
+            <column name="region_id" valueNumeric="7" />
+        </insert>
+        <insert tableName="ville">
+            <column name="id" valueNumeric="129" />
+            <column name="name" value="Loudaya" />
+            <column name="region_id" valueNumeric="7" />
+        </insert>
+        <insert tableName="ville">
+            <column name="id" valueNumeric="130" />
+            <column name="name" value="Lâattaouia" />
+            <column name="region_id" valueNumeric="7" />
+        </insert>
+        <insert tableName="ville">
+            <column name="id" valueNumeric="131" />
+            <column name="name" value="Moulay Brahim" />
+            <column name="region_id" valueNumeric="7" />
+        </insert>
+        <insert tableName="ville">
+            <column name="id" valueNumeric="132" />
+            <column name="name" value="Mzouda" />
+            <column name="region_id" valueNumeric="7" />
+        </insert>
+        <insert tableName="ville">
+            <column name="id" valueNumeric="133" />
+            <column name="name" value="Ounagha" />
+            <column name="region_id" valueNumeric="7" />
+        </insert>
+        <insert tableName="ville">
+            <column name="id" valueNumeric="134" />
+            <column name="name" value="Sid L'Mokhtar" />
+            <column name="region_id" valueNumeric="7" />
+        </insert>
+        <insert tableName="ville">
+            <column name="id" valueNumeric="135" />
+            <column name="name" value="Sid Zouin" />
+            <column name="region_id" valueNumeric="7" />
+        </insert>
+        <insert tableName="ville">
+            <column name="id" valueNumeric="136" />
+            <column name="name" value="Sidi Abdallah Ghiat" />
+            <column name="region_id" valueNumeric="7" />
+        </insert>
+        <insert tableName="ville">
+            <column name="id" valueNumeric="137" />
+            <column name="name" value="Sidi Bou Othmane" />
+            <column name="region_id" valueNumeric="7" />
+        </insert>
+        <insert tableName="ville">
+            <column name="id" valueNumeric="138" />
+            <column name="name" value="Sidi Rahhal" />
+            <column name="region_id" valueNumeric="7" />
+        </insert>
+        <insert tableName="ville">
+            <column name="id" valueNumeric="139" />
+            <column name="name" value="Skhour Rehamna" />
+            <column name="region_id" valueNumeric="7" />
+        </insert>
+        <insert tableName="ville">
+            <column name="id" valueNumeric="140" />
+            <column name="name" value="Smimou" />
+            <column name="region_id" valueNumeric="7" />
+        </insert>
+        <insert tableName="ville">
+            <column name="id" valueNumeric="141" />
+            <column name="name" value="Tafetachte" />
+            <column name="region_id" valueNumeric="7" />
+        </insert>
+        <insert tableName="ville">
+            <column name="id" valueNumeric="142" />
+            <column name="name" value="Tahannaout" />
+            <column name="region_id" valueNumeric="7" />
+        </insert>
+        <insert tableName="ville">
+            <column name="id" valueNumeric="143" />
+            <column name="name" value="Talmest" />
+            <column name="region_id" valueNumeric="7" />
+        </insert>
+        <insert tableName="ville">
+            <column name="id" valueNumeric="144" />
+            <column name="name" value="Tamallalt" />
+            <column name="region_id" valueNumeric="7" />
+        </insert>
+        <insert tableName="ville">
+            <column name="id" valueNumeric="145" />
+            <column name="name" value="Tamanar" />
+            <column name="region_id" valueNumeric="7" />
+        </insert>
+        <insert tableName="ville">
+            <column name="id" valueNumeric="146" />
+            <column name="name" value="Tamansourt" />
+            <column name="region_id" valueNumeric="7" />
+        </insert>
+        <insert tableName="ville">
+            <column name="id" valueNumeric="147" />
+            <column name="name" value="Tameslouht" />
+            <column name="region_id" valueNumeric="7" />
+        </insert>
+        <insert tableName="ville">
+            <column name="id" valueNumeric="148" />
+            <column name="name" value="Tanalt" />
+            <column name="region_id" valueNumeric="9" />
+        </insert>
+        <insert tableName="ville">
+            <column name="id" valueNumeric="149" />
+            <column name="name" value="Zeubelemok" />
+            <column name="region_id" valueNumeric="7" />
+        </insert>
+        <insert tableName="ville">
+            <column name="id" valueNumeric="150" />
+            <column name="name" value="Meknès?" />
+            <column name="region_id" valueNumeric="3" />
+        </insert>
+        <insert tableName="ville">
+            <column name="id" valueNumeric="151" />
+            <column name="name" value="Khénifra" />
+            <column name="region_id" valueNumeric="5" />
+        </insert>
+        <insert tableName="ville">
+            <column name="id" valueNumeric="152" />
+            <column name="name" value="Agourai" />
+            <column name="region_id" valueNumeric="3" />
+        </insert>
+        <insert tableName="ville">
+            <column name="id" valueNumeric="153" />
+            <column name="name" value="Ain Taoujdate" />
+            <column name="region_id" valueNumeric="3" />
+        </insert>
+        <insert tableName="ville">
+            <column name="id" valueNumeric="154" />
+            <column name="name" value="MyAliCherif" />
+            <column name="region_id" valueNumeric="8" />
+        </insert>
+        <insert tableName="ville">
+            <column name="id" valueNumeric="155" />
+            <column name="name" value="Rissani" />
+            <column name="region_id" valueNumeric="8" />
+        </insert>
+        <insert tableName="ville">
+            <column name="id" valueNumeric="156" />
+            <column name="name" value="Amalou Ighriben" />
+            <column name="region_id" valueNumeric="5" />
+        </insert>
+        <insert tableName="ville">
+            <column name="id" valueNumeric="157" />
+            <column name="name" value="Aoufous" />
+            <column name="region_id" valueNumeric="8" />
+        </insert>
+        <insert tableName="ville">
+            <column name="id" valueNumeric="158" />
+            <column name="name" value="Arfoud" />
+            <column name="region_id" valueNumeric="8" />
+        </insert>
+        <insert tableName="ville">
+            <column name="id" valueNumeric="159" />
+            <column name="name" value="Azrou" />
+            <column name="region_id" valueNumeric="3" />
+        </insert>
+        <insert tableName="ville">
+            <column name="id" valueNumeric="160" />
+            <column name="name" value="Aïn Jemaa" />
+            <column name="region_id" valueNumeric="3" />
+        </insert>
+        <insert tableName="ville">
+            <column name="id" valueNumeric="161" />
+            <column name="name" value="Aïn Karma" />
+            <column name="region_id" valueNumeric="3" />
+        </insert>
+        <insert tableName="ville">
+            <column name="id" valueNumeric="162" />
+            <column name="name" value="Aïn Leuh" />
+            <column name="region_id" valueNumeric="3" />
+        </insert>
+        <insert tableName="ville">
+            <column name="id" valueNumeric="163" />
+            <column name="name" value="Aït Boubidmane" />
+            <column name="region_id" valueNumeric="3" />
+        </insert>
+        <insert tableName="ville">
+            <column name="id" valueNumeric="164" />
+            <column name="name" value="Aït Ishaq" />
+            <column name="region_id" valueNumeric="5" />
+        </insert>
+        <insert tableName="ville">
+            <column name="id" valueNumeric="165" />
+            <column name="name" value="Boudnib" />
+            <column name="region_id" valueNumeric="8" />
+        </insert>
+        <insert tableName="ville">
+            <column name="id" valueNumeric="166" />
+            <column name="name" value="Boufakrane" />
+            <column name="region_id" valueNumeric="3" />
+        </insert>
+        <insert tableName="ville">
+            <column name="id" valueNumeric="167" />
+            <column name="name" value="Boumia" />
+            <column name="region_id" valueNumeric="8" />
+        </insert>
+        <insert tableName="ville">
+            <column name="id" valueNumeric="168" />
+            <column name="name" value="El Hajeb" />
+            <column name="region_id" valueNumeric="3" />
+        </insert>
+        <insert tableName="ville">
+            <column name="id" valueNumeric="169" />
+            <column name="name" value="Elkbab" />
+            <column name="region_id" valueNumeric="5" />
+        </insert>
+        <insert tableName="ville">
+            <column name="id" valueNumeric="170" />
+            <column name="name" value="Er-Rich" />
+            <column name="region_id" valueNumeric="5" />
+        </insert>
+        <insert tableName="ville">
+            <column name="id" valueNumeric="171" />
+            <column name="name" value="Errachidia" />
+            <column name="region_id" valueNumeric="8" />
+        </insert>
+        <insert tableName="ville">
+            <column name="id" valueNumeric="172" />
+            <column name="name" value="Gardmit" />
+            <column name="region_id" valueNumeric="8" />
+        </insert>
+        <insert tableName="ville">
+            <column name="id" valueNumeric="173" />
+            <column name="name" value="Goulmima" />
+            <column name="region_id" valueNumeric="8" />
+        </insert>
+        <insert tableName="ville">
+            <column name="id" valueNumeric="174" />
+            <column name="name" value="Gourrama" />
+            <column name="region_id" valueNumeric="8" />
+        </insert>
+        <insert tableName="ville">
+            <column name="id" valueNumeric="175" />
+            <column name="name" value="Had Bouhssoussen" />
+            <column name="region_id" valueNumeric="5" />
+        </insert>
+        <insert tableName="ville">
+            <column name="id" valueNumeric="176" />
+            <column name="name" value="Haj Kaddour" />
+            <column name="region_id" valueNumeric="3" />
+        </insert>
+        <insert tableName="ville">
+            <column name="id" valueNumeric="177" />
+            <column name="name" value="Ifrane" />
+            <column name="region_id" valueNumeric="3" />
+        </insert>
+        <insert tableName="ville">
+            <column name="id" valueNumeric="178" />
+            <column name="name" value="Itzer" />
+            <column name="region_id" valueNumeric="8" />
+        </insert>
+        <insert tableName="ville">
+            <column name="id" valueNumeric="179" />
+            <column name="name" value="Jorf" />
+            <column name="region_id" valueNumeric="8" />
+        </insert>
+        <insert tableName="ville">
+            <column name="id" valueNumeric="180" />
+            <column name="name" value="Kehf Nsour" />
+            <column name="region_id" valueNumeric="5" />
+        </insert>
+        <insert tableName="ville">
+            <column name="id" valueNumeric="181" />
+            <column name="name" value="Kerrouchen" />
+            <column name="region_id" valueNumeric="5" />
+        </insert>
+        <insert tableName="ville">
+            <column name="id" valueNumeric="182" />
+            <column name="name" value="M'haya" />
+            <column name="region_id" valueNumeric="3" />
+        </insert>
+        <insert tableName="ville">
+            <column name="id" valueNumeric="183" />
+            <column name="name" value="M'rirt" />
+            <column name="region_id" valueNumeric="5" />
+        </insert>
+        <insert tableName="ville">
+            <column name="id" valueNumeric="184" />
+            <column name="name" value="Midelt" />
+            <column name="region_id" valueNumeric="8" />
+        </insert>
+        <insert tableName="ville">
+            <column name="id" valueNumeric="185" />
+            <column name="name" value="Moulay Ali Cherif" />
+            <column name="region_id" valueNumeric="8" />
+        </insert>
+        <insert tableName="ville">
+            <column name="id" valueNumeric="186" />
+            <column name="name" value="Moulay Bouazza" />
+            <column name="region_id" valueNumeric="5" />
+        </insert>
+        <insert tableName="ville">
+            <column name="id" valueNumeric="187" />
+            <column name="name" value="Moulay Idriss Zerhoun" />
+            <column name="region_id" valueNumeric="3" />
+        </insert>
+        <insert tableName="ville">
+            <column name="id" valueNumeric="188" />
+            <column name="name" value="Moussaoua" />
+            <column name="region_id" valueNumeric="3" />
+        </insert>
+        <insert tableName="ville">
+            <column name="id" valueNumeric="189" />
+            <column name="name" value="N'Zalat Bni Amar" />
+            <column name="region_id" valueNumeric="3" />
+        </insert>
+        <insert tableName="ville">
+            <column name="id" valueNumeric="190" />
+            <column name="name" value="Ouaoumana" />
+            <column name="region_id" valueNumeric="5" />
+        </insert>
+        <insert tableName="ville">
+            <column name="id" valueNumeric="191" />
+            <column name="name" value="Oued Ifrane" />
+            <column name="region_id" valueNumeric="3" />
+        </insert>
+        <insert tableName="ville">
+            <column name="id" valueNumeric="192" />
+            <column name="name" value="Sabaa Aiyoun" />
+            <column name="region_id" valueNumeric="3" />
+        </insert>
+        <insert tableName="ville">
+            <column name="id" valueNumeric="193" />
+            <column name="name" value="Sebt Jahjouh" />
+            <column name="region_id" valueNumeric="3" />
+        </insert>
+        <insert tableName="ville">
+            <column name="id" valueNumeric="194" />
+            <column name="name" value="Sidi Addi" />
+            <column name="region_id" valueNumeric="3" />
+        </insert>
+        <insert tableName="ville">
+            <column name="id" valueNumeric="195" />
+            <column name="name" value="Tichoute" />
+            <column name="region_id" valueNumeric="8" />
+        </insert>
+        <insert tableName="ville">
+            <column name="id" valueNumeric="196" />
+            <column name="name" value="Tighassaline" />
+            <column name="region_id" valueNumeric="5" />
+        </insert>
+        <insert tableName="ville">
+            <column name="id" valueNumeric="197" />
+            <column name="name" value="Tighza" />
+            <column name="region_id" valueNumeric="5" />
+        </insert>
+        <insert tableName="ville">
+            <column name="id" valueNumeric="198" />
+            <column name="name" value="Timahdite" />
+            <column name="region_id" valueNumeric="3" />
+        </insert>
+        <insert tableName="ville">
+            <column name="id" valueNumeric="199" />
+            <column name="name" value="Tinejdad" />
+            <column name="region_id" valueNumeric="8" />
+        </insert>
+        <insert tableName="ville">
+            <column name="id" valueNumeric="200" />
+            <column name="name" value="Tizguite" />
+            <column name="region_id" valueNumeric="3" />
+        </insert>
+        <insert tableName="ville">
+            <column name="id" valueNumeric="201" />
+            <column name="name" value="Toulal" />
+            <column name="region_id" valueNumeric="3" />
+        </insert>
+        <insert tableName="ville">
+            <column name="id" valueNumeric="202" />
+            <column name="name" value="Tounfite" />
+            <column name="region_id" valueNumeric="8" />
+        </insert>
+        <insert tableName="ville">
+            <column name="id" valueNumeric="203" />
+            <column name="name" value="Zaouia d'Ifrane" />
+            <column name="region_id" valueNumeric="3" />
+        </insert>
+        <insert tableName="ville">
+            <column name="id" valueNumeric="204" />
+            <column name="name" value="Zaïda" />
+            <column name="region_id" valueNumeric="8" />
+        </insert>
+        <insert tableName="ville">
+            <column name="id" valueNumeric="205" />
+            <column name="name" value="Ahfir" />
+            <column name="region_id" valueNumeric="2" />
+        </insert>
+        <insert tableName="ville">
+            <column name="id" valueNumeric="206" />
+            <column name="name" value="Aklim" />
+            <column name="region_id" valueNumeric="2" />
+        </insert>
+        <insert tableName="ville">
+            <column name="id" valueNumeric="207" />
+            <column name="name" value="Al Aroui" />
+            <column name="region_id" valueNumeric="2" />
+        </insert>
+        <insert tableName="ville">
+            <column name="id" valueNumeric="208" />
+            <column name="name" value="Aïn Bni Mathar" />
+            <column name="region_id" valueNumeric="2" />
+        </insert>
+        <insert tableName="ville">
+            <column name="id" valueNumeric="209" />
+            <column name="name" value="Aïn Erreggada" />
+            <column name="region_id" valueNumeric="2" />
+        </insert>
+        <insert tableName="ville">
+            <column name="id" valueNumeric="210" />
+            <column name="name" value="Ben Taïeb" />
+            <column name="region_id" valueNumeric="2" />
+        </insert>
+        <insert tableName="ville">
+            <column name="id" valueNumeric="211" />
+            <column name="name" value="Berkane" />
+            <column name="region_id" valueNumeric="2" />
+        </insert>
+        <insert tableName="ville">
+            <column name="id" valueNumeric="212" />
+            <column name="name" value="Bni Ansar" />
+            <column name="region_id" valueNumeric="2" />
+        </insert>
+        <insert tableName="ville">
+            <column name="id" valueNumeric="213" />
+            <column name="name" value="Bni Chiker" />
+            <column name="region_id" valueNumeric="2" />
+        </insert>
+        <insert tableName="ville">
+            <column name="id" valueNumeric="214" />
+            <column name="name" value="Bni Drar" />
+            <column name="region_id" valueNumeric="2" />
+        </insert>
+        <insert tableName="ville">
+            <column name="id" valueNumeric="215" />
+            <column name="name" value="Bni Tadjite" />
+            <column name="region_id" valueNumeric="2" />
+        </insert>
+        <insert tableName="ville">
+            <column name="id" valueNumeric="216" />
+            <column name="name" value="Bouanane" />
+            <column name="region_id" valueNumeric="2" />
+        </insert>
+        <insert tableName="ville">
+            <column name="id" valueNumeric="217" />
+            <column name="name" value="Bouarfa" />
+            <column name="region_id" valueNumeric="2" />
+        </insert>
+        <insert tableName="ville">
+            <column name="id" valueNumeric="218" />
+            <column name="name" value="Bouhdila" />
+            <column name="region_id" valueNumeric="2" />
+        </insert>
+        <insert tableName="ville">
+            <column name="id" valueNumeric="219" />
+            <column name="name" value="Dar El Kebdani" />
+            <column name="region_id" valueNumeric="2" />
+        </insert>
+        <insert tableName="ville">
+            <column name="id" valueNumeric="220" />
+            <column name="name" value="Debdou" />
+            <column name="region_id" valueNumeric="2" />
+        </insert>
+        <insert tableName="ville">
+            <column name="id" valueNumeric="221" />
+            <column name="name" value="Douar Kannine" />
+            <column name="region_id" valueNumeric="2" />
+        </insert>
+        <insert tableName="ville">
+            <column name="id" valueNumeric="222" />
+            <column name="name" value="Driouch" />
+            <column name="region_id" valueNumeric="2" />
+        </insert>
+        <insert tableName="ville">
+            <column name="id" valueNumeric="223" />
+            <column name="name" value="El Aïoun Sidi Mellouk" />
+            <column name="region_id" valueNumeric="2" />
+        </insert>
+        <insert tableName="ville">
+            <column name="id" valueNumeric="224" />
+            <column name="name" value="Farkhana" />
+            <column name="region_id" valueNumeric="2" />
+        </insert>
+        <insert tableName="ville">
+            <column name="id" valueNumeric="225" />
+            <column name="name" value="Figuig" />
+            <column name="region_id" valueNumeric="2" />
+        </insert>
+        <insert tableName="ville">
+            <column name="id" valueNumeric="226" />
+            <column name="name" value="Ihddaden" />
+            <column name="region_id" valueNumeric="2" />
+        </insert>
+        <insert tableName="ville">
+            <column name="id" valueNumeric="227" />
+            <column name="name" value="Jaâdar" />
+            <column name="region_id" valueNumeric="2" />
+        </insert>
+        <insert tableName="ville">
+            <column name="id" valueNumeric="228" />
+            <column name="name" value="Jerada" />
+            <column name="region_id" valueNumeric="2" />
+        </insert>
+        <insert tableName="ville">
+            <column name="id" valueNumeric="229" />
+            <column name="name" value="Kariat Arekmane" />
+            <column name="region_id" valueNumeric="2" />
+        </insert>
+        <insert tableName="ville">
+            <column name="id" valueNumeric="230" />
+            <column name="name" value="Kassita" />
+            <column name="region_id" valueNumeric="2" />
+        </insert>
+        <insert tableName="ville">
+            <column name="id" valueNumeric="231" />
+            <column name="name" value="Kerouna" />
+            <column name="region_id" valueNumeric="2" />
+        </insert>
+        <insert tableName="ville">
+            <column name="id" valueNumeric="232" />
+            <column name="name" value="Laâtamna" />
+            <column name="region_id" valueNumeric="2" />
+        </insert>
+        <insert tableName="ville">
+            <column name="id" valueNumeric="233" />
+            <column name="name" value="Madagh" />
+            <column name="region_id" valueNumeric="2" />
+        </insert>
+        <insert tableName="ville">
+            <column name="id" valueNumeric="234" />
+            <column name="name" value="Midar" />
+            <column name="region_id" valueNumeric="2" />
+        </insert>
+        <insert tableName="ville">
+            <column name="id" valueNumeric="235" />
+            <column name="name" value="Nador" />
+            <column name="region_id" valueNumeric="2" />
+        </insert>
+        <insert tableName="ville">
+            <column name="id" valueNumeric="236" />
+            <column name="name" value="Naima" />
+            <column name="region_id" valueNumeric="2" />
+        </insert>
+        <insert tableName="ville">
+            <column name="id" valueNumeric="237" />
+            <column name="name" value="Oued Heimer" />
+            <column name="region_id" valueNumeric="2" />
+        </insert>
+        <insert tableName="ville">
+            <column name="id" valueNumeric="238" />
+            <column name="name" value="Oujda" />
+            <column name="region_id" valueNumeric="2" />
+        </insert>
+        <insert tableName="ville">
+            <column name="id" valueNumeric="239" />
+            <column name="name" value="Ras El Ma" />
+            <column name="region_id" valueNumeric="2" />
+        </insert>
+        <insert tableName="ville">
+            <column name="id" valueNumeric="240" />
+            <column name="name" value="Saïdia" />
+            <column name="region_id" valueNumeric="2" />
+        </insert>
+        <insert tableName="ville">
+            <column name="id" valueNumeric="241" />
+            <column name="name" value="Selouane" />
+            <column name="region_id" valueNumeric="2" />
+        </insert>
+        <insert tableName="ville">
+            <column name="id" valueNumeric="242" />
+            <column name="name" value="Sidi Boubker" />
+            <column name="region_id" valueNumeric="2" />
+        </insert>
+        <insert tableName="ville">
+            <column name="id" valueNumeric="243" />
+            <column name="name" value="Sidi Slimane Echcharaa" />
+            <column name="region_id" valueNumeric="2" />
+        </insert>
+        <insert tableName="ville">
+            <column name="id" valueNumeric="244" />
+            <column name="name" value="Talsint" />
+            <column name="region_id" valueNumeric="2" />
+        </insert>
+        <insert tableName="ville">
+            <column name="id" valueNumeric="245" />
+            <column name="name" value="Taourirt" />
+            <column name="region_id" valueNumeric="2" />
+        </insert>
+        <insert tableName="ville">
+            <column name="id" valueNumeric="246" />
+            <column name="name" value="Tendrara" />
+            <column name="region_id" valueNumeric="2" />
+        </insert>
+        <insert tableName="ville">
+            <column name="id" valueNumeric="247" />
+            <column name="name" value="Tiztoutine" />
+            <column name="region_id" valueNumeric="2" />
+        </insert>
+        <insert tableName="ville">
+            <column name="id" valueNumeric="248" />
+            <column name="name" value="Touima" />
+            <column name="region_id" valueNumeric="2" />
+        </insert>
+        <insert tableName="ville">
+            <column name="id" valueNumeric="249" />
+            <column name="name" value="Touissit" />
+            <column name="region_id" valueNumeric="2" />
+        </insert>
+        <insert tableName="ville">
+            <column name="id" valueNumeric="250" />
+            <column name="name" value="Zaïo" />
+            <column name="region_id" valueNumeric="2" />
+        </insert>
+        <insert tableName="ville">
+            <column name="id" valueNumeric="251" />
+            <column name="name" value="Zeghanghane" />
+            <column name="region_id" valueNumeric="2" />
+        </insert>
+        <insert tableName="ville">
+            <column name="id" valueNumeric="252" />
+            <column name="name" value="Rabat" />
+            <column name="region_id" valueNumeric="4" />
+        </insert>
+        <insert tableName="ville">
+            <column name="id" valueNumeric="253" />
+            <column name="name" value="Salé" />
+            <column name="region_id" valueNumeric="4" />
+        </insert>
+        <insert tableName="ville">
+            <column name="id" valueNumeric="254" />
+            <column name="name" value="Ain El Aouda" />
+            <column name="region_id" valueNumeric="4" />
+        </insert>
+        <insert tableName="ville">
+            <column name="id" valueNumeric="255" />
+            <column name="name" value="Harhoura" />
+            <column name="region_id" valueNumeric="4" />
+        </insert>
+        <insert tableName="ville">
+            <column name="id" valueNumeric="256" />
+            <column name="name" value="Khémisset" />
+            <column name="region_id" valueNumeric="4" />
+        </insert>
+        <insert tableName="ville">
+            <column name="id" valueNumeric="257" />
+            <column name="name" value="Oulmès" />
+            <column name="region_id" valueNumeric="4" />
+        </insert>
+        <insert tableName="ville">
+            <column name="id" valueNumeric="258" />
+            <column name="name" value="Rommani" />
+            <column name="region_id" valueNumeric="4" />
+        </insert>
+        <insert tableName="ville">
+            <column name="id" valueNumeric="259" />
+            <column name="name" value="Sidi Allal El Bahraoui" />
+            <column name="region_id" valueNumeric="4" />
+        </insert>
+        <insert tableName="ville">
+            <column name="id" valueNumeric="260" />
+            <column name="name" value="Sidi Bouknadel" />
+            <column name="region_id" valueNumeric="4" />
+        </insert>
+        <insert tableName="ville">
+            <column name="id" valueNumeric="261" />
+            <column name="name" value="Skhirate" />
+            <column name="region_id" valueNumeric="4" />
+        </insert>
+        <insert tableName="ville">
+            <column name="id" valueNumeric="262" />
+            <column name="name" value="Tamesna" />
+            <column name="region_id" valueNumeric="4" />
+        </insert>
+        <insert tableName="ville">
+            <column name="id" valueNumeric="263" />
+            <column name="name" value="Témara" />
+            <column name="region_id" valueNumeric="4" />
+        </insert>
+        <insert tableName="ville">
+            <column name="id" valueNumeric="264" />
+            <column name="name" value="Tiddas" />
+            <column name="region_id" valueNumeric="4" />
+        </insert>
+        <insert tableName="ville">
+            <column name="id" valueNumeric="265" />
+            <column name="name" value="Tiflet" />
+            <column name="region_id" valueNumeric="4" />
+        </insert>
+        <insert tableName="ville">
+            <column name="id" valueNumeric="266" />
+            <column name="name" value="Touarga" />
+            <column name="region_id" valueNumeric="4" />
+        </insert>
+        <insert tableName="ville">
+            <column name="id" valueNumeric="267" />
+            <column name="name" value="Agadir" />
+            <column name="region_id" valueNumeric="9" />
+        </insert>
+        <insert tableName="ville">
+            <column name="id" valueNumeric="268" />
+            <column name="name" value="Agdz" />
+            <column name="region_id" valueNumeric="8" />
+        </insert>
+        <insert tableName="ville">
+            <column name="id" valueNumeric="269" />
+            <column name="name" value="Agni Izimmer" />
+            <column name="region_id" valueNumeric="9" />
+        </insert>
+        <insert tableName="ville">
+            <column name="id" valueNumeric="270" />
+            <column name="name" value="Aït Melloul" />
+            <column name="region_id" valueNumeric="9" />
+        </insert>
+        <insert tableName="ville">
+            <column name="id" valueNumeric="271" />
+            <column name="name" value="Alnif" />
+            <column name="region_id" valueNumeric="8" />
+        </insert>
+        <insert tableName="ville">
+            <column name="id" valueNumeric="272" />
+            <column name="name" value="Anzi" />
+            <column name="region_id" valueNumeric="9" />
+        </insert>
+        <insert tableName="ville">
+            <column name="id" valueNumeric="273" />
+            <column name="name" value="Aoulouz" />
+            <column name="region_id" valueNumeric="9" />
+        </insert>
+        <insert tableName="ville">
+            <column name="id" valueNumeric="274" />
+            <column name="name" value="Aourir" />
+            <column name="region_id" valueNumeric="9" />
+        </insert>
+        <insert tableName="ville">
+            <column name="id" valueNumeric="275" />
+            <column name="name" value="Arazane" />
+            <column name="region_id" valueNumeric="9" />
+        </insert>
+        <insert tableName="ville">
+            <column name="id" valueNumeric="276" />
+            <column name="name" value="Aït Baha" />
+            <column name="region_id" valueNumeric="9" />
+        </insert>
+        <insert tableName="ville">
+            <column name="id" valueNumeric="277" />
+            <column name="name" value="Aït Iaâza" />
+            <column name="region_id" valueNumeric="9" />
+        </insert>
+        <insert tableName="ville">
+            <column name="id" valueNumeric="278" />
+            <column name="name" value="Aït Yalla" />
+            <column name="region_id" valueNumeric="8" />
+        </insert>
+        <insert tableName="ville">
+            <column name="id" valueNumeric="279" />
+            <column name="name" value="Ben Sergao" />
+            <column name="region_id" valueNumeric="9" />
+        </insert>
+        <insert tableName="ville">
+            <column name="id" valueNumeric="280" />
+            <column name="name" value="Biougra" />
+            <column name="region_id" valueNumeric="9" />
+        </insert>
+        <insert tableName="ville">
+            <column name="id" valueNumeric="281" />
+            <column name="name" value="Boumalne-Dadès" />
+            <column name="region_id" valueNumeric="8" />
+        </insert>
+        <insert tableName="ville">
+            <column name="id" valueNumeric="282" />
+            <column name="name" value="Dcheira El Jihadia" />
+            <column name="region_id" valueNumeric="9" />
+        </insert>
+        <insert tableName="ville">
+            <column name="id" valueNumeric="283" />
+            <column name="name" value="Drargua" />
+            <column name="region_id" valueNumeric="9" />
+        </insert>
+        <insert tableName="ville">
+            <column name="id" valueNumeric="284" />
+            <column name="name" value="El Guerdane" />
+            <column name="region_id" valueNumeric="9" />
+        </insert>
+        <insert tableName="ville">
+            <column name="id" valueNumeric="285" />
+            <column name="name" value="Harte Lyamine" />
+            <column name="region_id" valueNumeric="8" />
+        </insert>
+        <insert tableName="ville">
+            <column name="id" valueNumeric="286" />
+            <column name="name" value="Ida Ougnidif" />
+            <column name="region_id" valueNumeric="9" />
+        </insert>
+        <insert tableName="ville">
+            <column name="id" valueNumeric="287" />
+            <column name="name" value="Ifri" />
+            <column name="region_id" valueNumeric="8" />
+        </insert>
+        <insert tableName="ville">
+            <column name="id" valueNumeric="288" />
+            <column name="name" value="Igdamen" />
+            <column name="region_id" valueNumeric="9" />
+        </insert>
+        <insert tableName="ville">
+            <column name="id" valueNumeric="289" />
+            <column name="name" value="Ighil n'Oumgoun" />
+            <column name="region_id" valueNumeric="8" />
+        </insert>
+        <insert tableName="ville">
+            <column name="id" valueNumeric="290" />
+            <column name="name" value="Imassine" />
+            <column name="region_id" valueNumeric="8" />
+        </insert>
+        <insert tableName="ville">
+            <column name="id" valueNumeric="291" />
+            <column name="name" value="Inezgane" />
+            <column name="region_id" valueNumeric="9" />
+        </insert>
+        <insert tableName="ville">
+            <column name="id" valueNumeric="292" />
+            <column name="name" value="Irherm" />
+            <column name="region_id" valueNumeric="9" />
+        </insert>
+        <insert tableName="ville">
+            <column name="id" valueNumeric="293" />
+            <column name="name" value="Kelaat-M'Gouna" />
+            <column name="region_id" valueNumeric="8" />
+        </insert>
+        <insert tableName="ville">
+            <column name="id" valueNumeric="294" />
+            <column name="name" value="Lakhsas" />
+            <column name="region_id" valueNumeric="9" />
+        </insert>
+        <insert tableName="ville">
+            <column name="id" valueNumeric="295" />
+            <column name="name" value="Lakhsass" />
+            <column name="region_id" valueNumeric="9" />
+        </insert>
+        <insert tableName="ville">
+            <column name="id" valueNumeric="296" />
+            <column name="name" value="Lqliâa" />
+            <column name="region_id" valueNumeric="9" />
+        </insert>
+        <insert tableName="ville">
+            <column name="id" valueNumeric="297" />
+            <column name="name" value="M'semrir" />
+            <column name="region_id" valueNumeric="8" />
+        </insert>
+        <insert tableName="ville">
+            <column name="id" valueNumeric="298" />
+            <column name="name" value="Massa (Maroc)" />
+            <column name="region_id" valueNumeric="9" />
+        </insert>
+        <insert tableName="ville">
+            <column name="id" valueNumeric="299" />
+            <column name="name" value="Megousse" />
+            <column name="region_id" valueNumeric="9" />
+        </insert>
+        <insert tableName="ville">
+            <column name="id" valueNumeric="300" />
+            <column name="name" value="Ouarzazate" />
+            <column name="region_id" valueNumeric="8" />
+        </insert>
+        <insert tableName="ville">
+            <column name="id" valueNumeric="301" />
+            <column name="name" value="Oulad Berhil" />
+            <column name="region_id" valueNumeric="9" />
+        </insert>
+        <insert tableName="ville">
+            <column name="id" valueNumeric="302" />
+            <column name="name" value="Oulad Teïma" />
+            <column name="region_id" valueNumeric="9" />
+        </insert>
+        <insert tableName="ville">
+            <column name="id" valueNumeric="303" />
+            <column name="name" value="Sarghine" />
+            <column name="region_id" valueNumeric="8" />
+        </insert>
+        <insert tableName="ville">
+            <column name="id" valueNumeric="304" />
+            <column name="name" value="Sidi Ifni" />
+            <column name="region_id" valueNumeric="10" />
+        </insert>
+        <insert tableName="ville">
+            <column name="id" valueNumeric="305" />
+            <column name="name" value="Skoura" />
+            <column name="region_id" valueNumeric="8" />
+        </insert>
+        <insert tableName="ville">
+            <column name="id" valueNumeric="306" />
+            <column name="name" value="Tabounte" />
+            <column name="region_id" valueNumeric="8" />
+        </insert>
+        <insert tableName="ville">
+            <column name="id" valueNumeric="307" />
+            <column name="name" value="Tafraout" />
+            <column name="region_id" valueNumeric="9" />
+        </insert>
+        <insert tableName="ville">
+            <column name="id" valueNumeric="308" />
+            <column name="name" value="Taghzout" />
+            <column name="region_id" valueNumeric="1" />
+        </insert>
+        <insert tableName="ville">
+            <column name="id" valueNumeric="309" />
+            <column name="name" value="Tagzen" />
+            <column name="region_id" valueNumeric="9" />
+        </insert>
+        <insert tableName="ville">
+            <column name="id" valueNumeric="310" />
+            <column name="name" value="Taliouine" />
+            <column name="region_id" valueNumeric="9" />
+        </insert>
+        <insert tableName="ville">
+            <column name="id" valueNumeric="311" />
+            <column name="name" value="Tamegroute" />
+            <column name="region_id" valueNumeric="8" />
+        </insert>
+        <insert tableName="ville">
+            <column name="id" valueNumeric="312" />
+            <column name="name" value="Tamraght" />
+            <column name="region_id" valueNumeric="9" />
+        </insert>
+        <insert tableName="ville">
+            <column name="id" valueNumeric="313" />
+            <column name="name" value="Tanoumrite Nkob Zagora" />
+            <column name="region_id" valueNumeric="8" />
+        </insert>
+        <insert tableName="ville">
+            <column name="id" valueNumeric="314" />
+            <column name="name" value="Taourirt ait zaghar" />
+            <column name="region_id" valueNumeric="8" />
+        </insert>
+        <insert tableName="ville">
+            <column name="id" valueNumeric="315" />
+            <column name="name" value="Taroudannt" />
+            <column name="region_id" valueNumeric="9" />
+        </insert>
+        <insert tableName="ville">
+            <column name="id" valueNumeric="316" />
+            <column name="name" value="Temsia" />
+            <column name="region_id" valueNumeric="9" />
+        </insert>
+        <insert tableName="ville">
+            <column name="id" valueNumeric="317" />
+            <column name="name" value="Tifnit" />
+            <column name="region_id" valueNumeric="9" />
+        </insert>
+        <insert tableName="ville">
+            <column name="id" valueNumeric="318" />
+            <column name="name" value="Tisgdal" />
+            <column name="region_id" valueNumeric="9" />
+        </insert>
+        <insert tableName="ville">
+            <column name="id" valueNumeric="319" />
+            <column name="name" value="Tiznit" />
+            <column name="region_id" valueNumeric="9" />
+        </insert>
+        <insert tableName="ville">
+            <column name="id" valueNumeric="320" />
+            <column name="name" value="Toundoute" />
+            <column name="region_id" valueNumeric="8" />
+        </insert>
+        <insert tableName="ville">
+            <column name="id" valueNumeric="321" />
+            <column name="name" value="Zagora" />
+            <column name="region_id" valueNumeric="8" />
+        </insert>
+        <insert tableName="ville">
+            <column name="id" valueNumeric="322" />
+            <column name="name" value="Afourar" />
+            <column name="region_id" valueNumeric="5" />
+        </insert>
+        <insert tableName="ville">
+            <column name="id" valueNumeric="323" />
+            <column name="name" value="Aghbala" />
+            <column name="region_id" valueNumeric="5" />
+        </insert>
+        <insert tableName="ville">
+            <column name="id" valueNumeric="324" />
+            <column name="name" value="Azilal" />
+            <column name="region_id" valueNumeric="5" />
+        </insert>
+        <insert tableName="ville">
+            <column name="id" valueNumeric="325" />
+            <column name="name" value="Aït Majden" />
+            <column name="region_id" valueNumeric="5" />
+        </insert>
+        <insert tableName="ville">
+            <column name="id" valueNumeric="326" />
+            <column name="name" value="Beni Ayat" />
+            <column name="region_id" valueNumeric="5" />
+        </insert>
+        <insert tableName="ville">
+            <column name="id" valueNumeric="327" />
+            <column name="name" value="Béni Mellal" />
+            <column name="region_id" valueNumeric="5" />
+        </insert>
+        <insert tableName="ville">
+            <column name="id" valueNumeric="328" />
+            <column name="name" value="Bin elouidane" />
+            <column name="region_id" valueNumeric="5" />
+        </insert>
+        <insert tableName="ville">
+            <column name="id" valueNumeric="329" />
+            <column name="name" value="Bradia" />
+            <column name="region_id" valueNumeric="5" />
+        </insert>
+        <insert tableName="ville">
+            <column name="id" valueNumeric="330" />
+            <column name="name" value="Bzou" />
+            <column name="region_id" valueNumeric="5" />
+        </insert>
+        <insert tableName="ville">
+            <column name="id" valueNumeric="331" />
+            <column name="name" value="Dar Oulad Zidouh" />
+            <column name="region_id" valueNumeric="5" />
+        </insert>
+        <insert tableName="ville">
+            <column name="id" valueNumeric="332" />
+            <column name="name" value="Demnate" />
+            <column name="region_id" valueNumeric="5" />
+        </insert>
+        <insert tableName="ville">
+            <column name="id" valueNumeric="333" />
+            <column name="name" value="Dra'a" />
+            <column name="region_id" valueNumeric="8" />
+        </insert>
+        <insert tableName="ville">
+            <column name="id" valueNumeric="334" />
+            <column name="name" value="El Ksiba" />
+            <column name="region_id" valueNumeric="5" />
+        </insert>
+        <insert tableName="ville">
+            <column name="id" valueNumeric="335" />
+            <column name="name" value="Foum Jamaa" />
+            <column name="region_id" valueNumeric="5" />
+        </insert>
+        <insert tableName="ville">
+            <column name="id" valueNumeric="336" />
+            <column name="name" value="Fquih Ben Salah" />
+            <column name="region_id" valueNumeric="5" />
+        </insert>
+        <insert tableName="ville">
+            <column name="id" valueNumeric="337" />
+            <column name="name" value="Kasba Tadla" />
+            <column name="region_id" valueNumeric="5" />
+        </insert>
+        <insert tableName="ville">
+            <column name="id" valueNumeric="338" />
+            <column name="name" value="Ouaouizeght" />
+            <column name="region_id" valueNumeric="5" />
+        </insert>
+        <insert tableName="ville">
+            <column name="id" valueNumeric="339" />
+            <column name="name" value="Oulad Ayad" />
+            <column name="region_id" valueNumeric="5" />
+        </insert>
+        <insert tableName="ville">
+            <column name="id" valueNumeric="340" />
+            <column name="name" value="Oulad M'Barek" />
+            <column name="region_id" valueNumeric="5" />
+        </insert>
+        <insert tableName="ville">
+            <column name="id" valueNumeric="341" />
+            <column name="name" value="Oulad Yaich" />
+            <column name="region_id" valueNumeric="5" />
+        </insert>
+        <insert tableName="ville">
+            <column name="id" valueNumeric="342" />
+            <column name="name" value="Sidi Jaber" />
+            <column name="region_id" valueNumeric="5" />
+        </insert>
+        <insert tableName="ville">
+            <column name="id" valueNumeric="343" />
+            <column name="name" value="Souk Sebt Oulad Nemma" />
+            <column name="region_id" valueNumeric="5" />
+        </insert>
+        <insert tableName="ville">
+            <column name="id" valueNumeric="344" />
+            <column name="name" value="Zaouïat Cheikh" />
+            <column name="region_id" valueNumeric="5" />
+        </insert>
+        <insert tableName="ville">
+            <column name="id" valueNumeric="345" />
+            <column name="name" value="Tanger?" />
+            <column name="region_id" valueNumeric="1" />
+        </insert>
+        <insert tableName="ville">
+            <column name="id" valueNumeric="346" />
+            <column name="name" value="Tétouan?" />
+            <column name="region_id" valueNumeric="1" />
+        </insert>
+        <insert tableName="ville">
+            <column name="id" valueNumeric="347" />
+            <column name="name" value="Akchour" />
+            <column name="region_id" valueNumeric="1" />
+        </insert>
+        <insert tableName="ville">
+            <column name="id" valueNumeric="348" />
+            <column name="name" value="Assilah" />
+            <column name="region_id" valueNumeric="1" />
+        </insert>
+        <insert tableName="ville">
+            <column name="id" valueNumeric="349" />
+            <column name="name" value="Bab Berred" />
+            <column name="region_id" valueNumeric="1" />
+        </insert>
+        <insert tableName="ville">
+            <column name="id" valueNumeric="350" />
+            <column name="name" value="Bab Taza" />
+            <column name="region_id" valueNumeric="1" />
+        </insert>
+        <insert tableName="ville">
+            <column name="id" valueNumeric="351" />
+            <column name="name" value="Brikcha" />
+            <column name="region_id" valueNumeric="1" />
+        </insert>
+        <insert tableName="ville">
+            <column name="id" valueNumeric="352" />
+            <column name="name" value="Chefchaouen" />
+            <column name="region_id" valueNumeric="1" />
+        </insert>
+        <insert tableName="ville">
+            <column name="id" valueNumeric="353" />
+            <column name="name" value="Dar Bni Karrich" />
+            <column name="region_id" valueNumeric="1" />
+        </insert>
+        <insert tableName="ville">
+            <column name="id" valueNumeric="354" />
+            <column name="name" value="Dar Chaoui" />
+            <column name="region_id" valueNumeric="1" />
+        </insert>
+        <insert tableName="ville">
+            <column name="id" valueNumeric="355" />
+            <column name="name" value="Fnideq" />
+            <column name="region_id" valueNumeric="1" />
+        </insert>
+        <insert tableName="ville">
+            <column name="id" valueNumeric="356" />
+            <column name="name" value="Gueznaia" />
+            <column name="region_id" valueNumeric="1" />
+        </insert>
+        <insert tableName="ville">
+            <column name="id" valueNumeric="357" />
+            <column name="name" value="Jebha" />
+            <column name="region_id" valueNumeric="1" />
+        </insert>
+        <insert tableName="ville">
+            <column name="id" valueNumeric="358" />
+            <column name="name" value="Karia" />
+            <column name="region_id" valueNumeric="3" />
+        </insert>
+        <insert tableName="ville">
+            <column name="id" valueNumeric="359" />
+            <column name="name" value="Khémis Sahel" />
+            <column name="region_id" valueNumeric="1" />
+        </insert>
+        <insert tableName="ville">
+            <column name="id" valueNumeric="360" />
+            <column name="name" value="Ksar El Kébir" />
+            <column name="region_id" valueNumeric="1" />
+        </insert>
+        <insert tableName="ville">
+            <column name="id" valueNumeric="361" />
+            <column name="name" value="Larache" />
+            <column name="region_id" valueNumeric="1" />
+        </insert>
+        <insert tableName="ville">
+            <column name="id" valueNumeric="362" />
+            <column name="name" value="M'diq" />
+            <column name="region_id" valueNumeric="1" />
+        </insert>
+        <insert tableName="ville">
+            <column name="id" valueNumeric="363" />
+            <column name="name" value="Martil" />
+            <column name="region_id" valueNumeric="1" />
+        </insert>
+        <insert tableName="ville">
+            <column name="id" valueNumeric="364" />
+            <column name="name" value="Moqrisset" />
+            <column name="region_id" valueNumeric="1" />
+        </insert>
+        <insert tableName="ville">
+            <column name="id" valueNumeric="365" />
+            <column name="name" value="Oued Laou" />
+            <column name="region_id" valueNumeric="1" />
+        </insert>
+        <insert tableName="ville">
+            <column name="id" valueNumeric="366" />
+            <column name="name" value="Oued Rmel" />
+            <column name="region_id" valueNumeric="1" />
+        </insert>
+        <insert tableName="ville">
+            <column name="id" valueNumeric="367" />
+            <column name="name" value="Ouazzane" />
+            <column name="region_id" valueNumeric="1" />
+        </insert>
+        <insert tableName="ville">
+            <column name="id" valueNumeric="368" />
+            <column name="name" value="Point Cires" />
+            <column name="region_id" valueNumeric="1" />
+        </insert>
+        <insert tableName="ville">
+            <column name="id" valueNumeric="369" />
+            <column name="name" value="Sidi Lyamani" />
+            <column name="region_id" valueNumeric="1" />
+        </insert>
+        <insert tableName="ville">
+            <column name="id" valueNumeric="370" />
+            <column name="name" value="Sidi Mohamed ben Abdallah el-Raisuni" />
+            <column name="region_id" valueNumeric="1" />
+        </insert>
+        <insert tableName="ville">
+            <column name="id" valueNumeric="371" />
+            <column name="name" value="Zinat" />
+            <column name="region_id" valueNumeric="1" />
+        </insert>
+        <insert tableName="ville">
+            <column name="id" valueNumeric="372" />
+            <column name="name" value="Ajdir?" />
+            <column name="region_id" valueNumeric="1" />
+        </insert>
+        <insert tableName="ville">
+            <column name="id" valueNumeric="373" />
+            <column name="name" value="Aknoul?" />
+            <column name="region_id" valueNumeric="3" />
+        </insert>
+        <insert tableName="ville">
+            <column name="id" valueNumeric="374" />
+            <column name="name" value="Al Hoceïma?" />
+            <column name="region_id" valueNumeric="1" />
+        </insert>
+        <insert tableName="ville">
+            <column name="id" valueNumeric="375" />
+            <column name="name" value="Aït Hichem?" />
+            <column name="region_id" valueNumeric="1" />
+        </insert>
+        <insert tableName="ville">
+            <column name="id" valueNumeric="376" />
+            <column name="name" value="Bni Bouayach?" />
+            <column name="region_id" valueNumeric="1" />
+        </insert>
+        <insert tableName="ville">
+            <column name="id" valueNumeric="377" />
+            <column name="name" value="Bni Hadifa?" />
+            <column name="region_id" valueNumeric="1" />
+        </insert>
+        <insert tableName="ville">
+            <column name="id" valueNumeric="378" />
+            <column name="name" value="Ghafsai?" />
+            <column name="region_id" valueNumeric="3" />
+        </insert>
+        <insert tableName="ville">
+            <column name="id" valueNumeric="379" />
+            <column name="name" value="Guercif?" />
+            <column name="region_id" valueNumeric="2" />
+        </insert>
+        <insert tableName="ville">
+            <column name="id" valueNumeric="380" />
+            <column name="name" value="Imzouren?" />
+            <column name="region_id" valueNumeric="1" />
+        </insert>
+        <insert tableName="ville">
+            <column name="id" valueNumeric="381" />
+            <column name="name" value="Inahnahen?" />
+            <column name="region_id" valueNumeric="1" />
+        </insert>
+        <insert tableName="ville">
+            <column name="id" valueNumeric="382" />
+            <column name="name" value="Issaguen (Ketama)?" />
+            <column name="region_id" valueNumeric="1" />
+        </insert>
+        <insert tableName="ville">
+            <column name="id" valueNumeric="383" />
+            <column name="name" value="Karia (El Jadida)?" />
+            <column name="region_id" valueNumeric="6" />
+        </insert>
+        <insert tableName="ville">
+            <column name="id" valueNumeric="384" />
+            <column name="name" value="Karia Ba Mohamed?" />
+            <column name="region_id" valueNumeric="3" />
+        </insert>
+        <insert tableName="ville">
+            <column name="id" valueNumeric="385" />
+            <column name="name" value="Oued Amlil?" />
+            <column name="region_id" valueNumeric="3" />
+        </insert>
+        <insert tableName="ville">
+            <column name="id" valueNumeric="386" />
+            <column name="name" value="Oulad Zbair?" />
+            <column name="region_id" valueNumeric="3" />
+        </insert>
+        <insert tableName="ville">
+            <column name="id" valueNumeric="387" />
+            <column name="name" value="Tahla?" />
+            <column name="region_id" valueNumeric="3" />
+        </insert>
+        <insert tableName="ville">
+            <column name="id" valueNumeric="388" />
+            <column name="name" value="Tala Tazegwaght?" />
+            <column name="region_id" valueNumeric="1" />
+        </insert>
+        <insert tableName="ville">
+            <column name="id" valueNumeric="389" />
+            <column name="name" value="Tamassint?" />
+            <column name="region_id" valueNumeric="1" />
+        </insert>
+        <insert tableName="ville">
+            <column name="id" valueNumeric="390" />
+            <column name="name" value="Taounate?" />
+            <column name="region_id" valueNumeric="3" />
+        </insert>
+        <insert tableName="ville">
+            <column name="id" valueNumeric="391" />
+            <column name="name" value="Targuist?" />
+            <column name="region_id" valueNumeric="1" />
+        </insert>
+        <insert tableName="ville">
+            <column name="id" valueNumeric="392" />
+            <column name="name" value="Taza?" />
+            <column name="region_id" valueNumeric="3" />
+        </insert>
+        <insert tableName="ville">
+            <column name="id" valueNumeric="393" />
+            <column name="name" value="Taïnaste?" />
+            <column name="region_id" valueNumeric="3" />
+        </insert>
+        <insert tableName="ville">
+            <column name="id" valueNumeric="394" />
+            <column name="name" value="Thar Es-Souk?" />
+            <column name="region_id" valueNumeric="3" />
+        </insert>
+        <insert tableName="ville">
+            <column name="id" valueNumeric="395" />
+            <column name="name" value="Tissa?" />
+            <column name="region_id" valueNumeric="3" />
+        </insert>
+        <insert tableName="ville">
+            <column name="id" valueNumeric="396" />
+            <column name="name" value="Tizi Ouasli?" />
+            <column name="region_id" valueNumeric="3" />
+        </insert>
+        <insert tableName="ville">
+            <column name="id" valueNumeric="397" />
+            <column name="name" value="Laayoune?" />
+            <column name="region_id" valueNumeric="11" />
+        </insert>
+        <insert tableName="ville">
+            <column name="id" valueNumeric="398" />
+            <column name="name" value="El Marsa?" />
+            <column name="region_id" valueNumeric="11" />
+        </insert>
+        <insert tableName="ville">
+            <column name="id" valueNumeric="399" />
+            <column name="name" value="Tarfaya?" />
+            <column name="region_id" valueNumeric="11" />
+        </insert>
+        <insert tableName="ville">
+            <column name="id" valueNumeric="400" />
+            <column name="name" value="Boujdour?" />
+            <column name="region_id" valueNumeric="11" />
+        </insert>
+        <insert tableName="ville">
+            <column name="id" valueNumeric="401" />
+            <column name="name" value="Awsard" />
+            <column name="region_id" valueNumeric="12" />
+        </insert>
+        <insert tableName="ville">
+            <column name="id" valueNumeric="402" />
+            <column name="name" value="Oued-Eddahab" />
+            <column name="region_id" valueNumeric="12" />
+        </insert>
+        <insert tableName="ville">
+            <column name="id" valueNumeric="403" />
+            <column name="name" value="Stehat" />
+            <column name="region_id" valueNumeric="1" />
+        </insert>
+        <insert tableName="ville">
+            <column name="id" valueNumeric="404" />
+            <column name="name" value="Aït Attab" />
+            <column name="region_id" valueNumeric="5" />
+        </insert>
+    </changeSet>
+
+    <changeSet author="Dehaoui (generated)" id="1640692897760-78">
+        <insert tableName="pays">
+
+            <column name="id" valueNumeric="1"/>
+            <column name="libelle" value="Maroc"/>
+        </insert>
+        <insert tableName="pays">
+            <column name="id" valueNumeric="2"/>
+            <column name="libelle" value="France"/>
+        </insert>
+        <insert tableName="pays">
+            <column name="id" valueNumeric="3"/>
+            <column name="libelle" value="UAE"/>
+
+        </insert>
+    </changeSet>
+    <changeSet author="umamda (generated)" id="1638879995979-43">
+        <insert tableName="examens_medicaux">
+            <column name="norme_id" value="f48c2c87-3647-4152-8ff4-8e2d1da7e50f" />
+            <column name="honoraire_id" value="1" />
+        </insert>
+        <insert tableName="examens_medicaux">
+            <column name="norme_id" value="aaef6861-0c47-4290-83b3-72534d6f3098" />
+            <column name="honoraire_id" value="9" />
+        </insert>
+        <insert tableName="examens_medicaux">
+            <column name="norme_id" value="b2809fc3-b8d7-4ff9-8177-63c2eb6d019c" />
+            <column name="honoraire_id" value="1" />
+        </insert>
+        <insert tableName="examens_medicaux">
+            <column name="norme_id" value="b2809fc3-b8d7-4ff9-8177-63c2eb6d019c" />
+            <column name="honoraire_id" value="4" />
+        </insert>
+        <insert tableName="examens_medicaux">
+            <column name="norme_id" value="b2809fc3-b8d7-4ff9-8177-63c2eb6d019c" />
+            <column name="honoraire_id" value="5" />
+        </insert>
+        <insert tableName="examens_medicaux">
+            <column name="norme_id" value="e8081c43-8938-4d8e-a6fc-39c9f306d4f6" />
+            <column name="honoraire_id" value="1" />
+        </insert>
+        <insert tableName="examens_medicaux">
+            <column name="norme_id" value="e8081c43-8938-4d8e-a6fc-39c9f306d4f6" />
+            <column name="honoraire_id" value="2" />
+        </insert>
+        <insert tableName="examens_medicaux">
+            <column name="norme_id" value="b2809fc3-b8d7-4ff9-8177-63c2eb6d019c" />
+            <column name="honoraire_id" value="9" />
+        </insert>
+        <insert tableName="examens_medicaux">
+            <column name="norme_id" value="b2809fc3-b8d7-4ff9-8177-63c2eb6d019c" />
+            <column name="honoraire_id" value="6" />
+        </insert>
+        <insert tableName="examens_medicaux">
+            <column name="norme_id" value="b2809fc3-b8d7-4ff9-8177-63c2eb6d019c" />
+            <column name="honoraire_id" value="8" />
+        </insert>
+        <insert tableName="examens_medicaux">
+            <column name="norme_id" value="e8081c43-8938-4d8e-a6fc-39c9f306d4f6" />
+            <column name="honoraire_id" value="3" />
+        </insert>
+        <insert tableName="examens_medicaux">
+            <column name="norme_id" value="e8081c43-8938-4d8e-a6fc-39c9f306d4f6" />
+            <column name="honoraire_id" value="10" />
+        </insert>
+        <insert tableName="examens_medicaux">
+            <column name="norme_id" value="705dda49-249d-43ef-a261-488a6288df77" />
+            <column name="honoraire_id" value="3" />
+        </insert>
+        <insert tableName="examens_medicaux">
+            <column name="norme_id" value="705dda49-249d-43ef-a261-488a6288df77" />
+            <column name="honoraire_id" value="5" />
+        </insert>
+        <insert tableName="examens_medicaux">
+            <column name="norme_id" value="b2cf4e4b-914a-4aba-9723-04b01604197a" />
+            <column name="honoraire_id" value="11" />
+        </insert>
+        <insert tableName="examens_medicaux">
+            <column name="norme_id" value="b2cf4e4b-914a-4aba-9723-04b01604197a" />
+            <column name="honoraire_id" value="3" />
+        </insert>
+        <insert tableName="examens_medicaux">
+            <column name="norme_id" value="b2cf4e4b-914a-4aba-9723-04b01604197a" />
+            <column name="honoraire_id" value="10" />
+        </insert>
+        <insert tableName="examens_medicaux">
+            <column name="norme_id" value="b2cf4e4b-914a-4aba-9723-04b01604197a" />
+            <column name="honoraire_id" value="12" />
+        </insert>
+    </changeSet>
+
+    <changeSet author="umamda (generated)" id="1638879995979-45">
+        <insert tableName="famille_produit">
+            <column name="id" value="1" />
+            <column name="creation_date" />
+            <column name="flux_id" />
+            <column name="name" value="Deces" />
+        </insert>
+        <insert tableName="famille_produit">
+            <column name="id" value="2" />
+            <column name="creation_date" />
+            <column name="flux_id" />
+            <column name="name" value="Retraite" />
+        </insert>
+        <insert tableName="famille_produit">
+            <column name="id" value="3" />
+            <column name="creation_date" />
+            <column name="flux_id" />
+            <column name="name" value="Education" />
+        </insert>
+    </changeSet>
+    <changeSet author="umamda (generated)" id="1638879995979-454">
+
+        <insert tableName="honoraire">
+            <column name="id" value="10" />
+            <column name="creation_date" />
+            <column name="flux_id" />
+            <column name="code" value="C" />
+            <column name="intituele" value="ECG à l effort" />
+            <column name="libelle" value="ECG à l effort" />
+            <column name="montant_honoraire" valueNumeric="800.0" />
+            <column name="type_auxiliaire_hon_id" value="2" />
+        </insert>
+        <insert tableName="honoraire">
+            <column name="id" value="11" />
+            <column name="creation_date" />
+            <column name="flux_id" />
+            <column name="code" value="A" />
+            <column name="intituele" value="Questionnaire" />
+            <column name="libelle" value="Questionnaire Medical" />
+            <column name="montant_honoraire" valueNumeric="300.0" />
+            <column name="type_auxiliaire_hon_id" value="2" />
+        </insert>
+        <insert tableName="honoraire">
+            <column name="id" value="12" />
+            <column name="creation_date" />
+            <column name="flux_id" />
+            <column name="code" value="CE" />
+            <column name="intituele" value="CONTRE EXPERTISE" />
+            <column name="libelle" value="CONTRE EXPERTISE" />
+            <column name="montant_honoraire" valueNumeric="500.0" />
+            <column name="type_auxiliaire_hon_id" value="4" />
+        </insert>
+        <insert tableName="honoraire">
+            <column name="id" value="2" />
+            <column name="creation_date" />
+            <column name="flux_id" />
+            <column name="code" value="QM" />
+            <column name="intituele" value="Questionnaire" />
+            <column name="libelle" value="Questionnaire Medical" />
+            <column name="montant_honoraire" valueNumeric="300.0" />
+            <column name="type_auxiliaire_hon_id" value="2" />
+        </insert>
+        <insert tableName="honoraire">
+            <column name="id" value="3" />
+            <column name="creation_date" />
+            <column name="flux_id" />
+            <column name="code" value="B" />
+            <column name="intituele" value="ECG au repos" />
+            <column name="libelle" value="ECG au repos" />
+            <column name="montant_honoraire" valueNumeric="0.0" />
+            <column name="type_auxiliaire_hon_id" value="2" />
+        </insert>
+        <insert tableName="honoraire">
+            <column name="id" value="4" />
+            <column name="creation_date" />
+            <column name="flux_id" />
+            <column name="code" value="D" />
+            <column name="intituele" value="CBU" />
+            <column name="libelle" value="CBU" />
+            <column name="montant_honoraire" valueNumeric="80.0" />
+            <column name="type_auxiliaire_hon_id" value="1" />
+        </insert>
+        <insert tableName="honoraire">
+            <column name="id" value="5" />
+            <column name="creation_date" />
+            <column name="flux_id" />
+            <column name="code" value="E" />
+            <column name="intituele" value="NFS" />
+            <column name="libelle" value="NFS" />
+            <column name="montant_honoraire" valueNumeric="70.0" />
+            <column name="type_auxiliaire_hon_id" value="1" />
+        </insert>
+        <insert tableName="honoraire">
+            <column name="id" value="6" />
+            <column name="creation_date" />
+            <column name="flux_id" />
+            <column name="code" value="F" />
+            <column name="intituele" value="VIH" />
+            <column name="libelle" value="VIH" />
+            <column name="montant_honoraire" valueNumeric="180.0" />
+            <column name="type_auxiliaire_hon_id" value="1" />
+        </insert>
+        <insert tableName="honoraire">
+            <column name="id" value="7" />
+            <column name="creation_date" />
+            <column name="flux_id" />
+            <column name="code" value="G" />
+            <column name="intituele" value="Serologie Hepatites B et C" />
+            <column name="libelle" value="Serologie Hepatites B et C" />
+            <column name="montant_honoraire" valueNumeric="300.0" />
+            <column name="type_auxiliaire_hon_id" value="1" />
+        </insert>
+        <insert tableName="honoraire">
+            <column name="id" value="8" />
+            <column name="creation_date" />
+            <column name="flux_id" />
+            <column name="code" value="EXP" />
+            <column name="intituele" value="Expertise" />
+            <column name="libelle" value="Expertise" />
+            <column name="montant_honoraire" valueNumeric="250.0" />
+            <column name="type_auxiliaire_hon_id" value="3" />
+        </insert>
+        <insert tableName="honoraire">
+            <column name="id" value="9" />
+            <column name="creation_date" />
+            <column name="flux_id" />
+            <column name="code" value="Echop" />
+            <column name="intituele" value="ECHOGRAPHIE HEPATIQUE" />
+            <column name="libelle" value="ECHOGRAPHIE HEPATIQUE" />
+            <column name="montant_honoraire" valueNumeric="400.0" />
+            <column name="type_auxiliaire_hon_id" value="5" />
+        </insert>
+    </changeSet>
+
+
+    <changeSet author="umamda (generated)" id="1638879995979-554">
+        <insert tableName="partenaire">
+            <column name="id" value="1" />
+            <column name="creation_date" />
+            <column name="flux_id" />
+            <column name="code" value="BKAY" />
+            <column name="frais_acquisition" value="3" />
+            <column name="numero_compte" value="1234567891011121314151617181920212223" />
+            <column name="raison_social" value="BANK AL YOUSR" />
+            <column name="siege_social" value="Boulevard Anfa et rue Molière. 20050 _ Casablanca" />
+            <column name="telephone" valueNumeric="522647660" />
+            <column name="tva" value="20" />
+            <column name="type_partenaire" value="banque" />
+            <column name="branche_type" />
+        </insert>
+        <insert tableName="partenaire">
+            <column name="id" value="2" />
+            <column name="creation_date" />
+            <column name="flux_id" />
+            <column name="code" value="cam" />
+            <column name="frais_acquisition" />
+            <column name="numero_compte" />
+            <column name="raison_social" value="cam" />
+            <column name="siege_social" />
+            <column name="telephone" />
+            <column name="tva" />
+            <column name="type_partenaire" value="banque" />
+            <column name="branche_type" />
+        </insert>
+    </changeSet>
+    <changeSet author="umamda (generated)" id="1638879995979-53">
+        <insert tableName="periodicite">
+            <column name="id" value="1" />
+            <column name="creation_date" />
+            <column name="flux_id" />
+            <column name="abb" value="M" />
+            <column name="libelle" value="Mensuelle" />
+        </insert>
+        <insert tableName="periodicite">
+            <column name="id" value="2" />
+            <column name="creation_date" />
+            <column name="flux_id" />
+            <column name="abb" value="T" />
+            <column name="libelle" value="Trimestrielle" />
+        </insert>
+        <insert tableName="periodicite">
+            <column name="id" value="3" />
+            <column name="creation_date" />
+            <column name="flux_id" />
+            <column name="abb" value="A" />
+            <column name="libelle" value="Annuelle" />
+        </insert>
+        <insert tableName="periodicite">
+            <column name="id" value="4" />
+            <column name="creation_date" />
+            <column name="flux_id" />
+            <column name="abb" value="S" />
+            <column name="libelle" value="Semestrielle" />
+        </insert>
+        <insert tableName="periodicite">
+            <column name="id" value="5" />
+            <column name="creation_date" />
+            <column name="flux_id" />
+            <column name="abb" value="U" />
+            <column name="libelle" value="Unique" />
+        </insert>
+    </changeSet>
+
+    <changeSet author="umamda (generated)" id="1638879995979-558">
+        <insert tableName="point_vente">
+            <column name="id" value="1" />
+            <column name="creation_date" />
+            <column name="flux_id" />
+            <column name="abb" value="siege mamda" />
+            <column name="code_caps" />
+            <column name="code_interne" />
+            <column name="code_responsable" />
+            <column name="ice" />
+            <column name="libelle" value="siege mamda" />
+            <column name="logo" />
+            <column name="nom_responsable" />
+            <column name="patente" value="1" />
+            <column name="partenairepv_id" value="1" />
+            <column name="secteur_activite_id" value="1" />
+            <column name="type_point_vente_id" value="1" />
+            <column name="adress_code_postal" />
+            <column name="adress_complement" />
+            <column name="adress_complete" />
+            <column name="adress_numero" />
+            <column name="adress_pays" />
+            <column name="adress_ville" />
+            <column name="adress_vois" />
+        </insert>
+    </changeSet>
+
+    <changeSet author="umamda (generated)" id="1638879995979-598">
+        <insert tableName="privilege">
+            <column name="id" value="2c93ce11-68b8-49e7-9255-2f5acf6455c5" />
+            <column name="creation_date" valueDate="2021-03-05T12:37:01.023" />
+            <column name="flux_id" />
+            <column name="name" value="GESTION_UTILISATEURS" />
+        </insert>
+        <insert tableName="privilege">
+            <column name="id" value="2c93ce11-68b8-49e7-9255-26543215" />
+            <column name="creation_date" valueDate="2021-03-05T12:37:01.023" />
+            <column name="flux_id" />
+            <column name="name" value="CREATION_CONTRAT" />
+        </insert>
+        <insert tableName="privilege">
+            <column name="id" value="78314b8d-b22c-4a80-8116-79e942595490" />
+            <column name="creation_date" valueDate="2022-01-17 11:40:14.133" />
+            <column name="flux_id" value="c2c98c39-ce2b-45ff-a8fe-7837dcb0279b" />
+            <column name="name" value="GESTION_ACCEPTATION" />
+        </insert>
+        <insert tableName="privilege">
+            <column name="id" value="f4e5354e-bd92-43eb-94b6-d85830a1b6cd" />
+            <column name="creation_date" valueDate="2022-01-12 14:23:45.010" />
+            <column name="flux_id" value="e27485ac-45fc-4f3e-b9bc-5c006e845c0b" />
+            <column name="name" value="GESTION_SINISTRE" />
+        </insert>
+        <insert tableName="privilege">
+            <column name="id" value="4ea7a783-a855-4d35-9a93-3a307b628333" />
+            <column name="creation_date" valueDate="2021-03-05T12:37:01.087" />
+            <column name="flux_id" />
+            <column name="name" value="GESTION_ROLE_ET_PERMISSION" />
+        </insert>
+        <insert tableName="privilege">
+            <column name="id" value="50cf3fed-5643-4ca1-8fad-b6497ca7ac21" />
+            <column name="creation_date" valueDate="2021-03-05T12:37:01.097" />
+            <column name="flux_id" />
+            <column name="name" value="GESTION_PATAMETRAGE" />
+        </insert>
+        <insert tableName="privilege">
+            <column name="id" value="6d8b1462-cca5-4f22-be28-392e43a39fc4" />
+            <column name="creation_date" valueDate="2021-03-05T12:37:01.1" />
+            <column name="flux_id" />
+            <column name="name" value="GESTION_CONTRAT" />
+        </insert>
+        <insert tableName="privilege">
+            <column name="id" value="23488922-c8ec-4e87-a253-7d64a0e8d090" />
+            <column name="creation_date" valueDate="2022-01-19 15:26:11.167" />
+            <column name="flux_id" value="fcc15df4-8751-497b-abc4-318ff28ab0bd" />
+            <column name="name" value="SIMULATION" />
+        </insert>
+        <insert tableName="privilege">
+            <column name="id" value="1dd3378e-859c-4f56-a09d-4756a4070bce" />
+            <column name="creation_date" valueDate="2022-01-20 11:33:50.300" />
+            <column name="flux_id" value="cced81b2-a41f-48cb-9c3f-911fe5d5701f" />
+            <column name="name" value="CONTRAT_MRB" />
+        </insert>
+        <insert tableName="privilege">
+            <column name="id" value="c9972627-d30a-4f38-969d-f65bb45469e4" />
+            <column name="creation_date" valueDate="2022-01-20 11:33:41.390" />
+            <column name="flux_id" value="1eaafd4c-443d-4470-84e8-23172c026fc8" />
+            <column name="name" value="CONTRAT_DECES" />
+        </insert>
+        <insert tableName="privilege">
+            <column name="id" value="a2e0412e-6293-40bd-841f-5b1fdc06afa7" />
+            <column name="creation_date" valueDate="2022-01-20 11:34:15.960" />
+            <column name="flux_id" value="74c956f0-ab95-4c8b-a9fe-c239db3d093b" />
+            <column name="name" value="CONTRAT_RETRAITE" />
+        </insert>
+    </changeSet>
+
+    <changeSet author="umamda (generated)" id="1638879995979-67">
+        <insert tableName="profession">
+            <column name="id" value="1" />
+            <column name="creation_date" />
+            <column name="flux_id" />
+            <column name="libelle" value="AVOCAT" />
+        </insert>
+        <insert tableName="profession">
+            <column name="id" value="10" />
+            <column name="creation_date" />
+            <column name="flux_id" />
+            <column name="libelle" value="MEDECIN " />
+        </insert>
+        <insert tableName="profession">
+            <column name="id" value="2" />
+            <column name="creation_date" />
+            <column name="flux_id" />
+            <column name="libelle" value="INGENIEUR SI" />
+        </insert>
+        <insert tableName="profession">
+            <column name="id" value="3" />
+            <column name="creation_date" />
+            <column name="flux_id" />
+            <column name="libelle" value="OFFICIER" />
+        </insert>
+        <insert tableName="profession">
+            <column name="id" value="4" />
+            <column name="creation_date" />
+            <column name="flux_id" />
+            <column name="libelle" value="SOUS-OFFICIERS" />
+        </insert>
+        <insert tableName="profession">
+            <column name="id" value="5" />
+            <column name="creation_date" />
+            <column name="flux_id" />
+            <column name="libelle" value="MENUISIER" />
+        </insert>
+        <insert tableName="profession">
+            <column name="id" value="6" />
+            <column name="creation_date" />
+            <column name="flux_id" />
+            <column name="libelle" value="MATHEMATICIEN" />
+        </insert>
+        <insert tableName="profession">
+            <column name="id" value="7" />
+            <column name="creation_date" />
+            <column name="flux_id" />
+            <column name="libelle" value="ASSISTANT SOCIAL" />
+        </insert>
+        <insert tableName="profession">
+            <column name="id" value="8" />
+            <column name="creation_date" />
+            <column name="flux_id" />
+            <column name="libelle" value="DENTISTE" />
+        </insert>
+        <insert tableName="profession">
+            <column name="id" value="9" />
+            <column name="creation_date" />
+            <column name="flux_id" />
+            <column name="libelle" value="KINESITHERAPIE" />
+        </insert>
+    </changeSet>
+    <changeSet author="umamda (generated)" id="1638879995979-68">
+        <insert tableName="restitution">
+            <column name="id" value="074eb75d-393d-45cf-8a2c-8d9f4d1b8173" />
+            <column name="creation_date" valueDate="2021-05-11T12:28:18.62" />
+            <column name="flux_id" />
+            <column name="libelle" value="Rabais" />
+        </insert>
+        <insert tableName="restitution">
+            <column name="id" value="9003857e-941d-43d5-98bb-c340b8299180" />
+            <column name="creation_date" valueDate="2021-05-11T12:27:46.017" />
+            <column name="flux_id" />
+            <column name="libelle" value="Invalidité" />
+        </insert>
+        <insert tableName="restitution">
+            <column name="id" value="e05427d0-3203-48c3-9f09-0ab86f595042" />
+            <column name="creation_date" valueDate="2021-05-11T12:28:02.927" />
+            <column name="flux_id" />
+            <column name="libelle" value="I.T.D. " />
+        </insert>
+        <insert tableName="restitution">
+            <column name="id" value="eba9a5fb-8044-40f1-94d5-f733587395dd" />
+            <column name="creation_date" valueDate="2021-05-11T12:27:30.483" />
+            <column name="flux_id" />
+            <column name="libelle" value="Décès" />
+        </insert>
+    </changeSet>
+    <changeSet author="umamda (generated)" id="1638879995979-70">
+        <insert tableName="risque">
+            <column name="id" value="1" />
+            <column name="creation_date" valueDate="2021-04-05T13:41:07.773" />
+            <column name="flux_id" />
+            <column name="bundle" value="DECES PREVOYANCE" />
+            <column name="code" value="DP" />
+            <column name="icon" value="string" />
+            <column name="libelle" value="DECES PREVOYANCE" />
+            <column name="name" value="DECES PREVOYANCE" />
+            <column name="theme" />
+            <column name="branche_type" />
+        </insert>
+        <insert tableName="risque">
+            <column name="id" value="2" />
+            <column name="creation_date" valueDate="2021-04-05T13:41:07.773" />
+            <column name="flux_id" />
+            <column name="bundle" value="INVESTISSEMENT" />
+            <column name="code" value="INV" />
+            <column name="icon" value="String" />
+            <column name="libelle" value="INVESTISSEMENT" />
+            <column name="name" value="INVESTISSEMENT" />
+            <column name="theme" />
+            <column name="branche_type" />
+        </insert>
+        <insert tableName="risque">
+            <column name="id" value="c6d2d89b-196d-4969-a27d-f86f3f496450" />
+            <column name="creation_date" valueDate="2021-04-05T13:41:07.773" />
+            <column name="flux_id" />
+            <column name="bundle" value="DECES FINANCEMENT" />
+            <column name="code" value="DF" />
+            <column name="icon" value="string" />
+            <column name="libelle" value="DECES FINANCEMENT" />
+            <column name="name" value="DECES FINANCEMENT" />
+            <column name="theme" value="string" />
+            <column name="branche_type" />
+        </insert>
+    </changeSet>
+    <changeSet author="umamda (generated)" id="1638879995979-71">
+        <insert tableName="role">
+            <column name="id" value="a72bd87e-dbfc-4f36-9aa1-59fae4628aea" />
+            <column name="creation_date" valueDate="2021-03-05T12:37:01.007" />
+            <column name="flux_id" />
+            <column name="name" value="ADMIN" />
+        </insert>
+    </changeSet>
+    <changeSet author="umamda (generated)" id="1638879995979-72">
+        <insert tableName="roles_privileges">
+            <column name="role_id" value="a72bd87e-dbfc-4f36-9aa1-59fae4628aea" />
+            <column name="privilege_id" value="2c93ce11-68b8-49e7-9255-2f5acf6455c5" />
+        </insert>
+        <insert tableName="roles_privileges">
+            <column name="role_id" value="a72bd87e-dbfc-4f36-9aa1-59fae4628aea" />
+            <column name="privilege_id" value="4ea7a783-a855-4d35-9a93-3a307b628333" />
+        </insert>
+        <insert tableName="roles_privileges">
+            <column name="role_id" value="a72bd87e-dbfc-4f36-9aa1-59fae4628aea" />
+            <column name="privilege_id" value="50cf3fed-5643-4ca1-8fad-b6497ca7ac21" />
+        </insert>
+        <insert tableName="roles_privileges">
+            <column name="role_id" value="a72bd87e-dbfc-4f36-9aa1-59fae4628aea" />
+            <column name="privilege_id" value="6d8b1462-cca5-4f22-be28-392e43a39fc4" />
+        </insert>
+    </changeSet>
+    <changeSet author="umamda (generated)" id="1638879995979-73">
+        <insert tableName="secteur_activite">
+            <column name="id" value="1" />
+            <column name="creation_date" />
+            <column name="flux_id" />
+            <column name="description" value="Banque" />
+            <column name="libelle" value="Banque" />
+        </insert>
+        <insert tableName="secteur_activite">
+            <column name="id" value="2" />
+            <column name="creation_date" />
+            <column name="flux_id" />
+            <column name="description" value="Assurance" />
+            <column name="libelle" value="Assurance" />
+        </insert>
+    </changeSet>
+    <changeSet author="umamda (generated)" id="1638879995979-741">
+
+        <insert tableName="takaful_user">
+            <column name="id" value="8bfe1285-34a2-48e4-a5c3-50b88dc50769" />
+            <column name="flux_id" />
+            <column name="email" value="administrateur@mamda-mcma.ma" />
+            <column name="encrypte_password" value="$2a$10$pDY6iRyszoY1hsAmxW.tNeZBTXmuqNiyEIBCtJjRrJoksZzGTwfIy" />
+            <column name="first_name" value="administrateur" />
+            <column name="last_name" value="administrateur" />
+            <column name="status" value="ACTIVE" />
+        </insert>
+    </changeSet>
+
+
+    <changeSet author="umamda (generated)" id="1638879995979-77">
+        <insert tableName="type_auxiliaire">
+            <column name="id" value="1" />
+            <column name="creation_date" />
+            <column name="flux_id" />
+            <column name="code" value="Lab" />
+            <column name="libelle" value="LABORATOIRE" />
+        </insert>
+        <insert tableName="type_auxiliaire">
+            <column name="id" value="2" />
+            <column name="creation_date" />
+            <column name="flux_id" />
+            <column name="code" value="EXM" />
+            <column name="libelle" value="MEDECIN EXAMINATEUR" />
+        </insert>
+        <insert tableName="type_auxiliaire">
+            <column name="id" value="3" />
+            <column name="creation_date" />
+            <column name="flux_id" />
+            <column name="code" value="MEDCON" />
+            <column name="libelle" value="MEDECIN CONSEIL" />
+        </insert>
+        <insert tableName="type_auxiliaire">
+            <column name="id" value="4" />
+            <column name="creation_date" />
+            <column name="flux_id" />
+            <column name="code" value="MEDSPEC" />
+            <column name="libelle" value="MEDECIN SPECIALISTE" />
+        </insert>
+        <insert tableName="type_auxiliaire">
+            <column name="id" value="5" />
+            <column name="creation_date" />
+            <column name="flux_id" />
+            <column name="code" value="MEDARB" />
+            <column name="libelle" value="MEDECIN-ARBITRE" />
+        </insert>
+    </changeSet>
+    <changeSet author="umamda (generated)" id="1638879995979-78">
+        <insert tableName="type_avenant">
+            <column name="id" value="1" />
+            <column name="creation_date" />
+            <column name="flux_id" />
+            <column name="code" value="AVN01" />
+            <column name="libelle" value="Changement  de capital et durée" />
+        </insert>
+        <insert tableName="type_avenant">
+            <column name="id" value="11" />
+            <column name="creation_date" />
+            <column name="flux_id" />
+            <column name="code" value="AVN02" />
+            <column name="libelle" value="La modification de la périodicité de versement de la contribution" />
+        </insert>
+        <insert tableName="type_avenant">
+            <column name="id" value="2" />
+            <column name="creation_date" />
+            <column name="flux_id" />
+            <column name="code" value="AVN03" />
+            <column name="libelle" value="La modification du montant de la contribution périodique" />
+        </insert>
+        <insert tableName="type_avenant">
+            <column name="id" value="4" />
+            <column name="creation_date" />
+            <column name="flux_id" />
+            <column name="code" value="AVN04" />
+            <column name="libelle" value="La modification du bénéficiaire du contrat par un autre bénéficiaire" />
+        </insert>
+        <insert tableName="type_avenant">
+            <column name="id" value="5" />
+            <column name="creation_date" />
+            <column name="flux_id" />
+            <column name="code" value="AVN05" />
+            <column name="libelle" value="La modification du la durée du contrat" />
+        </insert>
+        <insert tableName="type_avenant">
+            <column name="id" value="ce8ed982-d965-42e6-b1eb-60a553aada95" />
+            <column name="creation_date" valueDate="2021-06-04T11:34:15.733" />
+            <column name="flux_id" />
+            <column name="code" value="AVN06" />
+            <column name="libelle" value="changement d'adresse" />
+        </insert>
+    </changeSet>
+    <changeSet author="umamda (generated)" id="1638879995979-79">
+        <insert tableName="type_personne_morale">
+            <column name="id" value="1" />
+            <column name="creation_date" />
+            <column name="flux_id" />
+            <column name="code" value="MUTU" />
+            <column name="libelle" value="Mutuelle" />
+        </insert>
+        <insert tableName="type_personne_morale">
+            <column name="id" value="2" />
+            <column name="creation_date" />
+            <column name="flux_id" />
+            <column name="code" value="ETA_PUB" />
+            <column name="libelle" value="Etablissement public" />
+        </insert>
+        <insert tableName="type_personne_morale">
+            <column name="id" value="3" />
+            <column name="creation_date" />
+            <column name="flux_id" />
+            <column name="code" value="ASSC" />
+            <column name="libelle" value="Association" />
+        </insert>
+        <insert tableName="type_personne_morale">
+            <column name="id" value="4" />
+            <column name="creation_date" />
+            <column name="flux_id" />
+            <column name="code" value="ENT_PR" />
+            <column name="libelle" value="Entreprise privée" />
+        </insert>
+        <insert tableName="type_personne_morale">
+            <column name="id" value="5" />
+            <column name="creation_date" />
+            <column name="flux_id" />
+            <column name="code" value="GRPT" />
+            <column name="libelle" value="Groupement" />
+        </insert>
+    </changeSet>
+    <changeSet author="umamda (generated)" id="1638879995979-80">
+        <insert tableName="type_point_vente">
+            <column name="id" value="1" />
+            <column name="creation_date" />
+            <column name="flux_id" />
+            <column name="code" value="type1" />
+            <column name="libelle" value="type1" />
+        </insert>
+    </changeSet>
+    <changeSet author="umamda (generated)" id="1638879995979-81">
+        <insert tableName="type_prestation">
+            <column name="id" value="2ebd2f65-5ac9-4c63-b41a-1b2e8aedf67d" />
+            <column name="creation_date" valueDate="2021-05-11T12:30:44.273" />
+            <column name="flux_id" />
+            <column name="code" value="SIN_DEC" />
+            <column name="libelle" value="Décès" />
+            <column name="name" value="sinistre" />
+            <column name="famille_id" value="1" />
+        </insert>
+        <insert tableName="type_prestation">
+            <column name="id" value="e74e08ee-ef28-4bd5-9918-441ef8dd0fc9" />
+            <column name="creation_date" valueDate="2021-05-11T12:31:14.383" />
+            <column name="flux_id" />
+            <column name="code" value="SIN_IVD" />
+            <column name="libelle" value="INVALIDITE TOTALE ET DEFINITIVE" />
+            <column name="name" value="sinistre" />
+            <column name="famille_id" value="1" />
+        </insert>
+    </changeSet>
+
+
+    <changeSet author="umamda (generated)" id="1638879995979-845">
+        <insert tableName="users_pointvente">
+            <column name="user_id" value="8bfe1285-34a2-48e4-a5c3-50b88dc50769" />
+            <column name="point_vente_id" value="1" />
+        </insert>
+    </changeSet>
+    <changeSet author="umamda (generated)" id="1638879995979-856">
+        <insert tableName="users_roles">
+            <column name="user_id" value="8bfe1285-34a2-48e4-a5c3-50b88dc50769" />
+            <column name="role_id" value="a72bd87e-dbfc-4f36-9aa1-59fae4628aea" />
+        </insert>
+    </changeSet>
+    <changeSet author="umamda (generated)" id="1638879995979-86">
+        <insert tableName="verdict">
+            <column name="id" value="1" />
+            <column name="creation_date" />
+            <column name="flux_id" />
+            <column name="status" value="Medecin Specialiste" />
+            <column name="type" value="nonexaminateur" />
+        </insert>
+        <insert tableName="verdict">
+            <column name="id" value="2" />
+            <column name="creation_date" />
+            <column name="flux_id" />
+            <column name="status" value="Examen complementaire" />
+            <column name="type" value="nonexaminateur" />
+        </insert>
+        <insert tableName="verdict">
+            <column name="id" value="3" />
+            <column name="creation_date" />
+            <column name="flux_id" />
+            <column name="status" value="Expertise médecin conseil" />
+            <column name="type" value="examinateur" />
+        </insert>
+        <insert tableName="verdict">
+            <column name="id" value="4" />
+            <column name="creation_date" />
+            <column name="flux_id" />
+            <column name="status" value="Réassurance" />
+            <column name="type" value="examinateur" />
+        </insert>
+        <insert tableName="verdict">
+            <column name="id" value="5" />
+            <column name="creation_date" />
+            <column name="flux_id" />
+            <column name="status" value="Rejet" />
+            <column name="type" value="nonexaminateur" />
+        </insert>
+        <insert tableName="verdict">
+            <column name="id" value="6" />
+            <column name="creation_date" />
+            <column name="flux_id" />
+            <column name="status" value="Acceptation au tarif normal" />
+            <column name="type" value="nonexaminateur" />
+        </insert>
+        <insert tableName="verdict">
+            <column name="id" value="7" />
+            <column name="creation_date" />
+            <column name="flux_id" />
+            <column name="status" value="Acceptation avec surprime" />
+            <column name="type" value="nonexaminateur" />
+        </insert>
+    </changeSet>
+    <changeSet id="enable-keys" author="x" runAlways="true">
+        <sql>EXEC sp_msforeachtable "ALTER TABLE ? CHECK CONSTRAINT all"
+</sql>
+    </changeSet>
+</databaseChangeLog>

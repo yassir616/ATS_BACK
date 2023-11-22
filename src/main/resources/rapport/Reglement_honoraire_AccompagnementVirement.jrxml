@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.6.0.final using JasperReports Library version 6.6.0  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Reglement_honoraire" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" whenResourceMissingType="Error" uuid="dbcf9b5c-8a9d-4e83-bdd8-6499736673f0">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="One Empty Record"/>
+	<subDataset name="MYCollectionDataSet" uuid="ab37c44e-8b53-49e3-a89f-967bc3d36db5">
+		<queryString>
+			<![CDATA[]]>
+		</queryString>
+		<field name="num_sinistre" class="java.lang.String"/>
+		<field name="benificiaire" class="java.lang.String"/>
+		<field name="rib" class="java.lang.String"/>
+		<field name="assure" class="java.lang.String"/>
+		<field name="montantNet" class="java.lang.Float"/>
+		<field name="montantTaxe" class="java.lang.Float"/>
+		<field name="montantBrut" class="java.lang.Float"/>
+	</subDataset>
+	<parameter name="PATH" class="java.lang.String"/>
+	<parameter name="CollectionBeanParam" class="net.sf.jasperreports.engine.data.JRBeanCollectionDataSource"/>
+	<parameter name="Total" class="java.lang.String"/>
+	<parameter name="Partenaire" class="java.lang.String"/>
+	<parameter name="Agence" class="java.lang.String"/>
+	<parameter name="Adresse" class="java.lang.String"/>
+	<parameter name="Benificiaire" class="java.lang.String"/>
+	<parameter name="ModeReglement" class="java.lang.String"/>
+	<parameter name="referencePartenaire" class="java.lang.String"/>
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<field name="Total" class="java.lang.String"/>
+	<field name="Partenaire" class="java.lang.String"/>
+	<field name="Agence" class="java.lang.String"/>
+	<field name="Adresse" class="java.lang.String"/>
+	<field name="ModeReglement" class="java.lang.String"/>
+	<field name="referencePartenaire" class="java.lang.String"/>
+	<field name="reglement" class="java.lang.String"/>
+	<variable name="total1" class="java.lang.Integer" resetType="Page" calculation="Count">
+		<variableExpression><![CDATA[$F{Total}]]></variableExpression>
+	</variable>
+	<background>
+		<band height="802" splitType="Stretch">
+			<image>
+				<reportElement x="-20" y="-50" width="680" height="852" uuid="bc34a25f-64df-4ac0-b846-58f65c621d76"/>
+				<imageExpression><![CDATA[$P{PATH}+"/PET_TAKAFUL (3)_page-0001.jpg"]]></imageExpression>
+			</image>
+		</band>
+	</background>
+	<title>
+		<band height="183" splitType="Stretch">
+			<textField pattern="MMMMM dd, yyyy">
+				<reportElement x="460" y="10" width="100" height="20" uuid="35ec3faf-eb7f-4ebc-b4ab-5f26ffd10ac1"/>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="416" y="10" width="80" height="20" uuid="133af3cb-74b3-4045-a9cb-16cad57b4134"/>
+				<text><![CDATA[Rabat, le ]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="351" y="100" width="199" height="20" uuid="7caff47d-8817-4a5a-8ff1-fb5b2a32647d"/>
+				<textFieldExpression><![CDATA[$P{Agence}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="351" y="120" width="199" height="40" uuid="01401d73-fe1c-40be-80f3-d52329d08cee"/>
+				<textFieldExpression><![CDATA[$P{Adresse}]]></textFieldExpression>
+			</textField>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="76" splitType="Stretch">
+			<staticText>
+				<reportElement x="40" y="50" width="30" height="21" uuid="9601e565-cd51-425a-8449-b8a1f82939d9"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle"/>
+				<text><![CDATA[Objet : ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="40" y="26" width="146" height="14" uuid="071d9e9e-29f1-4110-928c-ba9f356c4ced">
+					<property name="local_mesure_unitwidth" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<text><![CDATA[Référence d’ordre de Virement : ]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="186" y="26" width="300" height="14" uuid="0072b8b1-e360-4d0c-b422-b7c0f8cd57c4"/>
+				<textFieldExpression><![CDATA[$P{referencePartenaire}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="70" y="50" width="357" height="21" uuid="aa65b5cb-a794-4f89-bf1f-f85c36a551ab"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle"/>
+				<text><![CDATA[Règlement des honoraires]]></text>
+			</staticText>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="151" splitType="Stretch">
+			<staticText>
+				<reportElement x="40" y="10" width="221" height="20" uuid="8ea618c9-0b12-4fb3-bb59-13ba346a006b"/>
+				<text><![CDATA[Monsieur,]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="40" y="91" width="360" height="20" uuid="cb424b27-85dd-4b6b-8687-79f7dda37c84"/>
+				<text><![CDATA[Veuillez agréer, Messieurs, l’expression de nos salutations distinguées.]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="262" y="60" width="209" height="15" uuid="b83eea3e-1e8d-4f46-ac3c-83e928e64a53"/>
+				<textElement textAlignment="Left" verticalAlignment="Top"/>
+				<textFieldExpression><![CDATA[$P{Total}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="40" y="39" width="310" height="17" uuid="627f72af-57f6-4e1c-8c62-4a55be784778"/>
+				<text><![CDATA[Nous vous prions d’effectuer un virement par le débit de notre compte MCMA]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="40" y="60" width="221" height="15" uuid="d839ecbb-b59a-46a8-9f45-2b2692975cac"/>
+				<text><![CDATA[ouvert auprès de votre agence de la somme de :]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="40" y="80" width="429" height="15" uuid="dcda9517-0eae-458c-bbfc-b38b9ded709a"/>
+				<textFieldExpression><![CDATA[$P{Partenaire}]]></textFieldExpression>
+			</textField>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="159" splitType="Stretch">
+			<staticText>
+				<reportElement x="340" y="40" width="140" height="30" uuid="9ca48666-1bf5-493b-bee7-755fa50e8cc2"/>
+				<text><![CDATA[Signature du donneur d’ordre]]></text>
+			</staticText>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="35" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>

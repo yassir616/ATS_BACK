@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.20.1.final using JasperReports Library version 6.20.1-7584acb244139816654f64e2fd57a00d3e31921e  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Lettre_Relance" pageWidth="612" pageHeight="792" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="a5b4288e-c083-4a37-b512-facf13c16f18">
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<field name="Nom et prénom" class="java.lang.String">
+		<fieldDescription><![CDATA[nomPrenom]]></fieldDescription>
+	</field>
+	<field name="Ville" class="java.lang.String">
+		<fieldDescription><![CDATA[ville]]></fieldDescription>
+	</field>
+	<field name="Libellé" class="java.lang.String">
+		<fieldDescription><![CDATA[libelle]]></fieldDescription>
+	</field>
+	<field name="Ville point de vente " class="java.lang.String">
+		<fieldDescription><![CDATA[pointVenteVille]]></fieldDescription>
+	</field>
+	<field name="Numéro de sinistre" class="java.lang.String">
+		<fieldDescription><![CDATA[numeroSinistre]]></fieldDescription>
+	</field>
+	<field name="Raison sociale" class="java.lang.String">
+		<fieldDescription><![CDATA[raisonSocial]]></fieldDescription>
+	</field>
+	<field name="Numéro de contrat" class="java.lang.String">
+		<fieldDescription><![CDATA[numeroContrat]]></fieldDescription>
+	</field>
+	<field name="Date" class="java.util.Date">
+		<fieldDescription><![CDATA[date]]></fieldDescription>
+	</field>
+	<field name="Commentaire" class="java.lang.String">
+		<fieldDescription><![CDATA[commentaire]]></fieldDescription>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch">
+			<staticText>
+				<reportElement x="210" y="24" width="180" height="30" forecolor="#370FFC" uuid="0329a0bd-b86a-464e-85a6-7fcbc9425ffb"/>
+				<textElement textAlignment="Center">
+					<font size="20" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[Lettre de relance :]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="112" splitType="Stretch">
+			<textField>
+				<reportElement x="360" y="30" width="100" height="20" uuid="313f6321-59ef-4882-8eb5-c990b554708b"/>
+				<textElement>
+					<font isBold="true" isUnderline="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{Raison sociale}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="360" y="10" width="60" height="20" uuid="e6db8807-8318-4528-83c7-ed3928b6a880"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[RABAT, LE ]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="480" y="30" width="90" height="20" uuid="24443f8e-19d1-41d6-8623-61a3079ad167"/>
+				<textElement>
+					<font isBold="true" isUnderline="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{Libellé}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="460" y="30" width="20" height="20" uuid="c772c99a-75c6-4c8f-8cf1-0e2104a15e33"/>
+				<textElement>
+					<font isBold="true" isUnderline="true"/>
+				</textElement>
+				<text><![CDATA[,]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="420" y="10" width="150" height="20" uuid="a3d42e04-7abd-456c-a1a6-a13adc28559a"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{Date}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="360" y="50" width="120" height="20" uuid="13a05b6d-a4e0-4a46-853b-f381dee8f126"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{Ville}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="97" splitType="Stretch">
+			<staticText>
+				<reportElement x="20" y="10" width="180" height="20" uuid="058f7e2d-d67d-4e84-be48-d67dc0240164"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[OBJET : RELANCE-Capital DECES ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="20" y="30" width="60" height="20" uuid="38d61f50-37dc-4c1a-bd65-10a71ebb9e7f"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[DOSSIER : ]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="180" y="30" width="60" height="20" uuid="f49d7611-c7d3-4c15-9dcd-bd9a36dcd1c8"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{Ville}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="20" y="50" width="30" height="20" uuid="8b36bcaf-454f-4aff-a9e9-7b10518c643c"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[REF /]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="50" y="50" width="100" height="20" uuid="5710fed4-a4bd-46cc-9210-4686f6f0dcce"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{Nom et prénom}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="20" y="70" width="40" height="20" uuid="49517369-58a7-48f1-9dc4-8c7a8525f050"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[REF SIN]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="60" y="70" width="130" height="20" uuid="d400fdfe-8cdc-4c94-99b2-71e2e8045010"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{Numéro de sinistre}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="150" y="50" width="40" height="20" uuid="dab07ee4-78b5-40a0-8378-0269158e5e26"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[- BULL ]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="190" y="50" width="110" height="20" uuid="f2188042-cfe5-4385-87b5-0dc85e70b3c8"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{Numéro de contrat}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="80" y="30" width="100" height="20" uuid="a4d82850-c8f2-4c4e-a6a6-b90cd7b700aa"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{Raison sociale}]]></textFieldExpression>
+			</textField>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="232" splitType="Stretch">
+			<staticText>
+				<reportElement x="20" y="30" width="60" height="20" uuid="c95f70c0-ddaa-4812-9cd5-5b1b4b91ce31"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Monsieur,]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="20" y="70" width="130" height="20" uuid="1d1578d4-2870-4dfd-99d3-03a6258278c1"/>
+				<text><![CDATA[Après l'étude du dossier de ]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="190" y="70" width="110" height="20" uuid="f4787a96-502e-41da-a314-651da9e5bf5c"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{Nom et prénom}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="300" y="70" width="240" height="20" uuid="e8fdea26-0f53-4507-9180-5d78e534fd2b"/>
+				<text><![CDATA[nous vous demandons de bien vouloir ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="20" y="90" width="220" height="20" uuid="dd45ad9b-9a97-4fc0-a87e-dfea432161de"/>
+				<text><![CDATA[nous transmettre la (es) pièce (s) suivante (es) : ]]></text>
+			</staticText>
+			<textField isStretchWithOverflow="true">
+				<reportElement positionType="Float" stretchType="RelativeToTallestObject" x="40" y="110" width="220" height="20" uuid="2d5fb643-409b-4312-8db4-fa2be35ed0d5"/>
+				<textFieldExpression><![CDATA[$F{Commentaire}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="20" y="150" width="210" height="20" uuid="09749a7f-1623-4ead-8f4e-9747ac9710d3"/>
+				<text><![CDATA[Nous vous en souhaitons bonne réception.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="20" y="170" width="100" height="20" uuid="5f825798-5f64-4acd-890e-4d6d55aa7055"/>
+				<text><![CDATA[Meilleures salutations.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="150" y="70" width="30" height="20" uuid="06a82a0c-6447-439c-99d9-ef9c6a695e6b"/>
+				<text><![CDATA[Feu(e)]]></text>
+			</staticText>
+		</band>
+	</detail>
+	<pageFooter>
+		<band height="122" splitType="Stretch">
+			<staticText>
+				<reportElement x="20" y="10" width="180" height="20" uuid="a29e8ead-40e7-4815-aef4-7e330729a639"/>
+				<textElement>
+					<font isBold="true" isUnderline="true"/>
+				</textElement>
+				<text><![CDATA[DIRECTION ATTAAMINE TAKAFUL ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="20" y="30" width="180" height="20" uuid="dedc73a3-3d89-4183-92c2-ccae3eeb5a7b"/>
+				<textElement>
+					<font isBold="true" isUnderline="true"/>
+				</textElement>
+				<text><![CDATA[DEPARTEMENT REGLEMENT]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="20" y="50" width="180" height="20" uuid="67478463-a0a1-4635-8fcb-17905ad0a481"/>
+				<textElement>
+					<font isBold="true" isUnderline="true"/>
+				</textElement>
+				<text><![CDATA[DES PRESTATIONS]]></text>
+			</staticText>
+		</band>
+	</pageFooter>
+</jasperReport>
