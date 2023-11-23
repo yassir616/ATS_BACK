@@ -13,6 +13,8 @@ import javax.transaction.Transactional;
 import com.soa.vie.takaful.entitymodels.Contract;
 import com.soa.vie.takaful.entitymodels.Cotisation;
 import com.soa.vie.takaful.entitymodels.EmissionGlobale;
+import com.soa.vie.takaful.entitymodels.PersonnePhysique;
+import com.soa.vie.takaful.entitymodels.Produit;
 import com.soa.vie.takaful.entitymodels.autoIncrementhelpers.CostumIdGeneratedValueLotEntity;
 import com.soa.vie.takaful.repositories.IContractRepository;
 import com.soa.vie.takaful.repositories.ICotisationRepository;
@@ -67,9 +69,11 @@ public class CotisationServiceImpl implements ICotisationService {
 		//designé les champs à selectionnées
 		StringBuilder queryBuilder = new StringBuilder("SELECT cotisation.id, cotisation.datePrelevement,cotisation.montantCotisation,cotisation.fraisAcquisitionTTC,cotisation.fraisGestionTTC,cotisation.montantTaxe,")
 				.append("cotisation.montantTTC,cotisation.solde,cotisation.numQuittance,cotisation.montantTaxeParaFiscale,cotisation.montantAccessoire,cotisation.capitalAssure,")
-				.append("contrat.numeroContrat,contrat.dateEffet,contrat.dateEchenace ")
-				.append( "FROM Cotisation cotisation,Contract contrat ");//,PersonnePhysique assure,Personne souscripteur,Produit produit");
-		queryBuilder.append(" WHERE cotisation.contrat.id=contrat.id and cotisation.id IN :cotisationIds ");
+				.append("contrat.numeroContrat,contrat.dateEffet,contrat.dateEcheance, ")
+				.append("produit.libelle, ")
+				.append("assure.nom,assure.prenom ")
+				.append( "FROM Cotisation cotisation,Contract contrat ,Produit produit ,PersonnePhysique assure ");//,,Personne souscripteur,Produit produit");
+		queryBuilder.append(" WHERE cotisation.contrat.id=contrat.id and contrat.produit.id=produit.id and contrat.assure.id=assure.id and cotisation.id IN :cotisationIds ");
 		params.put("cotisationIds", cotisationIds);
 		Query query = entityManager.createQuery(queryBuilder.toString());
 		params.forEach(query::setParameter);
@@ -92,9 +96,17 @@ public class CotisationServiceImpl implements ICotisationService {
 			cotisation.setMontantAccessoire((float) result[10]);
 			cotisation.setCapitalAssure((float) result[11]);
 			Contract contract=new Contract();
+			Produit produit=new Produit();
+			PersonnePhysique assure=new PersonnePhysique();
+			assure.setNom((String) result[16]);
+			assure.setPrenom((String) result[17]);
+			produit.setLibelle((String) result[15]);
+			contract.setProduit(produit);
+			contract.setAssure(assure);
 			contract.setNumeroContrat((String)result[12]);
 			contract.setDateEffet((Date) result[13] );
 			contract.setDateEcheance((Date) result[14] );
+			cotisation.setContrat(contract);
 			cotisations.add(cotisation);
 		}
 
@@ -299,15 +311,15 @@ public class CotisationServiceImpl implements ICotisationService {
 			//adding the data of cotaisation pojo class
 			BeanUtils.copyProperties(cotisation, cotiDTO);
 			//adding the data of contracts
-			// cotiDTO.setNumeroContrat(cotisation.getContrat().getNumeroContrat());
-			// cotiDTO.setDateEffet(cotisation.getContrat().getDateEffet());
-			// cotiDTO.setDateEcheance(cotisation.getContrat().getDateEcheance());
+			cotiDTO.setNumeroContrat(cotisation.getContrat().getNumeroContrat());
+			cotiDTO.setDateEffet(cotisation.getContrat().getDateEffet());
+			cotiDTO.setDateEcheance(cotisation.getContrat().getDateEcheance());
 			//adding the rest of the data
-			// cotiDTO.setNomAssuree(cotisation.getContrat().getAssure().getNom());
-			// cotiDTO.setPrenomAssuree(cotisation.getContrat().getAssure().getPrenom());
-			// cotiDTO.setProduitLibelle(cotisation.getContrat().getProduit().getLibelle());
+			cotiDTO.setNomAssuree(cotisation.getContrat().getAssure().getNom());
+			cotiDTO.setPrenomAssuree(cotisation.getContrat().getAssure().getPrenom());
+			cotiDTO.setProduitLibelle(cotisation.getContrat().getProduit().getLibelle());
 			// cotiDTO.setCreationDateCotisation(cotisation.getCreationDate());
-			// cotiDTO.setEtatCotisation(cotisation.getEtatCotisation());
+		    cotiDTO.setEtatCotisation(cotisation.getEtatCotisation());
 			//cotiDTO.setNomSouscripteur(coti.getContrat().getSouscripteur().getId());
 			//adding to the list
 			cotisationsDTO.add(cotiDTO);
