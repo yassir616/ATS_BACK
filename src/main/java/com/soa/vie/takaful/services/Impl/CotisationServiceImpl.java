@@ -64,7 +64,7 @@ public class CotisationServiceImpl implements ICotisationService {
 
 	//cotisation.id,cotisation.datePrelevement,cotisation.montantCotisation,cotisation.etatCotisation,cotisation.numQuittance,cotisation.solde,cotisation.montantTaxe,cotisation.montantTaxeParaFiscale,cotisation.annulation,cotisation.montantAccessoire,cotisation.montantTTC,cotisation.cotisationType,cotisation.fraisAcquisitionTTC,cotisation.fraisGestionTTC,cotisation.contributionPure,cotisation.capitalAssure,cotisation.dateEtablissement,cotisation.exercice,cotisation.numeroLot,cotisation.flagBatch,cotisation.dateEmission
 
-	private List<Cotisation> recupererParIds(List<String> cotisationIds) throws InterruptedException, ExecutionException {
+	private List<Cotisation> recupererParIds(Date startDate,Date endDate,String partenaireID,String produitID) throws InterruptedException, ExecutionException {
 		java.util.Map<String, Object> params = new HashMap<>();
 		//designé les champs à selectionnées
 		StringBuilder queryBuilder = new StringBuilder("SELECT cotisation.id, cotisation.datePrelevement,cotisation.montantCotisation,cotisation.fraisAcquisitionTTC,cotisation.fraisGestionTTC,cotisation.montantTaxe,")
@@ -72,9 +72,14 @@ public class CotisationServiceImpl implements ICotisationService {
 				.append("contrat.numeroContrat,contrat.dateEffet,contrat.dateEcheance, ")
 				.append("produit.libelle, ")
 				.append("assure.nom,assure.prenom ")
-				.append( "FROM Cotisation cotisation,Contract contrat ,Produit produit ,PersonnePhysique assure ");//,,Personne souscripteur,Produit produit");
-		queryBuilder.append(" WHERE cotisation.contrat.id=contrat.id and contrat.produit.id=produit.id and contrat.assure.id=assure.id and cotisation.id IN :cotisationIds ");
-		params.put("cotisationIds", cotisationIds);
+				.append( "FROM Cotisation cotisation,Contract contrat ,Produit produit ,PersonnePhysique assure ,Partenaire partenaire ");//,,Personne souscripteur,Produit produit");
+		queryBuilder.append(" WHERE cotisation.contrat.id=contrat.id and contrat.produit.id=produit.id and contrat.assure.id=assure.id and produit.partenaire.id=partenaire.id and cotisation.datePrelevement between :startDate and :endDate ")
+		.append(" and partenaire.id=:patId ")
+		.append(" and produit.id=:prodID ")	;
+		params.put("startDate", startDate);
+		params.put("endDate", endDate);
+		params.put("patId", partenaireID);
+		params.put("prodID", produitID);
 		Query query = entityManager.createQuery(queryBuilder.toString());
 		params.forEach(query::setParameter);
 
@@ -283,11 +288,12 @@ public class CotisationServiceImpl implements ICotisationService {
 		SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
 		Date startDatee=sdf.parse(startDate);
 		Date endDatee=sdf.parse(endDate);
-		List<String> cotisationIds = new ArrayList<>();
+		List<Cotisation> cotisations = new ArrayList<>();
 		if (!partenaireId.equals("empty")) {
 			if (!produitId.equals("empty")) {
 				log.info("searchByALL...");
-				cotisationIds=cotisationRepository.getEmissionGlobale(partenaireId, produitId, startDatee, endDatee);
+				//cotisationIds=cotisationRepository.getEmissionGlobale(partenaireId, produitId, startDatee, endDatee);
+				cotisations=recupererParIds(startDatee,endDatee,partenaireId,produitId);
 			} else {
 				log.info("searchByPartenaireAndDate...");
 				//cotisationIds=cotisationRepository.getEmissionGlobaleByDateAndPartenaire(partenaireId, startDate, endDate);
@@ -300,7 +306,6 @@ public class CotisationServiceImpl implements ICotisationService {
 		log.info("END EXECUTION OF REQUEST BEGIN DTO ...");
 		//design pattern 
 		int i=0;
-		List<Cotisation> cotisations=recupererParIds(cotisationIds);
 		log.info("END EXECUTION OF GET IDS ...");
 		List<CotisationRequestDTO> cotisationsDTO= new ArrayList<>();
 		for (Cotisation cotisation : cotisations) {
