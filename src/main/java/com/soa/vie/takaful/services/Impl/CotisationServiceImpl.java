@@ -6,8 +6,7 @@ import java.text.SimpleDateFormat;
 import java.util.*;
 import java.util.concurrent.ExecutionException;
 import java.util.stream.Collectors;
-import javax.persistence.EntityManager;
-import javax.persistence.Query;
+
 import javax.transaction.Transactional;
 
 import com.soa.vie.takaful.entitymodels.Contract;
@@ -57,12 +56,11 @@ public class CotisationServiceImpl implements ICotisationService {
 	@Autowired
 	private ModelMapper modelMapper;
 
-	@Autowired
-	private EntityManager entityManager;
+
 
 	//cotisation.id,cotisation.datePrelevement,cotisation.montantCotisation,cotisation.etatCotisation,cotisation.numQuittance,cotisation.solde,cotisation.montantTaxe,cotisation.montantTaxeParaFiscale,cotisation.annulation,cotisation.montantAccessoire,cotisation.montantTTC,cotisation.cotisationType,cotisation.fraisAcquisitionTTC,cotisation.fraisGestionTTC,cotisation.contributionPure,cotisation.capitalAssure,cotisation.dateEtablissement,cotisation.exercice,cotisation.numeroLot,cotisation.flagBatch,cotisation.dateEmission
 
-	private List<Cotisation> recupererParIds(List<String> cotisationIds) throws InterruptedException, ExecutionException {
+/*	private List<Cotisation> recupererParIds(List<String> cotisationIds) throws InterruptedException, ExecutionException {
 		java.util.Map<String, Object> params = new HashMap<>();
 		//designé les champs à selectionnées
 		StringBuilder queryBuilder = new StringBuilder("SELECT cotisation.id, cotisation.datePrelevement,cotisation.montantCotisation,cotisation.fraisAcquisitionTTC,cotisation.fraisGestionTTC,cotisation.montantTaxe,")
@@ -99,7 +97,7 @@ public class CotisationServiceImpl implements ICotisationService {
 		}
 
 		return cotisations;
-	}
+	}*/
 	@Override
 	@Async("asyncExecutor")
 	public Page<CotisationModelResponse> getCotisations(int page, int limit)
@@ -288,7 +286,7 @@ public class CotisationServiceImpl implements ICotisationService {
 		log.info("END EXECUTION OF REQUEST BEGIN DTO ...");
 		//design pattern 
 		int i=0;
-		List<Cotisation> cotisations=recupererParIds(cotisationIds);
+		List<Cotisation> cotisations=cotisationRepository.recupererParIds(cotisationIds);
 		log.info("END EXECUTION OF GET IDS ...");
 		List<CotisationRequestDTO> cotisationsDTO= new ArrayList<>();
 		for (Cotisation cotisation : cotisations) {

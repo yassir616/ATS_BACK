@@ -1,4 +1,4 @@
-/*package com.soa.vie.takaful.repositoriesImplemetation;
+package com.soa.vie.takaful.repositories.Impl;
 
 import java.util.ArrayList;
 import java.util.Date;
@@ -7,35 +7,34 @@ import java.util.List;
 import java.util.concurrent.ExecutionException;
 
 import javax.persistence.EntityManager;
+import javax.persistence.PersistenceContext;
 import javax.persistence.Query;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Repository;
 
 import com.soa.vie.takaful.entitymodels.Cotisation;
 import com.soa.vie.takaful.repositories.ICotisationRepositoryCustom;
+import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Repository;
 
-
+@Repository
 public class CotisationRepositoryImpl implements ICotisationRepositoryCustom{
 
-	@Autowired
-	private EntityManager entityManager;
+    @PersistenceContext
+    private EntityManager entityManager;
 
 	//cotisation.id,cotisation.datePrelevement,cotisation.montantCotisation,cotisation.etatCotisation,cotisation.numQuittance,cotisation.solde,cotisation.montantTaxe,cotisation.montantTaxeParaFiscale,cotisation.annulation,cotisation.montantAccessoire,cotisation.montantTTC,cotisation.cotisationType,cotisation.fraisAcquisitionTTC,cotisation.fraisGestionTTC,cotisation.contributionPure,cotisation.capitalAssure,cotisation.dateEtablissement,cotisation.exercice,cotisation.numeroLot,cotisation.flagBatch,cotisation.dateEmission
 	@Override
 	public List<Cotisation> recupererParIds(List<String> cotisationIds) throws InterruptedException, ExecutionException {
     java.util.Map<String, Object> params = new HashMap<>();
     //designé les champs à selectionnées
-    StringBuilder queryBuilder = new StringBuilder("SELECT cotisation.id, cotisation.datePrelevement,cotisation.montantCotisation,cotisation.fraisAcquisitionTTC,cotisation.fraisGestionTTC,cotisation.montantTaxe,")
-	.append("cotisation.montantTTC,cotisation.solde,cotisation.numQuittance,cotisation.montantTaxeParaFiscale,cotisation.montantAccessoire,cotisation.capitalAssure,")
-    .append("contrat.numeroContrat ")
+    StringBuilder queryBuilder = new StringBuilder("SELECT cotisation ")
 	.append( "FROM Cotisation cotisation,Contract contrat ");//,PersonnePhysique assure,Personne souscripteur,Produit produit");
     queryBuilder.append(" WHERE   cotisation.contrat.id=contrat.id and cotisation.id IN :cotisationIds ");
     params.put("cotisationIds", cotisationIds);
     Query query = entityManager.createQuery(queryBuilder.toString());
     params.forEach(query::setParameter);
-
-    List<Object[]> resultList = query.getResultList();
+   /* List<Cotisation> resultList = query.getResultList();
     List<Cotisation> cotisations = new ArrayList<>();
 	
     for (Object[] result : resultList) {
@@ -55,9 +54,10 @@ public class CotisationRepositoryImpl implements ICotisationRepositoryCustom{
 
         cotisations.add(cotisation);
     }
+*/
+    return 		query.getResultList();
 
-    return cotisations;
 }
 
     
-} */
+}
