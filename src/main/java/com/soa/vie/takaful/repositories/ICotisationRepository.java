@@ -13,8 +13,10 @@ import org.springframework.data.repository.PagingAndSortingRepository;
 import org.springframework.data.repository.query.Param;
 
 import com.soa.vie.takaful.entitymodels.Cotisation;
+import org.springframework.stereotype.Repository;
 
-public interface ICotisationRepository extends PagingAndSortingRepository<Cotisation, String>,ICotisationRepositoryCustom {
+@Repository
+public interface ICotisationRepository extends PagingAndSortingRepository<Cotisation, String> {
 
 	@Query(value = "select * from cotisation  where solde != 0 \n-- #pageable\n", countQuery = "SELECT count(*) from cotisation  where solde != 0 ", nativeQuery = true)
 	public Page<Cotisation> findAllCotisation(Pageable pageable);

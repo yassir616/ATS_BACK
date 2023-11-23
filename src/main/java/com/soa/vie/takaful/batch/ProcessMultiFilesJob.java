@@ -102,7 +102,7 @@ public class ProcessMultiFilesJob {
 		FlatFileItemWriter<CotisationDTO> writers = new FlatFileItemWriter<>();
 
 		String partenaire = "";
-		List<CotisationModelResponse> cot = cotisationService.cotisationByContrats(id);
+		List<CotisationModelResponse> cot = cotisationService.getCotisationByContrats(id);
 		for (CotisationModelResponse item : cot) {
 			partenaire = item.getContrat().getProduit().getPartenaire().getCode();
 			cotisationRepository.updateNumeroOrdre(item.getContrat().getNumOrdrePrelevement() + 1,
@@ -242,7 +242,7 @@ public class ProcessMultiFilesJob {
 	public ItemReader<CotisationDTO> itemReader(@Value("#{jobParameters['id']}") String id)
 			throws InterruptedException, ExecutionException {
 
-		List<CotisationModelResponse> cot = cotisationService.cotisationByContrats(id);
+		List<CotisationModelResponse> cot = cotisationService.getCotisationByContrats(id);
 		List<CotisationDTO> dto = new ArrayList<>();
 		for (CotisationModelResponse item : cot) {
 

@@ -45,7 +45,7 @@ public class CotisationController {
 	@GetMapping(path = "cotisation/contrat/{id}")
 	public List<CotisationModelResponse> cotisationByContrat(@PathVariable String id)
 			throws InterruptedException, ExecutionException {
-		return cotisationService.cotisationByContrat(id);
+		return cotisationService.getCotisationByContrat(id);
 	}
 
 	@PostMapping(path = "addCotisation")

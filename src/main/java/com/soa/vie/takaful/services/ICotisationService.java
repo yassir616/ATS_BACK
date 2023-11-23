@@ -21,9 +21,9 @@ public interface ICotisationService {
 	public CotisationModelResponse createCotisation(CreateAndUpdateCotisation model)
 			throws InterruptedException, ExecutionException;
 
-	public List<CotisationModelResponse> cotisationByContrat(String id) throws InterruptedException, ExecutionException;
+	public List<CotisationModelResponse> getCotisationByContrat(String id) throws InterruptedException, ExecutionException;
 
-	public List<CotisationModelResponse> cotisationByContrats(String type)
+	public List<CotisationModelResponse> getCotisationByContrats(String type)
 			throws InterruptedException, ExecutionException;
 
 	public List<String> productByContrats() throws InterruptedException, ExecutionException;

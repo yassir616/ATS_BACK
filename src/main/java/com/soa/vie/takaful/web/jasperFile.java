@@ -36,7 +36,7 @@ import com.soa.vie.takaful.requestmodels.RequestExamenComplementaireMedecinSpeci
 import com.soa.vie.takaful.requestmodels.RequestLettreRejet;
 import com.soa.vie.takaful.requestmodels.RequestLettreRenonciation;
 import com.soa.vie.takaful.responsemodels.Devis;
-import com.soa.vie.takaful.servicesImplementation.FileStorageService;
+import com.soa.vie.takaful.services.Impl.FileStorageService;
 import com.soa.vie.takaful.util.Constants;
 
 import lombok.extern.slf4j.Slf4j;

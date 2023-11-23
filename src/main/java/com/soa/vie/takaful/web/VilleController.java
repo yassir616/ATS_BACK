@@ -3,7 +3,7 @@ package com.soa.vie.takaful.web;
 import java.util.List;
 
 import com.soa.vie.takaful.entitymodels.Ville;
-import com.soa.vie.takaful.servicesImplementation.VilleServiceImpl;
+import com.soa.vie.takaful.services.Impl.VilleServiceImpl;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;

@@ -2,7 +2,7 @@ package com.soa.vie.takaful.web;
 
 import com.soa.vie.takaful.requestmodels.FileRequestModel;
 import com.soa.vie.takaful.responsemodels.ResponseMessage;
-import com.soa.vie.takaful.servicesImplementation.FileStorageService;
+import com.soa.vie.takaful.services.Impl.FileStorageService;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;

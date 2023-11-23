@@ -12,9 +12,9 @@ import com.soa.vie.takaful.responsemodels.NotificationModelResponse;
 import com.soa.vie.takaful.requestmodels.NotificationSinistreRequestModel;
 import com.soa.vie.takaful.responsemodels.NotificationSinistreModelResponse;
 import com.soa.vie.takaful.security.SecurityCanstants;
-import com.soa.vie.takaful.servicesImplementation.NotificationServiceImpl;
-import com.soa.vie.takaful.servicesImplementation.NotificationSinistreServiceImpl;
-import com.soa.vie.takaful.servicesImplementation.UserServiceImpl;
+import com.soa.vie.takaful.services.Impl.NotificationServiceImpl;
+import com.soa.vie.takaful.services.Impl.NotificationSinistreServiceImpl;
+import com.soa.vie.takaful.services.Impl.UserServiceImpl;
 
 import org.springframework.beans.factory.annotation.Autowired;
 

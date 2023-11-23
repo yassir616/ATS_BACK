@@ -3,7 +3,7 @@ package com.soa.vie.takaful.web;
 import com.soa.vie.takaful.entitymodels.FileToUploadSinistre;
 import com.soa.vie.takaful.requestmodels.FileSinistreRequestModel;
 import com.soa.vie.takaful.responsemodels.ResponseMessage;
-import com.soa.vie.takaful.servicesImplementation.FileSinistreStorageService;
+import com.soa.vie.takaful.services.Impl.FileSinistreStorageService;
 
 import java.util.List;
 
