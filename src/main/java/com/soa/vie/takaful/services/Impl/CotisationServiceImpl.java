@@ -9,11 +9,7 @@ import java.util.stream.Collectors;
 
 import javax.transaction.Transactional;
 
-import com.soa.vie.takaful.entitymodels.Contract;
-import com.soa.vie.takaful.entitymodels.Cotisation;
-import com.soa.vie.takaful.entitymodels.EmissionGlobale;
-import com.soa.vie.takaful.entitymodels.PersonnePhysique;
-import com.soa.vie.takaful.entitymodels.Produit;
+import com.soa.vie.takaful.entitymodels.*;
 import com.soa.vie.takaful.entitymodels.autoIncrementhelpers.CostumIdGeneratedValueLotEntity;
 import com.soa.vie.takaful.repositories.IContractRepository;
 import com.soa.vie.takaful.repositories.ICotisationRepository;
@@ -238,7 +234,7 @@ public class CotisationServiceImpl implements ICotisationService {
 		List<Cotisation> cotisations = cotisationRepository.recupererParIds(sdf.parse(startDate),sdf.parse(endDate),partenaireId,produitId);
 
 		return cotisations.stream()
-				.map(cotisation -> modelMapper.map(cotisation, CotisationRequestDTO.class))
+				.map(cotisation -> cotisationMapper.map(cotisation, CotisationRequestDTO.class))
 				.collect(Collectors.toList());
 	}
 
