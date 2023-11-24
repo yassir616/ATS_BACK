@@ -7,16 +7,16 @@ import javax.transaction.Transactional;
 
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
+import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Modifying;
 import org.springframework.data.jpa.repository.Query;
-import org.springframework.data.repository.PagingAndSortingRepository;
 import org.springframework.data.repository.query.Param;
 
 import com.soa.vie.takaful.entitymodels.Cotisation;
 import org.springframework.stereotype.Repository;
 
 @Repository
-public interface ICotisationRepository extends PagingAndSortingRepository<Cotisation, String> {
+public interface ICotisationRepository extends JpaRepository<Cotisation, String> {
 
 	@Query(value = "select * from cotisation  where solde != 0 \n-- #pageable\n", countQuery = "SELECT count(*) from cotisation  where solde != 0 ", nativeQuery = true)
 	public Page<Cotisation> findAllCotisation(Pageable pageable);
@@ -43,56 +43,15 @@ public interface ICotisationRepository extends PagingAndSortingRepository<Cotisa
 	@Query(value = "update contract set num_ordre_prelevement = ?1 where id =?2", nativeQuery = true)
 	public void updateNumeroOrdre(int numOrdre, String contratId);
 
-	// @Query(value = "SELECT cot.id FROM cotisation cot " +
-	// 		"INNER JOIN contract c ON cot.contrat_id = c.id " +
-	// 		"INNER JOIN produit p ON p.id = c.produit_id " +
-	// 		"INNER JOIN partenaire pat ON pat.id = p.partenaire_id " +
-	// 		"WHERE c.status = 'ACCEPTED' " +
-	// 		"AND cot.etat_cotisation = 'EMIS' " +
-	// 		"AND pat.id LIKE %:partenaireId% " +
-	// 		"AND p.id LIKE %:produitId% " +
-	// 		"AND cot.date_prelevement between :startDate and :endDate", nativeQuery = true)
+	// @Query(value = "SELECT cot.id FROM cotisation cot WHERE cot.etat_cotisation = 'EMIS' "+
+	//   "AND cot.date_prelevement between :startDate and :endDate " +
+	//   "AND EXISTS (SELECT 1 FROM contract c JOIN produit p ON p.id = c.produit_id " +
+	//   "JOIN partenaire pat ON pat.id = :partenaireId" +
+	//   " WHERE c.status = 'ACCEPTED' AND p.id = :produitId  " +
+	// 	"AND cot.contrat_id = c.id);", nativeQuery = true)
 	// public List<String> getEmissionGlobale(@Param("partenaireId") String partenaireId,
-	// 		@Param("produitId") String produitId, @Param("startDate") String startDate,
-	// 		@Param("endDate") String endDate);	
-	@Query(value = "SELECT cot.id FROM cotisation cot WHERE cot.etat_cotisation = 'EMIS' "+
-	  "AND cot.date_prelevement between :startDate and :endDate " +
-	  "AND EXISTS (SELECT 1 FROM contract c JOIN produit p ON p.id = c.produit_id " +
-	  "JOIN partenaire pat ON pat.id = :partenaireId" +
-	  " WHERE c.status = 'ACCEPTED' AND p.id = :produitId  " +
-		"AND cot.contrat_id = c.id);", nativeQuery = true)
-	public List<String> getEmissionGlobale(@Param("partenaireId") String partenaireId,
-			@Param("produitId") String produitId, @Param("startDate") Date startDate,
-			@Param("endDate") Date endDate);
-
-
-	// @Query(value = "SELECT cot.* FROM cotisation cot "
-	// 		+ "INNER JOIN contract c ON cot.contrat_id = c.id "
-	// 		// + "INNER JOIN produit p ON p.id = c.produit_id "
-	// 		// + "INNER JOIN partenaire pat ON pat.id = p.partenaire_id "
-	// 		+ "WHERE c.status = 'ACCEPTED' "
-	// 		+ "AND cot.etat_cotisation = 'EMIS' "
-	// 		+ "AND convert(date,cot.date_prelevement ) >= :startDate and convert(date,cot.date_prelevement ) <= :endDate", nativeQuery = true)
-	@Query(value = "SELECT cot.* FROM cotisation cot where "
-			//+ "INNER JOIN contract c ON cot.contrat_id = c.id  "
-			// + "INNER JOIN produit p ON p.id = c.produit_id "
-			// + "INNER JOIN partenaire pat ON pat.id = p.partenaire_id "
-			//+ "WHERE c.status = 'ACCEPTED' "
-			+ "cot.etat_cotisation = 'EMIS' "
-			+ "AND convert(date,cot.date_prelevement ) >= :startDate and convert(date,cot.date_prelevement ) <= :endDate", nativeQuery = true)		
-	public List<Cotisation> getEmissionGlobaleByDateOnly(@Param("startDate") String startDate,
-			@Param("endDate") String endDate);
-
-	@Query(value = "SELECT cot.* FROM cotisation cot "
-			+ "INNER JOIN contract c ON cot.contrat_id = c.id "
-			+ "INNER JOIN produit p ON p.id = c.produit_id "
-			+ "INNER JOIN partenaire pat ON pat.id = p.partenaire_id "
-			+ "WHERE c.status = 'ACCEPTED' "
-			+ "AND cot.etat_cotisation = 'EMIS' "
-			+ "AND pat.id LIKE %:partenaireId% "
-			+ "AND cot.date_prelevement between  :startDate and :endDate", nativeQuery = true)
-	public List<Cotisation> getEmissionGlobaleByDateAndPartenaire(@Param("partenaireId") String partenaireId,
-			@Param("startDate") String startDate, @Param("endDate") String endDate);
+	// 		@Param("produitId") String produitId, @Param("startDate") Date startDate,
+	// 		@Param("endDate") Date endDate);
 
 	@Query(value = "SELECT * from cotisation cot inner join emission_globale eg on cot.numero_lot=eg.numero_lot where cot.numero_lot=:numeroLot", nativeQuery = true)
 	public List<Cotisation> getCotisationByNumeroLot(@Param("numeroLot") String numeroLot);
