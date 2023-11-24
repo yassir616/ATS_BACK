@@ -171,55 +171,6 @@ public class CotisationServiceImpl implements ICotisationService {
 				.collect(Collectors.toList());
 	}
 
-	
-
-	// @Override
-	// public List<CotisationRequestDTO> getEmissionGlobale(String partenaireId, String produitId, String startDate, String endDate)
-	// 		throws InterruptedException, ExecutionException {
-	// 	log.info("getting cotisations.........");
-	// 	log.info("startDate : " + startDate);
-	// 	log.info("endDate : " + endDate);
-	// 	log.info("produitId : " + produitId);
-	// 	log.info("partenaireId : " + partenaireId);
-	// 	List<Cotisation> cotisations = new ArrayList<>();
-	// 	if (!partenaireId.equals("empty")) {
-	// 		if (!produitId.equals("empty")) {
-	// 			log.info("searchByALL...");
-	// 			cotisations=cotisationRepository.getEmissionGlobale(partenaireId, produitId, startDate, endDate);
-	// 		} else {
-	// 			log.info("searchByPartenaireAndDate...");
-	// 			cotisations=cotisationRepository.getEmissionGlobaleByDateAndPartenaire(partenaireId, startDate, endDate);
-	// 		}
-	// 	} else {
-	// 		log.info("searchByDateOnly...");
-	// 		cotisations=cotisationRepository.getEmissionGlobaleByDateOnly(startDate, endDate);
-			
-	// 	}
-	// 	log.info("END EXECUTION OF REQUEST BEGIN DTO ...");
-	// 	//design pattern 
-	// 	List<CotisationRequestDTO> cotisationsDTO= new ArrayList<>();
-	// 	for (Cotisation coti : cotisations) {
-	// 		CotisationRequestDTO cotiDTO =new CotisationRequestDTO();
-	// 		//adding the data of cotisation pojo class
-	// 		BeanUtils.copyProperties(coti, cotiDTO);
-	// 		//adding the data of contracts
-	// 		cotiDTO.setNumeroContrat(coti.getContrat().getNumeroContrat());
-	// 		cotiDTO.setDateEffet(coti.getContrat().getDateEffet());
-	// 		cotiDTO.setDateEcheance(coti.getContrat().getDateEcheance());
-	// 		//adding the rest of the data
-	// 		cotiDTO.setNomAssuree(coti.getContrat().getAssure().getNom());
-	// 		cotiDTO.setPrenomAssuree(coti.getContrat().getAssure().getPrenom());
-	// 		cotiDTO.setProduitLibelle(coti.getContrat().getProduit().getLibelle());
-	// 		cotiDTO.setCreationDateCotisation(coti.getCreationDate());
-	// 		cotiDTO.setEtatCotisation(coti.getEtatCotisation());
-	// 		//cotiDTO.setNomSouscripteur(coti.getContrat().getSouscripteur().getId());
-			
-	// 		//adding to the list
-	// 		cotisationsDTO.add(cotiDTO);
-	// 	}
-
-	// 	return cotisationsDTO;
-	// }
 
 	@Override
 	public List<CotisationRequestDTO> getEmissionGlobale(EmissionGroupeRequestModel requestModel) {

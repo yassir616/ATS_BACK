@@ -16,7 +16,7 @@ public class ContractAnnulation {
     @Autowired
     IDecesContratRepository contractDecesRepos;
 
-    @Scheduled(cron = "0 0 */1 * * ?")
+    @Scheduled(cron = "0 0 12 * * ?")
 
     public void AnnulateContract() {
         Date now = new Date();

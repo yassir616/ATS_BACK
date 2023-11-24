@@ -3,9 +3,9 @@ package com.soa.vie.takaful.repositories.Impl;
 import java.util.List;
 
 import javax.persistence.EntityManager;
+import javax.persistence.PersistenceContext;
 import javax.persistence.Query;
 
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageImpl;
 import org.springframework.data.domain.Pageable;
@@ -15,7 +15,7 @@ import com.soa.vie.takaful.repositories.IReglementRepositoryCostum;
 
 public class IReglementRepositoryImpl implements IReglementRepositoryCostum{
 
-    @Autowired
+    @PersistenceContext
     public EntityManager entityManager;
 
     @Override
