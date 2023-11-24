@@ -21,6 +21,7 @@ import com.soa.vie.takaful.requestmodels.AnnulationCotisationRequest;
 import com.soa.vie.takaful.requestmodels.CotisationRequestDTO;
 import com.soa.vie.takaful.requestmodels.CreateAndUpdateCotisation;
 import com.soa.vie.takaful.requestmodels.CreateEmissionGlobale;
+import com.soa.vie.takaful.requestmodels.EmissionGroupeRequestModel;
 import com.soa.vie.takaful.requestmodels.ValidationGroupeRequestModel;
 import com.soa.vie.takaful.services.ICotisationService;
 
@@ -60,10 +61,13 @@ public class CotisationController {
 		return cotisationService.AnnulationCotisation(id, model);
 	}
 
-	@GetMapping(path = "cotisation/emissionGlobale/{partenaireId}/{produitId}/{startDate}/{endDate}")
-	public List<CotisationRequestDTO> getEmissionGlobale(@PathVariable String partenaireId, @PathVariable String produitId,
-			@PathVariable String startDate, @PathVariable String endDate)
+	@PostMapping(path = "cotisation/emissionGlobale")
+	public List<CotisationRequestDTO> getEmissionGlobale(@RequestBody EmissionGroupeRequestModel requestModel)
 			throws InterruptedException, ExecutionException, ParseException {
+			String startDate = requestModel.getStartDate();
+			String endDate=requestModel.getEndDate();
+			String produitId=requestModel.getProduitId();
+			String partenaireId=requestModel.getPartenaireId(); 
 		log.info("Début du Request getEmissionGlobale avec partenaireId={}, produitId={}, startDate={}, endDate={}",
 				partenaireId, produitId, startDate, endDate);
 		return cotisationService.getEmissionGlobale(partenaireId, produitId, startDate, endDate);
