@@ -1,31 +1,36 @@
 package com.soa.vie.takaful.services.mapper;
 
 import com.soa.vie.takaful.entitymodels.Cotisation;
+import com.soa.vie.takaful.entitymodels.CotisationDTO;
 import com.soa.vie.takaful.requestmodels.CotisationRequestDTO;
-import com.soa.vie.takaful.util.bankingService.BaseMapper;
+import org.modelmapper.Conditions;
 import org.modelmapper.ModelMapper;
-import org.modelmapper.PropertyMap;
 import org.springframework.stereotype.Component;
+
 @Component
 public class CotisationMapper extends BaseMapper<Cotisation, CotisationRequestDTO> {
 
+    public CotisationMapper(ModelMapper modelMapper) {
+        super(modelMapper);
+        configureMappings();
+    }
 
     @Override
-    public ModelMapper createMapper() {
-        ModelMapper modelMapper = new ModelMapper();
+    public void configureMappings() {
+        getModelMapper().addConverter(context -> null, Cotisation.class, CotisationDTO.class);
+        getModelMapper().getConfiguration().setPropertyCondition(Conditions.isNotNull());
+    }
 
-        modelMapper.addMappings(new PropertyMap<Cotisation, CotisationRequestDTO>() {
-            @Override
-            protected void configure() {
-                // Here, let's add a null check for the contrat property
-                if (source.getContrat() != null) {
-                    map().setNumeroContrat(source.getContrat().getNumeroContrat());
-                    map().setDateEffet(source.getContrat().getDateEffet());
-                    map().setDateEcheance(source.getContrat().getDateEcheance());
-                }
-            }
-        });
+    @Override
+    public CotisationRequestDTO map(Cotisation source, Class<CotisationRequestDTO> destinationType) {
+        CotisationRequestDTO result = super.map(source, destinationType);
 
-        return modelMapper;
+        if (source.getContrat() != null) {
+            result.setNumeroContrat(source.getContrat().getNumeroContrat());
+            result.setDateEffet(source.getContrat().getDateEffet());
+            result.setDateEcheance(source.getContrat().getDateEcheance());
+        }
+
+        return result;
     }
 }

@@ -62,15 +62,10 @@ public class CotisationController {
 	}
 
 	@PostMapping(path = "cotisation/emissionGlobale")
-	public List<CotisationRequestDTO> getEmissionGlobale(@RequestBody EmissionGroupeRequestModel requestModel)
-			throws InterruptedException, ExecutionException, ParseException {
-			String startDate = requestModel.getStartDate();
-			String endDate=requestModel.getEndDate();
-			String produitId=requestModel.getProduitId();
-			String partenaireId=requestModel.getPartenaireId(); 
+	public List<CotisationRequestDTO> getEmissionGlobale(@RequestBody EmissionGroupeRequestModel requestModel) {
 		log.info("Début du Request getEmissionGlobale avec partenaireId={}, produitId={}, startDate={}, endDate={}",
-				partenaireId, produitId, startDate, endDate);
-		return cotisationService.getEmissionGlobale(partenaireId, produitId, startDate, endDate);
+				requestModel.getPartenaireId(), requestModel.getProduitId(), requestModel.getStartDate(), requestModel.getEndDate());
+		return cotisationService.getEmissionGlobale(requestModel);
 	}
 
 	@PutMapping(path = "cotisation/validationGlobale")

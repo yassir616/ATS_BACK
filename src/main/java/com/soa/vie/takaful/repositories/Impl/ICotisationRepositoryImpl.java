@@ -15,6 +15,8 @@ import com.soa.vie.takaful.entitymodels.Produit;
 
 import com.soa.vie.takaful.entitymodels.Cotisation;
 import com.soa.vie.takaful.repositories.ICotisationRepositoryCustom;
+import com.soa.vie.takaful.requestmodels.EmissionGroupeRequestModel;
+import com.soa.vie.takaful.util.Utilis;
 
 
 public class ICotisationRepositoryImpl implements ICotisationRepositoryCustom{
@@ -22,11 +24,10 @@ public class ICotisationRepositoryImpl implements ICotisationRepositoryCustom{
     @PersistenceContext
     private EntityManager entityManager;
 
-	//cotisation.id,cotisation.datePrelevement,cotisation.montantCotisation,cotisation.etatCotisation,cotisation.numQuittance,cotisation.solde,cotisation.montantTaxe,cotisation.montantTaxeParaFiscale,cotisation.annulation,cotisation.montantAccessoire,cotisation.montantTTC,cotisation.cotisationType,cotisation.fraisAcquisitionTTC,cotisation.fraisGestionTTC,cotisation.contributionPure,cotisation.capitalAssure,cotisation.dateEtablissement,cotisation.exercice,cotisation.numeroLot,cotisation.flagBatch,cotisation.dateEmission
 	@Override
-	public List<Cotisation> recupererParIds(Date startDate,Date endDate,String partenaireID,String produitID){
+	public List<Cotisation> recupererEmissionGroupeParCriteres(EmissionGroupeRequestModel requestModel){
         java.util.Map<String, Object> params = new HashMap<>();
-        //designé les champs à selectionnées
+        //designé les champs à
         StringBuilder queryBuilder = new StringBuilder("SELECT cotisation.id, cotisation.datePrelevement,cotisation.montantCotisation,cotisation.fraisAcquisitionTTC,cotisation.fraisGestionTTC,cotisation.montantTaxe,")
                 .append("cotisation.montantTTC,cotisation.solde,cotisation.numQuittance,cotisation.montantTaxeParaFiscale,cotisation.montantAccessoire,cotisation.capitalAssure,")
                 .append("contrat.numeroContrat,contrat.dateEffet,contrat.dateEcheance, ")
@@ -34,17 +35,21 @@ public class ICotisationRepositoryImpl implements ICotisationRepositoryCustom{
                 .append("assure.nom,assure.prenom ")
                 .append( "FROM Cotisation cotisation,Contract contrat ,Produit produit ,PersonnePhysique assure ,Partenaire partenaire ")
                 .append(" WHERE cotisation.contrat.id=contrat.id and contrat.produit.id=produit.id and contrat.assure.id=assure.id and produit.partenaire.id=partenaire.id ")
-                .append(" AND contrat.status='ACCEPTED' and cotisation.etatCotisation='EMIS' and cotisation.datePrelevement >= :startDate and cotisation.datePrelevement <= :endDate ");
-
-        params.put("startDate", startDate);
-        params.put("endDate", endDate);
-        if (!partenaireID.equals("empty")) {
-            queryBuilder.append(" and partenaire.id=:partenaireId ");
-            params.put("partenaireId", partenaireID);
+                .append(" AND contrat.status='ACCEPTED' and cotisation.etatCotisation='EMIS' ");
+        if(requestModel.getStartDate()!=null &&  requestModel.getEndDate()!=null){
+            queryBuilder.append(" and cotisation.datePrelevement >= :startDate and cotisation.datePrelevement <= :endDate ");
+            params.put("startDate", requestModel.getStartDate());
+            params.put("endDate", requestModel.getEndDate());
         }
-        if (!produitID.equals("empty")) {
+
+
+        if (!Utilis.isNullOrEmpty(requestModel.getPartenaireId())) {
+            queryBuilder.append(" and partenaire.id=:partenaireId ");
+            params.put("partenaireId", requestModel.getPartenaireId());
+        }
+        if (!Utilis.isNullOrEmpty(requestModel.getProduitId())) {
             queryBuilder.append(" and produit.id=:produitID ")	;
-            params.put("produitID", produitID);
+            params.put("produitID", requestModel.getProduitId());
         }
         Query query = entityManager.createQuery(queryBuilder.toString());
         params.forEach(query::setParameter);
