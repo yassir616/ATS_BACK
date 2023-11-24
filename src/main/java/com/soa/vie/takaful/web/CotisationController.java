@@ -64,6 +64,8 @@ public class CotisationController {
 	public List<CotisationRequestDTO> getEmissionGlobale(@PathVariable String partenaireId, @PathVariable String produitId,
 			@PathVariable String startDate, @PathVariable String endDate)
 			throws InterruptedException, ExecutionException, ParseException {
+		log.info("Début du Request getEmissionGlobale avec partenaireId={}, produitId={}, startDate={}, endDate={}",
+				partenaireId, produitId, startDate, endDate);
 		return cotisationService.getEmissionGlobale(partenaireId, produitId, startDate, endDate);
 	}
 

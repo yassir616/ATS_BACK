@@ -17,6 +17,7 @@ import com.soa.vie.takaful.entitymodels.Produit;
 import com.soa.vie.takaful.entitymodels.autoIncrementhelpers.CostumIdGeneratedValueLotEntity;
 import com.soa.vie.takaful.repositories.IContractRepository;
 import com.soa.vie.takaful.repositories.ICotisationRepository;
+import com.soa.vie.takaful.repositories.ICotisationRepositoryCustom;
 import com.soa.vie.takaful.repositories.IEmissionGlobaleRepository;
 import com.soa.vie.takaful.repositories.autoincrementhelpers.CostumIdGeneratedValueLotRepository;
 import com.soa.vie.takaful.requestmodels.AnnulationCotisationRequest;
@@ -25,6 +26,7 @@ import com.soa.vie.takaful.requestmodels.CreateAndUpdateCotisation;
 import com.soa.vie.takaful.requestmodels.CreateEmissionGlobale;
 import com.soa.vie.takaful.responsemodels.CotisationModelResponse;
 import com.soa.vie.takaful.services.ICotisationService;
+import com.soa.vie.takaful.services.mapper.CotisationMapper;
 import com.soa.vie.takaful.util.EtatCotisation;
 
 import org.modelmapper.ModelMapper;
@@ -57,6 +59,9 @@ public class CotisationServiceImpl implements ICotisationService {
 
 	@Autowired
 	private ModelMapper modelMapper;
+
+	@Autowired
+	private CotisationMapper cotisationMapper;
 
 
 
@@ -232,33 +237,9 @@ public class CotisationServiceImpl implements ICotisationService {
 		SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
 		List<Cotisation> cotisations = cotisationRepository.recupererParIds(sdf.parse(startDate),sdf.parse(endDate),partenaireId,produitId);
 
-
-		List<CotisationRequestDTO> cotisationsDTO= cotisations.stream()
-				.map(cotisation -> modelMapper.map(cotisation, CotisationRequestDTO.class))
+		return cotisations.stream()
+				.map(cotisation -> cotisationMapper.map(cotisation, CotisationRequestDTO.class))
 				.collect(Collectors.toList());
-
-		for (Cotisation cotisation : cotisations) {
-			log.info("CotiID : "+cotisation.getId());
-			CotisationRequestDTO cotiDTO =new CotisationRequestDTO();
-			//Cotisation cotisation= this.cotisationRepository.findById(coti).get();
-			//adding the data of cotaisation pojo class
-			BeanUtils.copyProperties(cotisation, cotiDTO);
-			//adding the data of contracts
-			cotiDTO.setNumeroContrat(cotisation.getContrat().getNumeroContrat());
-			cotiDTO.setDateEffet(cotisation.getContrat().getDateEffet());
-			cotiDTO.setDateEcheance(cotisation.getContrat().getDateEcheance());
-			//adding the rest of the data
-			cotiDTO.setNomAssuree(cotisation.getContrat().getAssure().getNom());
-			cotiDTO.setPrenomAssuree(cotisation.getContrat().getAssure().getPrenom());
-			cotiDTO.setProduitLibelle(cotisation.getContrat().getProduit().getLibelle());
-			// cotiDTO.setCreationDateCotisation(cotisation.getCreationDate());
-		    cotiDTO.setEtatCotisation(cotisation.getEtatCotisation());
-			//cotiDTO.setNomSouscripteur(coti.getContrat().getSouscripteur().getId());
-			//adding to the list
-			cotisationsDTO.add(cotiDTO);
-		}
-
-		return cotisationsDTO;
 	}
 
 
