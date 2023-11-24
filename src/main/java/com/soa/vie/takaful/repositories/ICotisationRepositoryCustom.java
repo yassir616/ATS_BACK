@@ -4,8 +4,9 @@ import java.util.Date;
 import java.util.List;
 
 import com.soa.vie.takaful.entitymodels.Cotisation;
+import com.soa.vie.takaful.requestmodels.EmissionGroupeRequestModel;
 
 public interface ICotisationRepositoryCustom {
-public List<Cotisation>  recupererParIds(Date startDate, Date endDate, String partenaireID, String produitID);
+public List<Cotisation>  recupererEmissionGroupeParCriteres(EmissionGroupeRequestModel requestModel);
 
 } 

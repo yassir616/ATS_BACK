@@ -13,13 +13,9 @@ import com.soa.vie.takaful.entitymodels.*;
 import com.soa.vie.takaful.entitymodels.autoIncrementhelpers.CostumIdGeneratedValueLotEntity;
 import com.soa.vie.takaful.repositories.IContractRepository;
 import com.soa.vie.takaful.repositories.ICotisationRepository;
-import com.soa.vie.takaful.repositories.ICotisationRepositoryCustom;
 import com.soa.vie.takaful.repositories.IEmissionGlobaleRepository;
 import com.soa.vie.takaful.repositories.autoincrementhelpers.CostumIdGeneratedValueLotRepository;
-import com.soa.vie.takaful.requestmodels.AnnulationCotisationRequest;
-import com.soa.vie.takaful.requestmodels.CotisationRequestDTO;
-import com.soa.vie.takaful.requestmodels.CreateAndUpdateCotisation;
-import com.soa.vie.takaful.requestmodels.CreateEmissionGlobale;
+import com.soa.vie.takaful.requestmodels.*;
 import com.soa.vie.takaful.responsemodels.CotisationModelResponse;
 import com.soa.vie.takaful.services.ICotisationService;
 import com.soa.vie.takaful.services.mapper.CotisationMapper;
@@ -226,12 +222,9 @@ public class CotisationServiceImpl implements ICotisationService {
 	// }
 
 	@Override
-	public List<CotisationRequestDTO> getEmissionGlobale(String partenaireId, String produitId, String startDate, String endDate)
-			throws InterruptedException, ExecutionException, ParseException {
-		log.info("Début du service getEmissionGlobale avec partenaireId={}, produitId={}, startDate={}, endDate={}",
-				partenaireId, produitId, startDate, endDate);
-		SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
-		List<Cotisation> cotisations = cotisationRepository.recupererParIds(sdf.parse(startDate),sdf.parse(endDate),partenaireId,produitId);
+	public List<CotisationRequestDTO> getEmissionGlobale(EmissionGroupeRequestModel requestModel) {
+		log.info("Début du service getEmissionGlobale avec requestModel={}",requestModel);
+		List<Cotisation> cotisations = cotisationRepository.recupererEmissionGroupeParCriteres(requestModel);
 
 		return cotisations.stream()
 				.map(cotisation -> cotisationMapper.map(cotisation, CotisationRequestDTO.class))
