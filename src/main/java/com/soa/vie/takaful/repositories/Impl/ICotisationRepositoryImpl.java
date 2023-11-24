@@ -15,7 +15,6 @@ import com.soa.vie.takaful.entitymodels.Produit;
 
 import com.soa.vie.takaful.entitymodels.Cotisation;
 import com.soa.vie.takaful.repositories.ICotisationRepositoryCustom;
-import org.springframework.stereotype.Repository;
 
 
 public class ICotisationRepositoryImpl implements ICotisationRepositoryCustom{
@@ -34,8 +33,8 @@ public class ICotisationRepositoryImpl implements ICotisationRepositoryCustom{
                 .append("produit.libelle, ")
                 .append("assure.nom,assure.prenom ")
                 .append( "FROM Cotisation cotisation,Contract contrat ,Produit produit ,PersonnePhysique assure ,Partenaire partenaire ")
-                .append(" WHERE cotisation.contrat.id=contrat.id and contrat.produit.id=produit.id and contrat.assure.id=assure.id ")
-                .append(" and produit.partenaire.id=partenaire.id and cotisation.datePrelevement between :startDate and :endDate ");
+                .append(" WHERE cotisation.contrat.id=contrat.id and contrat.produit.id=produit.id and contrat.assure.id=assure.id and produit.partenaire.id=partenaire.id ")
+                .append(" AND contrat.status='ACCEPTED' and cotisation.etatCotisation='EMIS' and cotisation.datePrelevement >= :startDate and cotisation.datePrelevement <= :endDate ");
 
         params.put("startDate", startDate);
         params.put("endDate", endDate);
