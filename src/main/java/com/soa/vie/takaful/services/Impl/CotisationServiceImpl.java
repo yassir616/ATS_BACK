@@ -238,7 +238,7 @@ public class CotisationServiceImpl implements ICotisationService {
 		List<Cotisation> cotisations = cotisationRepository.recupererParIds(sdf.parse(startDate),sdf.parse(endDate),partenaireId,produitId);
 
 		return cotisations.stream()
-				.map(cotisation -> cotisationMapper.map(cotisation, CotisationRequestDTO.class))
+				.map(cotisation -> modelMapper.map(cotisation, CotisationRequestDTO.class))
 				.collect(Collectors.toList());
 	}
 
