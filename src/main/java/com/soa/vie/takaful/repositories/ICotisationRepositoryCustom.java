@@ -1,6 +1,5 @@
 package com.soa.vie.takaful.repositories;
 
-import java.util.Date;
 import java.util.List;
 
 import com.soa.vie.takaful.entitymodels.Cotisation;

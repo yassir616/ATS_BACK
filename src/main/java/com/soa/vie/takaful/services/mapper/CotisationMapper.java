@@ -25,10 +25,18 @@ public class CotisationMapper extends BaseMapper<Cotisation, CotisationRequestDT
     public CotisationRequestDTO map(Cotisation source, Class<CotisationRequestDTO> destinationType) {
         CotisationRequestDTO result = super.map(source, destinationType);
 
-        if (source.getContrat() != null) {
+        if (source.getContrat() != null ) {
             result.setNumeroContrat(source.getContrat().getNumeroContrat());
             result.setDateEffet(source.getContrat().getDateEffet());
             result.setDateEcheance(source.getContrat().getDateEcheance());
+            if (source.getContrat().getProduit() != null ) {
+                result.setProduitLibelle(source.getContrat().getProduit().getLibelle());
+            }
+            if(source.getContrat().getAssure()!=null){
+                result.setNomAssuree(source.getContrat().getAssure().getNom());
+                result.setPrenomAssuree(source.getContrat().getAssure().getPrenom());
+            }
+            
         }
 
         return result;
