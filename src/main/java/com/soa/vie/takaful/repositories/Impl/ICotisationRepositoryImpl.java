@@ -18,7 +18,9 @@ import com.soa.vie.takaful.repositories.ICotisationRepositoryCustom;
 import com.soa.vie.takaful.requestmodels.EmissionGroupeRequestModel;
 import com.soa.vie.takaful.util.Utilis;
 
+import lombok.extern.slf4j.Slf4j;
 
+@Slf4j
 public class ICotisationRepositoryImpl implements ICotisationRepositoryCustom{
 
     @PersistenceContext
@@ -28,6 +30,7 @@ public class ICotisationRepositoryImpl implements ICotisationRepositoryCustom{
 	public List<Cotisation> recupererEmissionGroupeParCriteres(EmissionGroupeRequestModel requestModel){
         java.util.Map<String, Object> params = new HashMap<>();
         //designé les champs à
+        log.info("Début d'execution de la requete getEmissionGlobale");
         StringBuilder queryBuilder = new StringBuilder("SELECT cotisation.id, cotisation.datePrelevement,cotisation.montantCotisation,cotisation.fraisAcquisitionTTC,cotisation.fraisGestionTTC,cotisation.montantTaxe,")
                 .append("cotisation.montantTTC,cotisation.solde,cotisation.numQuittance,cotisation.montantTaxeParaFiscale,cotisation.montantAccessoire,cotisation.capitalAssure,")
                 .append("contrat.numeroContrat,contrat.dateEffet,contrat.dateEcheance, ")
@@ -55,38 +58,42 @@ public class ICotisationRepositoryImpl implements ICotisationRepositoryCustom{
         params.forEach(query::setParameter);
 
         List<Object[]> resultList = query.getResultList();
+        log.info("Fin d'execution de la requete getEmissionGlobale, taille : {}",resultList.size());
         List<Cotisation> cotisations = new ArrayList<>();
 
         for (Object[] result : resultList) {
-            Cotisation cotisation = new Cotisation();
-            cotisation.setId((String) result[0]); // Assuming id is of type String
-            cotisation.setDatePrelevement((Date) result[1]); // Assuming datePrelevement is of type Date
-            cotisation.setMontantCotisation(result[2]!=null?(float) result[2]:0f);
-            cotisation.setFraisAcquisitionTTC(result[3]!=null?(float) result[3]:0f);
-            cotisation.setFraisGestionTTC(result[4]!=null?(float) result[4]:0f);
-            cotisation.setMontantTaxe(result[5]!=null?(float) result[5]:0f);
-            cotisation.setMontantTTC(result[6]!=null?(float) result[6]:0f);
-            cotisation.setSolde(result[7]!=null?(float) result[7]:0f);
-            cotisation.setNumQuittance(result[8]!=null?(int) result[8]:0);
-            cotisation.setMontantTaxeParaFiscale(result[9]!=null?(float) result[9]:0f);
-            cotisation.setMontantAccessoire(result[10]!=null?(float) result[10]:0f);
-            cotisation.setCapitalAssure(result[11]!=null?(float) result[11]:0f);
-            Contract contract=new Contract();
-            Produit produit=new Produit();
-            PersonnePhysique assure=new PersonnePhysique();
-            contract.setNumeroContrat(result[12]!=null?(String) result[12]:"");
-            contract.setDateEffet((Date) result[13] );
-            contract.setDateEcheance((Date) result[14] );
-            produit.setLibelle(result[15]!=null?(String) result[15]:"");
-            assure.setNom(result[16]!=null?(String) result[16]:"");
-            assure.setPrenom(result[17]!=null?(String) result[17]:"");
-            contract.setProduit(produit);
-            contract.setAssure(assure);
-            cotisation.setContrat(contract);
-            cotisations.add(cotisation);
+            cotisations.add(mapToCotisation(result));
         }
-
         return cotisations;
+    }
+
+    private Cotisation mapToCotisation(Object[] result) {
+        Cotisation cotisation = new Cotisation();
+        cotisation.setId((String) result[0]); // Assuming id is of type String
+        cotisation.setDatePrelevement((Date) result[1]); // Assuming datePrelevement is of type Date
+        cotisation.setMontantCotisation(result[2]!=null?(float) result[2]:0f);
+        cotisation.setFraisAcquisitionTTC(result[3]!=null?(float) result[3]:0f);
+        cotisation.setFraisGestionTTC(result[4]!=null?(float) result[4]:0f);
+        cotisation.setMontantTaxe(result[5]!=null?(float) result[5]:0f);
+        cotisation.setMontantTTC(result[6]!=null?(float) result[6]:0f);
+        cotisation.setSolde(result[7]!=null?(float) result[7]:0f);
+        cotisation.setNumQuittance(result[8]!=null?(int) result[8]:0);
+        cotisation.setMontantTaxeParaFiscale(result[9]!=null?(float) result[9]:0f);
+        cotisation.setMontantAccessoire(result[10]!=null?(float) result[10]:0f);
+        cotisation.setCapitalAssure(result[11]!=null?(float) result[11]:0f);
+        Contract contract=new Contract();
+        Produit produit=new Produit();
+        PersonnePhysique assure=new PersonnePhysique();
+        contract.setNumeroContrat(result[12]!=null?(String) result[12]:"");
+        contract.setDateEffet((Date) result[13] );
+        contract.setDateEcheance((Date) result[14] );
+        produit.setLibelle(result[15]!=null?(String) result[15]:"");
+        assure.setNom(result[16]!=null?(String) result[16]:"");
+        assure.setPrenom(result[17]!=null?(String) result[17]:"");
+        contract.setProduit(produit);
+        contract.setAssure(assure);
+        cotisation.setContrat(contract);
+        return cotisation;
     }
 
 }
