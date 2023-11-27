@@ -1,5 +1,6 @@
 package com.soa.vie.takaful.repositories.Impl;
 
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.HashMap;
@@ -19,15 +20,19 @@ import com.soa.vie.takaful.requestmodels.EmissionGroupeRequestModel;
 import com.soa.vie.takaful.util.Utilis;
 
 
+
 public class ICotisationRepositoryImpl implements ICotisationRepositoryCustom{
 
     @PersistenceContext
     private EntityManager entityManager;
 
+	//cotisation.id,cotisation.datePrelevement,cotisation.montantCotisation,cotisation.etatCotisation,cotisation.numQuittance,cotisation.solde,cotisation.montantTaxe,cotisation.montantTaxeParaFiscale,cotisation.annulation,cotisation.montantAccessoire,cotisation.montantTTC,cotisation.cotisationType,cotisation.fraisAcquisitionTTC,cotisation.fraisGestionTTC,cotisation.contributionPure,cotisation.capitalAssure,cotisation.dateEtablissement,cotisation.exercice,cotisation.numeroLot,cotisation.flagBatch,cotisation.dateEmission
 	@Override
 	public List<Cotisation> recupererEmissionGroupeParCriteres(EmissionGroupeRequestModel requestModel){
         java.util.Map<String, Object> params = new HashMap<>();
-        //designé les champs à
+        //designé les champs à selectionnées
+        SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
+
         StringBuilder queryBuilder = new StringBuilder("SELECT cotisation.id, cotisation.datePrelevement,cotisation.montantCotisation,cotisation.fraisAcquisitionTTC,cotisation.fraisGestionTTC,cotisation.montantTaxe,")
                 .append("cotisation.montantTTC,cotisation.solde,cotisation.numQuittance,cotisation.montantTaxeParaFiscale,cotisation.montantAccessoire,cotisation.capitalAssure,")
                 .append("contrat.numeroContrat,contrat.dateEffet,contrat.dateEcheance, ")
@@ -47,7 +52,7 @@ public class ICotisationRepositoryImpl implements ICotisationRepositoryCustom{
             queryBuilder.append(" and partenaire.id=:partenaireId ");
             params.put("partenaireId", requestModel.getPartenaireId());
         }
-        if (!Utilis.isNullOrEmpty(requestModel.getProduitId())) {
+        if (!requestModel.getProduitId().equals("empty")) {
             queryBuilder.append(" and produit.id=:produitID ")	;
             params.put("produitID", requestModel.getProduitId());
         }
