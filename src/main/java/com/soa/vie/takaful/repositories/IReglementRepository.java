@@ -14,7 +14,7 @@ import org.springframework.data.jpa.repository.Modifying;
 import org.springframework.data.jpa.repository.Query;
 
 @JaversSpringDataAuditable
-public interface IReglementRepository extends JpaRepository<Reglement, String> {//,IReglementRepositoryCostum{
+public interface IReglementRepository extends JpaRepository<Reglement, String> ,IReglementRepositoryCustom{
 
 	@Query(value = "select reglement_id from reglement_prestations where reglement_id  = ?", countQuery = "select count(*) from reglement_prestations where reglement_id  = ?", nativeQuery = true)
 	List<String> findPrestationByIdReglement(String id);
@@ -23,8 +23,8 @@ public interface IReglementRepository extends JpaRepository<Reglement, String> {
 	@Transactional
 	@Query(value = "update reglement set statut= ?1 where id= ?2", nativeQuery = true)
 	public void updateStatutReglement(String satut, String id);
-
+/*
 	@Query(value = "select * from reglement order by creation_date desc ", countQuery = "select count(*) from reglement", nativeQuery = true)
 	Page<Reglement> findReglements(Pageable pageable);
-
+*/
 }

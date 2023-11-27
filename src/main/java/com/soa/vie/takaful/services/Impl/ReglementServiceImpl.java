@@ -24,6 +24,7 @@ import com.soa.vie.takaful.util.Pagination;
 import com.soa.vie.takaful.util.PrestationStatusEnum;
 import com.soa.vie.takaful.util.ReglementStatut;
 
+import com.sun.org.apache.bcel.internal.generic.SWITCH;
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -39,6 +40,7 @@ import lombok.extern.slf4j.Slf4j;
 @Transactional
 @Slf4j
 public class ReglementServiceImpl implements IReglementService {
+	
 	@Autowired
 	private IReglementRepository reglementRepository;
 
@@ -88,33 +90,24 @@ public class ReglementServiceImpl implements IReglementService {
 
 	@Override
 	@Async("asyncExecutor")
-	public Page<ReglementResponseModel> getReglements(int page, int limit, String sort, String direction)
-			throws InterruptedException, ExecutionException {
+	public Page<ReglementResponseModel> getReglements(int page, int limit, String sort, String direction) throws InterruptedException {
+		log.info("Début service get reglements page: {}, limit: {},direction: {},sort: {} ", page,limit,sort,direction);
 		Thread.sleep(1000L);
-		return reglementRepository.findReglements(Pagination.pageableRequest(page, limit, sort, direction))
+		return reglementRepository.listerReglements(Pagination.pageableRequest(page, limit, sort, direction))
 				.map(o -> modelMapper.map(o, ReglementResponseModel.class));
 	}
 
-	@Override
 	@Async("asyncExecutor")
-	public List<ReglementResponseModel> reglementPrestation(String id, String statut)
-			throws InterruptedException, ExecutionException {
+	public List<ReglementResponseModel> modifierReglementPrestationByIdAndStatut(String id, String statut)
+			throws InterruptedException {
+		log.info("Début service modifier reglement des presation par  id: {}, satut: {} ", id,statut);
 		Thread.sleep(1000L);
-		System.out.println(id + "  " + statut);
-		// List<String> reglementOpt =
-		// reglementRepository.findPrestationByIdReglement(id);
 		Optional<Reglement> reglementOptional = reglementRepository.findById(id);
 		if (reglementOptional.isPresent()) {
-			//Reglement reglement = reglementOptional.get();
-
 			if ("EN_COURS".equals(statut)) {
 				reglementRepository.updateStatutReglement("VALIDER", id);
-				// reglementLoopMethod(reglementOpt);
 			} else if ("Supprimer".equals(statut)) {
-				// reglement.setStatut(ReglementStatut.SUPPRIMER);
 				reglementRepository.updateStatutReglement("Supprimer", id);
-				// reglementLoopMethod(reglementOpt);
-
 			}
 		} else {
 			throw new NoSuchElementException();

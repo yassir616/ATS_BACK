@@ -37,7 +37,7 @@ public class ReglementController {
 	public List<ReglementResponseModel> getAllPrestations(@PathVariable String id, @PathVariable String statut)
 			throws InterruptedException, ExecutionException {
 
-		return reglementService.reglementPrestation(id, statut);
+		return reglementService.modifierReglementPrestationByIdAndStatut(id, statut);
 
 	}
 
