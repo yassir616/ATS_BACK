@@ -1,14 +1,11 @@
 package com.soa.vie.takaful.responsemodels;
 
-import com.soa.vie.takaful.entitymodels.Honoraire;
-import com.soa.vie.takaful.entitymodels.PrestationHonoraire;
-import com.soa.vie.takaful.util.ReglementStatut;
+import com.soa.vie.takaful.entitymodels.DetailPrestationHonoraire;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
-import java.util.Date;
 import java.util.List;
 
 @NoArgsConstructor
@@ -17,7 +14,7 @@ import java.util.List;
 @Setter
 public class PrestationHonoraireResponseDTO {
 
-      private String id;    //  table prestation_honoraire
+    private String id;    //  table prestation_honoraire
     private String reference; // table prestation_honoraire
     private String adressPaysAuxiliaire; // table auxiliare
     private String adressVilleAuxiliaire; // table auxiliare
@@ -49,12 +46,36 @@ public class PrestationHonoraireResponseDTO {
 
     private String raisonSocial; // table partenaire
 
-/*
-    private float montantHonoraire; //table detail_prestation
+    private List<DetailPrestationHonoraireResponseDTO> detailPrestationHonoraires;
+
+    public PrestationHonoraireResponseDTO(String id, String reference, String adressPaysAuxiliaire, String adressVilleAuxiliaire, String adressComplementAuxiliaire, String emailAuxiliaire, String nomAuxiliaire, String patenteAuxiliaire, String prenomAuxiliaire, String typePersonneAuxiliaire, String specialiteAuxiliaire, String cinAuxiliaire, String ribAuxiliaire, String typeFiscalAuxiliaire, String codeTypeAuxiliaire, String libelleTypeAuxiliaire, String modeReglement, float montant, float montantNet, float montantIr, String typePrestation, String nomAssure, String prenomAssure, String codePartenaire, String numeroCompte, String raisonSocial) {
+        this.id = id;
+        this.reference = reference;
+        this.adressPaysAuxiliaire = adressPaysAuxiliaire;
+        this.adressVilleAuxiliaire = adressVilleAuxiliaire;
+        this.adressComplementAuxiliaire = adressComplementAuxiliaire;
+        this.emailAuxiliaire = emailAuxiliaire;
+        this.nomAuxiliaire = nomAuxiliaire;
+        this.patenteAuxiliaire = patenteAuxiliaire;
+        this.prenomAuxiliaire = prenomAuxiliaire;
+        this.typePersonneAuxiliaire = typePersonneAuxiliaire;
+        this.specialiteAuxiliaire = specialiteAuxiliaire;
+        this.cinAuxiliaire = cinAuxiliaire;
+        this.ribAuxiliaire = ribAuxiliaire;
+        this.typeFiscalAuxiliaire = typeFiscalAuxiliaire;
+        this.codeTypeAuxiliaire = codeTypeAuxiliaire;
+        this.libelleTypeAuxiliaire = libelleTypeAuxiliaire;
+        this.modeReglement = modeReglement;
+        this.montant = montant;
+        this.montantNet = montantNet;
+        this.montantIr = montantIr;
+        this.typePrestation = typePrestation;
+        this.nomAssure = nomAssure;
+        this.prenomAssure = prenomAssure;
+        this.codePartenaire = codePartenaire;
+        this.numeroCompte = numeroCompte;
+        this.raisonSocial = raisonSocial;
+    }
 
 
-    private float montantHonoraireInitial; // table detail_prestation
-
-
-    */
 }

@@ -4,6 +4,7 @@ import com.soa.vie.takaful.entitymodels.PrestationHonoraire;
 import com.soa.vie.takaful.entitymodels.PrestationSinistre;
 import com.soa.vie.takaful.entitymodels.Reglement;
 import com.soa.vie.takaful.repositories.IReglementRepositoryCustom;
+import com.soa.vie.takaful.responsemodels.DetailPrestationHonoraireResponseDTO;
 import com.soa.vie.takaful.responsemodels.PrestationHonoraireResponseDTO;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageImpl;
@@ -73,14 +74,30 @@ public class IReglementRepositoryImpl implements IReglementRepositoryCustom {
         Query query = entityManager.createQuery(queryBuilder.toString());
         params.forEach(query::setParameter);
         List<PrestationHonoraireResponseDTO> prestationHonoraires = query.getResultList();
-
+        for(PrestationHonoraireResponseDTO dto:prestationHonoraires){
+            dto.setDetailPrestationHonoraires(listerDetailPrestationHonorairesById(dto.getId()));
+        }
         return prestationHonoraires;
     }
 
-    private PrestationHonoraire mapToPrestationHonoraire(Object[] result) {
-        PrestationHonoraire prestationHonoraire = new PrestationHonoraire();
-        prestationHonoraire.setReference((String) result[0]);
-        return prestationHonoraire;
+
+    private List<DetailPrestationHonoraireResponseDTO> listerDetailPrestationHonorairesById(String prestationHonoraireId) {
+        Map<String, Object> params = new HashMap<>();
+        StringBuilder queryBuilder = new StringBuilder("SELECT NEW com.soa.vie.takaful.responsemodels.DetailPrestationHonoraireResponseDTO(")
+                .append("detail.id, detail.montantHonoraire, detail.montantHonoraireInitial, acceptationTestMedical.paid, acceptationExamens.dateAnalyse, acceptationExaminateur.dateVisite, acceptationLaboratoire.dateAnalyse, acceptationSpecialiste.deteConsultation, acceptationConseil.dateExpertise) ")
+                .append("FROM DetailPrestationHonoraire detail, AcceptationTestMedical acceptationTestMedical, AcceptationExamens acceptationExamens, AcceptationExaminateur acceptationExaminateur, ")
+                .append("AcceptationLaboratoire acceptationLaboratoire, AcceptationSpecialiste acceptationSpecialiste, AcceptationConseil acceptationConseil ")
+                .append("WHERE detail.acceptationTestMedical.id = acceptationTestMedical.id  and acceptationTestMedical.acceptationExamens.id = acceptationExamens.id ")
+                .append("and acceptationTestMedical.acceptationExaminateur.id = acceptationExaminateur.id ")
+                .append("AND detail.id IN (SELECT ph.id FROM PrestationHonoraire ph WHERE ph.id = :prestationHonoraireId)");
+
+        params.put("prestationHonoraireId", prestationHonoraireId);
+        Query query = entityManager.createQuery(queryBuilder.toString());
+        params.forEach(query::setParameter);
+        List<DetailPrestationHonoraireResponseDTO> detailPrestationHonoraires = query.getResultList();
+
+        return detailPrestationHonoraires;
     }
+
 
 }

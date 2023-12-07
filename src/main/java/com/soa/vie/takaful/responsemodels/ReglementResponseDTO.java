@@ -31,24 +31,7 @@ import java.util.List;
 
 	private List<PrestationHonoraireResponseDTO> prestationHonoraires;
 
-/*
 
-    private boolean paid = false ; // table AcceptationTestMedical
-
-	private Date dateAnalyse; // table AcceptationExamens
-
-
-	private Date dateVisite; // table AcceptationExaminateur
-
-
-	private Date dateAnalyse2; // table AcceptationLaboratoire;
-
-
-	private Date deteConsultation; // table AcceptationSpecialiste
-
-
-	private Date dateExpertise; // table AcceptationConseil
- */
 
 
 }
