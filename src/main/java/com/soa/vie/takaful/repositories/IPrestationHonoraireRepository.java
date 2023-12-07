@@ -3,6 +3,7 @@ package com.soa.vie.takaful.repositories;
 import com.soa.vie.takaful.entitymodels.PrestationHonoraire;
 
 import java.util.List;
+import java.util.UUID;
 import javax.transaction.Transactional;
 import org.springframework.data.jpa.repository.Modifying;
 import org.javers.spring.annotation.JaversSpringDataAuditable;
@@ -105,6 +106,15 @@ public interface IPrestationHonoraireRepository extends PagingAndSortingReposito
             nativeQuery=true)
             public void updateMontantPrestationIR(String numeroSinistre);
 
+         /*   @Query(value = "SELECT rh.honoraire_id,ph.reference,a.adress_pays,a.adress_Ville,a.adress_complement,a.email,a.nom,a.patente,a.prenom," +
+                    "a.type_personne," +
+                    "a.specialite,a.cin,a.rib,a.type_fiscal,ta.code,ta.libelle" +
+                    "from  reglement_honoraires rh,prestation_honoraire ph,auxiliaire a,type_auxiliaire ta" +
+                    "WHERE  rh.honoraire_id=ph.prestation_id" +
+                    "and ph.auxiliaire_id=a.id and a.type_auxiliaire_id=ta.id");
+            public List<PrestationHonoraire> findPrestationHonoraireByReglementId(UUID reglementId);
+
+*/
 
 
 }

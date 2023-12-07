@@ -7,6 +7,7 @@ import java.util.NoSuchElementException;
 import java.util.Optional;
 import java.util.Random;
 import java.util.concurrent.ExecutionException;
+import java.util.stream.Collectors;
 
 import javax.transaction.Transactional;
 
@@ -18,13 +19,15 @@ import com.soa.vie.takaful.repositories.IPrestationHonoraireRepository;
 import com.soa.vie.takaful.repositories.IReglementRepository;
 import com.soa.vie.takaful.repositories.ISinistreRepository;
 import com.soa.vie.takaful.requestmodels.CreateReglementRequest;
+import com.soa.vie.takaful.responsemodels.PrestationHonoraireResponseDTO;
+import com.soa.vie.takaful.responsemodels.ReglementResponseDTO;
 import com.soa.vie.takaful.responsemodels.ReglementResponseModel;
 import com.soa.vie.takaful.services.IReglementService;
+import com.soa.vie.takaful.services.mapper.ReglementMapper;
 import com.soa.vie.takaful.util.Pagination;
 import com.soa.vie.takaful.util.PrestationStatusEnum;
 import com.soa.vie.takaful.util.ReglementStatut;
 
-import com.sun.org.apache.bcel.internal.generic.SWITCH;
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -52,6 +55,9 @@ public class ReglementServiceImpl implements IReglementService {
 
 	@Autowired
 	private ModelMapper modelMapper;
+
+	@Autowired
+	private ReglementMapper reglementMapper;
 
 	@Override
 	@Async("asyncExecutor")
@@ -90,11 +96,18 @@ public class ReglementServiceImpl implements IReglementService {
 
 	@Override
 	@Async("asyncExecutor")
-	public Page<ReglementResponseModel> getReglements(int page, int limit, String sort, String direction) throws InterruptedException {
+	public Page<ReglementResponseDTO> getReglements(int page, int limit, String sort, String direction) throws InterruptedException {
 		log.info("Début service get reglements page: {}, limit: {},direction: {},sort: {} ", page,limit,sort,direction);
-		Thread.sleep(1000L);
-		return reglementRepository.listerReglements(Pagination.pageableRequest(page, limit, sort, direction))
-				.map(o -> modelMapper.map(o, ReglementResponseModel.class));
+		Page<Reglement> reglements= reglementRepository.listerReglements(Pagination.pageableRequest(page, limit, sort, direction));
+		List<PrestationSinistre> prestations=new ArrayList<>();
+		List<PrestationHonoraireResponseDTO> honoraires=new ArrayList<>();
+		for(Reglement reglement:reglements.getContent()){
+			//prestations=reglementRepository.listerPrestationsByReglementId(reglement.getId());
+			honoraires=reglementRepository.listerPrestationHonorairesByReglementId(reglement.getId());
+		}
+
+		return reglements.map(o -> reglementMapper.map(o, ReglementResponseDTO.class));
+
 	}
 
 	@Async("asyncExecutor")

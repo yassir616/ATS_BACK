@@ -17,7 +17,6 @@ public class CotisationMapper extends BaseMapper<Cotisation, CotisationRequestDT
 
     @Override
     public void configureMappings() {
-        getModelMapper().addConverter(context -> null, Cotisation.class, CotisationDTO.class);
         getModelMapper().getConfiguration().setPropertyCondition(Conditions.isNotNull());
     }
 

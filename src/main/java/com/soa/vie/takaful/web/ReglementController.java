@@ -3,6 +3,7 @@ package com.soa.vie.takaful.web;
 import java.util.List;
 import java.util.concurrent.ExecutionException;
 
+import com.soa.vie.takaful.responsemodels.ReglementResponseDTO;
 import com.soa.vie.takaful.responsemodels.ReglementResponseModel;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
@@ -25,11 +26,10 @@ public class ReglementController {
 	}
 
 	@GetMapping("reglements")
-	public Page<ReglementResponseModel> getAllReglements(@RequestParam("page") int page,
-			@RequestParam(name = "limit", defaultValue = Integer.MAX_VALUE + "") int limit,
-			@RequestParam("sort") String sort, @RequestParam("direction") String direction)
+	public Page<ReglementResponseDTO> getAllReglements(@RequestParam("page") int page,
+													   @RequestParam(name = "limit", defaultValue = Integer.MAX_VALUE + "") int limit,
+													   @RequestParam("sort") String sort, @RequestParam("direction") String direction)
 			throws InterruptedException, ExecutionException {
-
 		return reglementService.getReglements(page, limit, sort, direction);
 	}
 
