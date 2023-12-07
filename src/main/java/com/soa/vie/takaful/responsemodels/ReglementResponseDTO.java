@@ -14,6 +14,8 @@ import java.util.List;
  public class ReglementResponseDTO {
 
 
+	private String id; // table reglement
+
 	private String libelle; // table reglement
 
 	private ReglementStatut statut = ReglementStatut.EN_COURS; // table reglement
@@ -27,7 +29,7 @@ import java.util.List;
 	private String num_lot; // table reglement
 
 
-	private List<PrestationHonoraireResponseDTO> honoraires;
+	private List<PrestationHonoraireResponseDTO> prestationHonoraires;
 
 /*
 

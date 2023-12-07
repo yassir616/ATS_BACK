@@ -54,17 +54,22 @@ public class IReglementRepositoryImpl implements IReglementRepositoryCustom {
     @Override
     public List<PrestationHonoraireResponseDTO> listerPrestationHonorairesByReglementId(String reglementId) {
         Map<String, Object> params = new HashMap<>();
-        //  StringBuilder queryBuilder = new StringBuilder("SELECT reglement.honoraires FROM Reglement reglement ");
         StringBuilder queryBuilder = new StringBuilder("SELECT NEW com.soa.vie.takaful.responsemodels.PrestationHonoraireResponseDTO(")
-                .append("honoraire.reference, auxiliaire.adressPays, auxiliaire.adressVille, auxiliaire.adressComplement, auxiliaire.email, auxiliaire.nom, auxiliaire.patente, auxiliaire.prenom, auxiliaire.typePersonne, ")
-                .append("auxiliaire.specialite, auxiliaire.cin, auxiliaire.rib, auxiliaire.typeFiscal,typeAuxiliaire.code,typeAuxiliaire.libelle, '') ")
-                .append("FROM PrestationHonoraire honoraire, Auxiliaire auxiliaire,TypeAuxiliaire typeAuxiliaire ")
-                .append("WHERE honoraire.auxiliaire.id = auxiliaire.id ")
-                .append("AND honoraire.id IN (SELECT rh.id FROM Reglement reglement JOIN reglement.honoraires rh WHERE reglement.id = :reglementId)")
-                .append("AND auxiliaire.typeAuxiliaire.id = typeAuxiliaire.id")
-                .append("");
-        params.put("reglementId", reglementId);
+                .append("  prestation.id ,prestationHonoraire.reference, auxiliaire.adressPays, auxiliaire.adressVille, auxiliaire.adressComplement, auxiliaire.email, auxiliaire.nom, auxiliaire.patente, auxiliaire.prenom, auxiliaire.typePersonne, ")
+                .append("auxiliaire.specialite, auxiliaire.cin, auxiliaire.rib, auxiliaire.typeFiscal, typeAuxiliaire.code, typeAuxiliaire.libelle, prestation.modeReglement, ")
+                .append("prestation.montant, prestation.montantNet, prestation.montantIr, prestation.typePrestation, personnePhysique.nom,personnePhysique.prenom,partenaire.code,partenaire.numeroCompte ,partenaire.raisonSocial)")
+                .append(" FROM PrestationHonoraire prestationHonoraire, Auxiliaire auxiliaire, TypeAuxiliaire typeAuxiliaire, ")
+                .append(" Prestation prestation, Contract contrat,PersonnePhysique personnePhysique,Produit produit,Partenaire partenaire  ")
+                .append(" WHERE prestationHonoraire.auxiliaire.id = auxiliaire.id ")
+                .append("AND auxiliaire.typeAuxiliaire.id = typeAuxiliaire.id ")
+                .append("AND prestation.id = prestationHonoraire.id ")
+                .append("AND prestation.contrat.id = contrat.id ")
+                .append("AND contrat.assure.id = personnePhysique.id ")
+                .append("AND contrat.produit.id = produit.id ")
+                .append("AND produit.partenaire.id = partenaire.id ")
+                .append("AND prestationHonoraire.id IN (SELECT rh.id FROM Reglement reglement JOIN reglement.honoraires rh WHERE reglement.id = :reglementId)");
 
+        params.put("reglementId", reglementId);
         Query query = entityManager.createQuery(queryBuilder.toString());
         params.forEach(query::setParameter);
         List<PrestationHonoraireResponseDTO> prestationHonoraires = query.getResultList();

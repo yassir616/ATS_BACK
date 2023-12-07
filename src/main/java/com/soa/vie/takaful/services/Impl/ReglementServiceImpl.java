@@ -99,15 +99,11 @@ public class ReglementServiceImpl implements IReglementService {
 	public Page<ReglementResponseDTO> getReglements(int page, int limit, String sort, String direction) throws InterruptedException {
 		log.info("Début service get reglements page: {}, limit: {},direction: {},sort: {} ", page,limit,sort,direction);
 		Page<Reglement> reglements= reglementRepository.listerReglements(Pagination.pageableRequest(page, limit, sort, direction));
-		List<PrestationSinistre> prestations=new ArrayList<>();
-		List<PrestationHonoraireResponseDTO> honoraires=new ArrayList<>();
-		for(Reglement reglement:reglements.getContent()){
-			//prestations=reglementRepository.listerPrestationsByReglementId(reglement.getId());
-			honoraires=reglementRepository.listerPrestationHonorairesByReglementId(reglement.getId());
+		Page<ReglementResponseDTO> reglementResponses=reglements.map(o -> reglementMapper.map(o, ReglementResponseDTO.class));
+		for(ReglementResponseDTO reglementResponse:reglementResponses.getContent()){
+			reglementResponse.setPrestationHonoraires(reglementRepository.listerPrestationHonorairesByReglementId(reglementResponse.getId()));
 		}
-
-		return reglements.map(o -> reglementMapper.map(o, ReglementResponseDTO.class));
-
+ 		return  reglementResponses;
 	}
 
 	@Async("asyncExecutor")
