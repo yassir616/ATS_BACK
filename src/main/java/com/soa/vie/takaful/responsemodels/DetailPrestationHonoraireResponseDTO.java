@@ -17,7 +17,7 @@ public class DetailPrestationHonoraireResponseDTO {
     private String id;
     private float montantHonoraire; //table detail_prestation
     private float montantHonoraireInitial; // table detail_prestation
-   private boolean paid = false; // table AcceptationTestMedical
+    private boolean paid = false; // table AcceptationTestMedical
     private Date dateAnalyseExamens; // table AcceptationExamens
     private Date dateVisite; // table AcceptationExaminateur
     private Date dateAnalyseLaboratoire; // table AcceptationLaboratoire;

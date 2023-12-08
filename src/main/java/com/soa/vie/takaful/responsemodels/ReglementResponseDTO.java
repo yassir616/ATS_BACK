@@ -13,6 +13,7 @@ import java.util.List;
 @Setter
  public class ReglementResponseDTO {
 
+	private Date creationDate;  //table reglement
 
 	private String id; // table reglement
 
