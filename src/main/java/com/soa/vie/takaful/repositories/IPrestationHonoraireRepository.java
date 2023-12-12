@@ -13,7 +13,7 @@ import org.springframework.data.repository.PagingAndSortingRepository;
 
 
 @JaversSpringDataAuditable
-public interface IPrestationHonoraireRepository extends PagingAndSortingRepository<PrestationHonoraire, String> {
+public interface IPrestationHonoraireRepository extends PagingAndSortingRepository<PrestationHonoraire, String>,IPrestationHonoraireRepositoryCustom {
 
     @Query(value = "select * from prestation p "+
                    "inner join prestation_honoraire ph on ph.prestation_id = p.id "+  

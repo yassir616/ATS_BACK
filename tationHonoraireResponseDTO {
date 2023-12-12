@@ -1,0 +1,26 @@
+[33mfa87e0d[m[33m ([m[1;36mHEAD -> [m[1;32mreafctoring-repo[m[33m)[m HEAD@{0}: reset: moving to HEAD^
+[33m4443991[m[33m ([m[1;31morigin/reafctoring-repo[m[33m)[m HEAD@{1}: commit: Requete complete avec le detail et les honorairs
+[33mfa87e0d[m[33m ([m[1;36mHEAD -> [m[1;32mreafctoring-repo[m[33m)[m HEAD@{2}: commit: detailPresationHonoraire sans honorairs
+[33me30749c[m HEAD@{3}: commit: detail des prestationHonoraires
+[33m37aa1aa[m HEAD@{4}: commit: requete reglement sans info prestationSinistre et Honoraires sans prestation
+[33m5b6d6f8[m HEAD@{5}: commit: Optimisation Repo reglement+ add Logs Service
+[33mb69e14b[m HEAD@{6}: commit (merge): Merge repository
+[33m491d1e3[m HEAD@{7}: pull: Merge made by the 'ort' strategy.
+[33m4cf0027[m HEAD@{8}: commit (amend): Update Cotisation repo
+[33me0df058[m HEAD@{9}: pull: updating HEAD
+[33me0df058[m HEAD@{10}: pull: updating HEAD
+[33me0df058[m HEAD@{11}: commit: Update Cotisation repo
+[33ma6d34d9[m HEAD@{12}: commit: Refactoring le code et ajout d'une classe utilitaire
+[33mcd8c38d[m HEAD@{13}: pull: Merge made by the 'ort' strategy.
+[33m472f44a[m HEAD@{14}: commit: Add config modelMapper par heritage
+[33m8f67639[m HEAD@{15}: commit: Mapping elments without composition
+[33ma49eced[m HEAD@{16}: commit: Refactoring des repositories et ajout du config mapper
+[33me71348a[m HEAD@{17}: checkout: moving from Version1 to reafctoring-repo
+[33mfac4565[m[33m ([m[1;32mVersion1[m[33m)[m HEAD@{18}: pull: Fast-forward
+[33me76f456[m HEAD@{19}: checkout: moving from reafctoring-repo to Version1
+[33me71348a[m HEAD@{20}: commit (merge): Merge branch
+[33m7d50ed9[m HEAD@{21}: commit: refactoring repos Cotisation+add custom
+[33me76f456[m HEAD@{22}: checkout: moving from Version1 to reafctoring-repo
+[33me76f456[m HEAD@{23}: commit: Renommer et Depalacer Les packages
+[33m1533956[m HEAD@{24}: checkout: moving from main to Version1
+[33m896d656[m[33m ([m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m, [m[1;32mmain[m[33m)[m HEAD@{25}: clone: from https://github.com/yassir616/ATS_BACKEND.git

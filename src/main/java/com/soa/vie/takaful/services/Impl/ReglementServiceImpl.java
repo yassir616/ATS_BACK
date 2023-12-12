@@ -1,25 +1,14 @@
 package com.soa.vie.takaful.services.Impl;
 
-import java.time.LocalDate;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.NoSuchElementException;
-import java.util.Optional;
-import java.util.Random;
-import java.util.concurrent.ExecutionException;
-import java.util.stream.Collectors;
-
-import javax.transaction.Transactional;
-
 import com.soa.vie.takaful.entitymodels.Prestation;
 import com.soa.vie.takaful.entitymodels.PrestationHonoraire;
 import com.soa.vie.takaful.entitymodels.PrestationSinistre;
 import com.soa.vie.takaful.entitymodels.Reglement;
 import com.soa.vie.takaful.repositories.IPrestationHonoraireRepository;
+import com.soa.vie.takaful.repositories.IPrestationSinistreRepository;
 import com.soa.vie.takaful.repositories.IReglementRepository;
 import com.soa.vie.takaful.repositories.ISinistreRepository;
 import com.soa.vie.takaful.requestmodels.CreateReglementRequest;
-import com.soa.vie.takaful.responsemodels.PrestationHonoraireResponseDTO;
 import com.soa.vie.takaful.responsemodels.ReglementResponseDTO;
 import com.soa.vie.takaful.responsemodels.ReglementResponseModel;
 import com.soa.vie.takaful.services.IReglementService;
@@ -27,7 +16,7 @@ import com.soa.vie.takaful.services.mapper.ReglementMapper;
 import com.soa.vie.takaful.util.Pagination;
 import com.soa.vie.takaful.util.PrestationStatusEnum;
 import com.soa.vie.takaful.util.ReglementStatut;
-
+import lombok.extern.slf4j.Slf4j;
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -37,7 +26,10 @@ import org.springframework.scheduling.annotation.Async;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.HttpClientErrorException;
 
-import lombok.extern.slf4j.Slf4j;
+import javax.transaction.Transactional;
+import java.time.LocalDate;
+import java.util.*;
+import java.util.concurrent.ExecutionException;
 
 @Service
 @Transactional
@@ -51,7 +43,10 @@ public class ReglementServiceImpl implements IReglementService {
 	private ISinistreRepository sinistreRepository;
 
 	@Autowired
-	private IPrestationHonoraireRepository honoraireRepository;
+	private IPrestationHonoraireRepository prestationHonoraireRepository;
+
+	@Autowired
+	private IPrestationSinistreRepository prestationSinistreRepository;
 
 	@Autowired
 	private ModelMapper modelMapper;
@@ -101,8 +96,9 @@ public class ReglementServiceImpl implements IReglementService {
 		Page<Reglement> reglements= reglementRepository.listerReglements(Pagination.pageableRequest(page, limit, sort, direction));
 		Page<ReglementResponseDTO> reglementResponses=reglements.map(o -> reglementMapper.map(o, ReglementResponseDTO.class));
 		for(ReglementResponseDTO reglementResponse:reglementResponses.getContent()){
-			reglementResponse.setPrestationHonoraires(reglementRepository.listerPrestationHonorairesByReglementId(reglementResponse.getId()));
-		}
+			reglementResponse.setPrestationHonoraires(prestationHonoraireRepository.listerPrestationHonorairesByReglementId(reglementResponse.getId()));
+			reglementResponse.setPrestationSinistres(prestationSinistreRepository.listerPrestationSinistresByReglementId(reglementResponse.getId()));
+			}
  		return  reglementResponses;
 	}
 
@@ -145,9 +141,9 @@ public class ReglementServiceImpl implements IReglementService {
 		LocalDate currentDate = LocalDate.now();
 
 		if (Auxiliaire.equals("null")) {
-			sinistreOpt = honoraireRepository.findByStatusAndModeReglementHonoraire(type, ModeReglement);
+			sinistreOpt = prestationHonoraireRepository.findByStatusAndModeReglementHonoraire(type, ModeReglement);
 		} else {
-			sinistreOpt = honoraireRepository.findByStatusAndModeReglementHonoraireAndAuxiliaire(type, ModeReglement,
+			sinistreOpt = prestationHonoraireRepository.findByStatusAndModeReglementHonoraireAndAuxiliaire(type, ModeReglement,
 					Auxiliaire);
 		}
 
@@ -168,7 +164,7 @@ public class ReglementServiceImpl implements IReglementService {
 			List<PrestationHonoraire> honoraires = new ArrayList<>();
 			for (Prestation request : sinistreOpt) {
 				request.setStatus(PrestationStatusEnum.ENCOURS_SIGNATURE);
-				Optional<PrestationHonoraire> honoraireOptional = honoraireRepository.findById(request.getId());
+				Optional<PrestationHonoraire> honoraireOptional = prestationHonoraireRepository.findById(request.getId());
 				if (honoraireOptional.isPresent()) {
 					PrestationHonoraire honoraire = honoraireOptional.get();
 					honoraires.add(honoraire);
